@@ -1,8 +1,8 @@
 # Stat-222-Project
 
-## Textual Analysis of Financial Statements
+Textual Analysis of Financial Statements
 
-## Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
+Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 ### Project Updates
 
