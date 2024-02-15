@@ -1,10 +1,14 @@
 # Stat-222-Project
 
-## Project Updates
+## Textual Analysis of Financial Statements
+
+## Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
+
+### Project Updates
 
 Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_3i5U472d_8RIgSb-o/edit#slide=id.p).
 
-## Conda Environment
+### Conda Environment
 
 The environment `capstone` can be found in `environment.yml`.
 
