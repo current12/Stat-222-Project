@@ -12,7 +12,7 @@ Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_
 
 All data for this project is kept on Box.
 
-For filepaths, access it using `~/Box/STAT 222 Capstone` to ensure code is usable across all machines.
+For filepaths, access it using `"~/Box/STAT 222 Capstone"` to ensure code is usable across all machines.
 
 ### Conda Environment
 
