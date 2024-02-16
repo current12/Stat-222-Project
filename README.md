@@ -16,6 +16,6 @@ For filepaths, access it using `"~/Box/STAT 222 Capstone"` to ensure code is usa
 
 ### Conda Environment
 
-The environment `capstone` can be found in `environment.yml`.
+The environment `capstone` can be found in [`environment.yml`](https://github.com/current12/Stat-222-Project/blob/main/environment.yml).
 
 If you have the environment activated, you can run `conda env export > environment.yml` while in this directory to update the yaml file.
