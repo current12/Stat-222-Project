@@ -8,6 +8,12 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_3i5U472d_8RIgSb-o/edit#slide=id.p).
 
+### Box
+
+All data for this project is kept on Box.
+
+For filepaths, access it using `~/Box/STAT 222 Capstone` to ensure code is usable across all machines.
+
 ### Conda Environment
 
 The environment `capstone` can be found in `environment.yml`.
