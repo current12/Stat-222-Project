@@ -6,7 +6,7 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 ### Data Pipeline Steps
 
-1. `Code/Data Loading and Cleaning/Combine Credit Rating Data.ipynb`, `Code/Earning Calls/calls2sec.ipynb`, Code/Data Loading and Cleaning/tabular_findata_retrival&loading.ipynb`
+1. `Code/Data Loading and Cleaning/Combine Credit Rating Data.ipynb`, `Code/Earning Calls/calls2sec.ipynb`, `Code/Data Loading and Cleaning/tabular_findata_retrival&loading.ipynb`
 2. `Code/Data Loading and Cleaning/Credit Ratings on Earnings Call Dates.ipynb`
 3. `Code/Data Loading and Cleaning/Create Combined All Data.ipynb`
 
