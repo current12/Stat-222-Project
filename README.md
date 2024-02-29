@@ -46,6 +46,10 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_3i5U472d_8RIgSb-o/edit#slide=id.p).
 
+### Repo Filepaths
+
+Try to use relative paths (`..`, etc.) when referencing other folders in this repository. It's also recommended to clone the repository in `~/repo` (create a folder `repo` in whatever directory `~` references on your machine.
+
 ### Box
 
 All data for this project is kept on Box.
