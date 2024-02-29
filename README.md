@@ -48,7 +48,7 @@ Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_
 
 ### Repo Filepaths
 
-Try to use relative paths (`..`, etc.) when referencing other folders in this repository. It's also recommended to clone the repository in `~/repo` (create a folder `repo` in whatever directory `~` references on your machine.
+Try to use relative paths (`..`, etc.) when referencing other folders in this repository. It's also recommended to clone the repository in `~/repo` (create a folder `repo` in whatever directory `~` references on your machine).
 
 ### Box
 
