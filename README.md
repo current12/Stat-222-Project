@@ -89,6 +89,8 @@ To make yourself a copy of the environment, run `conda env create -f environment
 
 If you have the environment activated, you can run `conda env export > environment.yml` while in this directory to update the yaml file.
 
+A more limited `capstone_scf` environment for use on scf can be found in `environment_scf.yml`.
+
 ### Acknowledgements
 
 Special thanks to the Berkeley Statistical Computing Facility (SCF) for resources.
