@@ -88,3 +88,7 @@ The environment `capstone` can be found in [`environment.yml`](https://github.co
 To make yourself a copy of the environment, run `conda env create -f environment.yml`. To update the environment if the yaml changes, run `conda env update --name capstone --file environment.yml --prune`.
 
 If you have the environment activated, you can run `conda env export > environment.yml` while in this directory to update the yaml file.
+
+### Acknowledgements
+
+Special thanks to the Berkeley Statistical Computing Facility (SCF) for resources.
