@@ -3,30 +3,43 @@
 # (Slow file separated out from other code)
 
 # Flag for if you are running this on the sample dataset
-sample = False
-# Modify this path as needed to run on your machine
-sample_path = r'~\Box\STAT 222 Capstone\Intermediate Data\all_data_sample.csv'
+sample = True
 
 # Packages
 import pandas as pd
 import os
 import time
+import spacy
 
-# Load in sample csv, or full parquet file
+# Load in sample or full parquet file
 if sample:
-    df = pd.read_csv(sample_path)
+    df = pd.read_parquet(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates_Sample/all_data_fixed_quarter_dates_sample.parquet')
 else:
     # list of files in '../../../Data/All_Data/All_Data_Fixed_Quarter_Dates'
     file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates') if f.endswith('.parquet')]
     # read in all parquet files
     df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates/' + f) for f in file_list])
-
-import spacy
+print('dataframe')
+print(df.head())
 
 # load model and disable unnecessary components
 activated = spacy.prefer_gpu()
 print('using gpu? ', activated)
 nlp = spacy.load('en_core_web_sm', disable=['tagger', 'parser', 'lemmatizer', 'attribute_ruler', 'morphologizer', 'textcat', 'toc2vec'])
+
+# Testing the nlp model
+sample_text = 'Microsoft is a great company. I also like Apple and Google.'
+print('testing on sample text:')
+print(sample_text)
+doc = nlp(sample_text)
+for entity in doc.ents:
+    print(entity.text, entity.label_)
+harder_sample_text = 'I am going to the bank to deposit my money. apple had a great quarter.'
+print('testing on harder sample text:')
+print(harder_sample_text)
+doc = nlp(harder_sample_text)
+for entity in doc.ents:
+    print(entity.text, entity.label_)
 
 # Function to process transcript and count company mentions
 def count_companies(text):
@@ -61,4 +74,7 @@ end_time = time.time()
 print('Time to process: ', (end_time - start_time).seconds / 60)
 
 # Save parquet file of ticker, fixed_quarter_date, and company_mentions
-df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/All_Data/Company_Mentions.parquet')
+if sample:
+    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions_Sample.parquet')
+else:
+    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions.parquet')

@@ -5,5 +5,12 @@
 #SBATCH --partition=jsteinhardt
 #SBATCH --gres=gpu:A100:1
 
+echo "Starting mamba/conda env"
+
 mamba activate capstone_scf
-python 
+
+echo "Starting NER on Company Names"
+
+python NER_on_Company_Names.py
+
+echo "Completed NER
