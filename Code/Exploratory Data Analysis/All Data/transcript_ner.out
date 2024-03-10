@@ -1,1 +1,25 @@
 Starting NER on Company Names
+using gpu?  True
+beginning data load
+dataframe
+  ticker  ...                                            Comment
+0    NEE  ...  Companies that produce or distribute electrici...
+1    NEE  ...  Companies that produce or distribute electrici...
+2    NEE  ...  Companies that produce or distribute electrici...
+3    NEE  ...  Companies that produce or distribute electrici...
+4    NEE  ...  Companies that produce or distribute electrici...
+
+[5 rows x 171 columns]
+testing on sample text:
+Microsoft is a great company. I also like Apple and Google.
+Microsoft ORG
+Apple ORG
+Google ORG
+testing on harder sample text:
+I am going to the bank to deposit my money. apple had a great quarter.
+apple ORG
+a great quarter DATE
+179
+Estimated Time to process:  40.07732923825582
+Time to process:  17.188577417532603
+Completed NER
