@@ -1,0 +1,19 @@
+Run 'mamba init' to be able to run mamba activate/deactivate
+and start a new shell session. Or use conda to activate/deactivate.
+
+Traceback (most recent call last):
+  File "/accounts/grad/ijyliu/repo/Stat-222-Project/Code/Exploratory Data Analysis/All Data/NER_on_Company_Names.py", line 16, in <module>
+    df = pd.read_parquet(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates_Sample/all_data_fixed_quarter_dates_sample.parquet')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/capstone_scf/lib/python3.11/site-packages/pandas/io/parquet.py", line 651, in read_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/capstone_scf/lib/python3.11/site-packages/pandas/io/parquet.py", line 67, in get_engine
+    raise ImportError(
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+/var/lib/slurm/slurmd/job385387/slurm_script: line 16: unexpected EOF while looking for matching `"'
+/var/lib/slurm/slurmd/job385387/slurm_script: line 17: syntax error: unexpected end of file
