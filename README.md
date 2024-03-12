@@ -31,24 +31,23 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
         * Size: 31067 x 8
         * 1646 unique companies
 3. Tabular Financial Variables
-    1. tabuler_fin_data(balance_sheet).csv (raw data)
+    1. tabuler_fin_data(balance_sheet).csv
         * Columns: date, symbol, year, period, filing_date, total_current_asset...
         * Size: 55377 x 55
-    2. tabuler_fin_data(income_statement).csv (raw data)
+    2. tabuler_fin_data(income_statement).csv
         * Columns: date, symbol, year, period, filing_date, revenue...
         * Size: 55805 x 39
-    3. tabuler_fin_data(cash_flow_statement).csv (raw data)
+    3. tabuler_fin_data(cash_flow_statement).csv
         * Columns: date, symbol, year, period, filing_date, netIncome, deferredIncomeTax, ...
         * Size: 54808 x 41
-    4. Merge the dataset by [symbol, year, period]
-        * File: combined_corrected_tabular_financial_statements_data.parquet
-        * Columns: date, symbol, year, period, filing_date, financial variables, ...
-        * Size: 54218 x 126
-    5. Restrict to 2010-2016
-        * File: combined_financial_data_short.csv
-        * Columns: date, symbol, year, period, filing_date, financial variables, ...
-        * Size: 22488 × 126
-        * 862 unique companies
+    4. daily_market_cap.parquet
+        * Columns: symbol, date, marketcap
+        * Size: 1859825 x 3
+    5. combined_corrected_tabular_financial_statements_data.parquet
+        * Columns: date, symbol, reportedCurrency, period, filing_date, financial variables, Altman_Z ...
+        * Size: 20825 x 134
+        * 796 unique companies
+        
 4. All Data
     * Merge everything into all_data by company ticker and date
     * Take the intersection within the period 2010-2016
