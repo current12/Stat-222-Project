@@ -6,31 +6,30 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 ### Data (2010-2016)
 1. Credit Rating
-    1. corporate_rating.csv (raw data)
-        * Columns: Rating, Name, Symbol, Rating Agency, Date, Sector, other ratios
+    1. corporate_rating.csv
+        * Columns: Rating, Name, Symbol, Rating Agency Name, Date, Sector, other ratios ...
         * Size: 2029 x 31
-    2. corporateCreditRatingWithFinancialRatios.csv (raw data)
-        * Columns: rating, corporation, ticker, rating agency, date, sector, other variables.
+    2. corporateCreditRatingWithFinancialRatios.csv
+        * Columns: Rating, Name, Symbol, Rating Agency Name, Date, Sector, other ratios ...
         * Size: 7805 x 25
-    3. Select common columns, concatenate the data, remove duplicates, and add some columns (full data)
-        * File: combined_credit_rating_data.csv
-        * Columns: rating, symbol, rating agency, date, previous/next rating/date, type, change in rating ...
+    3. combined_credit_rating_data.csv
+        * Columns: Rating, Symbol, Rating Agency Name, Date, Source, Rating Rank AAA is 10, previous/next rating/date, type, change in rating ...
         * Size: 8732 x 13
-    4. Restrict to 2010-2016, create the column "fixed_quarter_date" for later merging
-        * File: credit_ratings_on_fixed_quarter_dates.csv
-        * Columns: rating, symbol, rating agency, date, previous/next rating/date, type, change in rating ...
-        * Size: 9117 × 16
-        * 638 unique companies
+    4. credit_ratings_on_fixed_quarter_dates_with_earnings_call_date.csv
+        * Columns: rating, symbol, rating agency, rating_date, fixed_quarter_date, ...
+        * Size: 7981 × 16
+        * 587 unique companies
 2. Earnings Call
-    1. Nested folders with sector-company-earnings_call. (raw data)
-        * File: calls.csv
-        * Columns: company, sector, year, quarter, date, transcript
-        * Size: 62074 x 6
-    2. Restrict to 2010-2016
-        * File: calls_short.csv
-        * Columns: company, sector, year, quarter, date, transcript
+    1. earning_call_web.csv
+        * Columns: symbol, quarter, year, date, content, source
+        * Size: 18346 x 6
+    2. calls_short.csv
+        * Columns: symbol, quarter', year, date, content, source
         * Size: 24580 x 6
-        * 1322 unique companies
+    3. combined_calls.csv
+        * Columns: symbol, quarter', year, earnings_call_datetime, content, source, web, earnings_call_date
+        * Size: 31067 x 8
+        * 1646 unique companies
 3. Tabular Financial Variables
     1. tabuler_fin_data(balance_sheet).csv (raw data)
         * Columns: date, symbol, year, period, filing_date, total_current_asset...
@@ -88,9 +87,3 @@ The environment `capstone` can be found in [`environment.yml`](https://github.co
 To make yourself a copy of the environment, run `conda env create -f environment.yml`. To update the environment if the yaml changes, run `conda env update --name capstone --file environment.yml --prune`.
 
 If you have the environment activated, you can run `conda env export > environment.yml` while in this directory to update the yaml file.
-
-A more limited `capstone_scf` environment for use on scf can be found in `environment_scf.yml`.
-
-### Acknowledgements
-
-Special thanks to the Berkeley Statistical Computing Facility (SCF) for resources.
