@@ -47,13 +47,13 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
         * Columns: date, symbol, reportedCurrency, period, filing_date, financial variables, Altman_Z ...
         * Size: 20825 x 134
         * 796 unique companies
-        
-4. All Data
-    * Merge everything into all_data by company ticker and date
-    * Take the intersection within the period 2010-2016
+4. combined_sector_data.csv  
+    * Columns: Ticker, Description, Company Name, Sector, Industry Group, Industry, Sub-Industry, Comment
+    * Size: 3389 x 8
+5. all_data_fixed_quarter_dates.parquet
     * Columns: rating, ticker, sector, year, quarter, call_date, transcript, financial variables, ... 
-    * Size: 4532 × 161
-    * 319 unique companies
+    * Size: 7334 x 166
+    * 536 unique companies
 
 ### Data Pipeline Steps
 
