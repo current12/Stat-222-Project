@@ -54,7 +54,7 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
     * Columns: rating, ticker, sector, year, quarter, call_date, transcript, financial variables, ... 
     * Size: 7334 x 166
     * 536 unique companies
-
+ 
 ![Flow Chart](Output/Mind Maps.jpg)
 
 ### Data Pipeline Steps
