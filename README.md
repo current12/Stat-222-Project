@@ -4,7 +4,7 @@ Textual Analysis of Financial Statements
 
 Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
-### Data (2010-2016)
+### Data Loading and Cleaning (2010-2016)
 1. Credit Rating
     1. corporate_rating.csv
         * Columns: Rating, Name, Symbol, Rating Agency Name, Date, Sector, other ratios ...
@@ -54,6 +54,8 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
     * Columns: rating, ticker, sector, year, quarter, call_date, transcript, financial variables, ... 
     * Size: 7334 x 166
     * 536 unique companies
+
+![Flow Chart](Output/Mind Maps.jpg)
 
 ### Data Pipeline Steps
 
