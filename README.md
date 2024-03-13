@@ -55,7 +55,7 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
     * Size: 7334 x 166
     * 536 unique companies
  
-![](Output\Mind Maps.jpg)
+<img src="Output\Mind Maps.jpg" style="max-width: 100%; height: auto; display: block;" />
 
 ### Data Pipeline Steps
 
