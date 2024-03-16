@@ -1,4 +1,4 @@
-name: capstone_scf
+name: scf_general
 channels:
   - conda-forge
 dependencies:
@@ -175,4 +175,4 @@ dependencies:
   - zstd=1.5.5=hfc55251_0
   - pip:
       - en-core-web-sm==3.7.1
-prefix: /scratch/users/ijyliu/conda/envs/capstone_scf
+prefix: /scratch/users/ijyliu/conda/envs/scf_general
