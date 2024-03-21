@@ -1,1 +1,31 @@
 Starting Job
+[nltk_data] Downloading package punkt to
+[nltk_data]     /accounts/grad/ijyliu/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Number of cores: 48
+beginning data load
+dataframe
+  ticker  ... train_test_80_20
+0    NEE  ...            train
+1    NEE  ...             test
+2    NEE  ...            train
+3    NEE  ...            train
+4    NEE  ...            train
+
+[5 rows x 4 columns]
+num rows
+5933
+length of list of doc vectors
+5933
+  ticker fixed_quarter_date  ... doc2vec_598 doc2vec_599
+0    NEE         2011-04-01  ...    0.145275   -0.429365
+2    NEE         2011-10-01  ...    0.059584   -0.218079
+3    NEE         2012-01-01  ...    0.082307   -0.254543
+4    NEE         2012-04-01  ...    0.034506   -0.416061
+5    NEE         2012-07-01  ...   -0.253594   -0.166601
+
+[5 rows x 605 columns]
+shape - should have 603 columns
+(5933, 603)
+Time to run: 40.419672731558485 minutes
+Completed Job

@@ -2,7 +2,7 @@
 # Note this package requires Linux OS
 
 # Packages
-import numpy as np
+#import numpy as np
 from pprint import pprint
 import sklearn.metrics
 from sklearn.utils.multiclass import type_of_target
@@ -29,6 +29,10 @@ X_train = train_df.drop(columns=['Rating', 'train_test_80_20'])
 y_train = train_df['Rating']
 X_test = test_df.drop(columns=['Rating', 'train_test_80_20'])
 y_test = test_df['Rating']
+
+# Check type
+print(f"type_of_target y_train={type_of_target(y_train)}")
+print(f"type_of_target y_test={type_of_target(y_test)}")
 
 # Create classifier
 automl = autosklearn.classification.AutoSklearnClassifier(
