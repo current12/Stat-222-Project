@@ -5,6 +5,6 @@
 
 echo "Starting NER on Company Names"
 
-python NER_on_Company_Names.py
+python NER_Count_Company_Names.py
 
 echo "Completed NER"

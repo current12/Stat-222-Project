@@ -79,6 +79,6 @@ print('Time to process: ', (end_time - start_time) / 60)
 
 # Save parquet file of ticker, fixed_quarter_date, and company_mentions
 if sample_run:
-    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions_Sample.parquet')
+    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions_Count_Sample.parquet')
 else:
-    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions.parquet')
+    df[['ticker', 'fixed_quarter_date', 'company_mentions']].to_parquet(r'../../../Data/Company_Mentions/Company_Mentions_Count.parquet')
