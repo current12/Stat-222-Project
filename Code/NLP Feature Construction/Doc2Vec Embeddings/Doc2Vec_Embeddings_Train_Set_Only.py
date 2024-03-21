@@ -17,7 +17,7 @@ cores = multiprocessing.cpu_count()
 print('Number of cores:', cores)
 
 # Flag for if you are running this on the sample dataset
-sample_run = True
+sample_run = False
 # Flag for limiting to training data only
 train_set_only = True
 
@@ -119,7 +119,7 @@ print(df.shape)
 
 # Export to parquet
 if not sample_run:
-    pd.to_parquet(df, r'../../../Data/Doc2Vec_Vectors/train_set_only_doc2vec_vectors.parquet')
+    df.to_parquet(r'../../../Data/Doc2Vec_Vectors/train_set_only_doc2vec_vectors.parquet')
 
 # End timer
 end_time = time.time()
