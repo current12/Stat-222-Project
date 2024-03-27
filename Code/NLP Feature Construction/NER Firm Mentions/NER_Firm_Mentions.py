@@ -57,7 +57,7 @@ def get_companies(ticker, fixed_quarter_date, text):
 # Test the function on one transcript
 # Start timer
 start_time = time.time()
-print(get_companies(df['transcript'].iloc[0]))
+print(get_companies(df['ticker'].iloc[0], df['fixed_quarter_date'].iloc[0], df['transcript'].iloc[0]))
 # Record end time
 end_time = time.time()
 # Print time to process in minutes
