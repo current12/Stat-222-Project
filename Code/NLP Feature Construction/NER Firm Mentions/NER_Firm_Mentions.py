@@ -29,7 +29,7 @@ print('dataframe')
 print(df.head())
 
 # load model and disable unnecessary components
-nlp = spacy.load('en_core_web_sm', disable=['tagger', 'parser', 'lemmatizer', 'attribute_ruler', 'morphologizer', 'textcat', 'toc2vec'])
+nlp = spacy.load("en_core_web_trf", disable=["tagger", "parser", "attribute_ruler", "lemmatizer"])
 
 # Function to process transcript and get company mentions as a dataframe with counts
 def get_companies(ticker, fixed_quarter_date, text):
