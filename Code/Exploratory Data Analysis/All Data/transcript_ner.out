@@ -2,24 +2,22 @@ Starting NER on Company Names
 using gpu?  True
 beginning data load
 dataframe
-  ticker  ...                                            Comment
-0    NEE  ...  Companies that produce or distribute electrici...
-1    NEE  ...  Companies that produce or distribute electrici...
-2    NEE  ...  Companies that produce or distribute electrici...
-3    NEE  ...  Companies that produce or distribute electrici...
-4    NEE  ...  Companies that produce or distribute electrici...
+  ticker  ... train_test_80_20
+0    NEE  ...            train
+1    NEE  ...             test
+2    NEE  ...            train
+3    NEE  ...            train
+4    NEE  ...            train
 
-[5 rows x 171 columns]
-testing on sample text:
-Microsoft is a great company. I also like Apple and Google.
-Microsoft ORG
-Apple ORG
-Google ORG
-testing on harder sample text:
-I am going to the bank to deposit my money. apple had a great quarter.
-apple ORG
-a great quarter DATE
-179
-Estimated Time to process:  40.07732923825582
-Time to process:  17.188577417532603
+[5 rows x 167 columns]
+Traceback (most recent call last):
+  File "/accounts/grad/ijyliu/repo/Stat-222-Project/Code/Exploratory Data Analysis/All Data/NER_Count_Company_Names.py", line 32, in <module>
+    nlp = spacy.load("en_core_web_trf", disable=["tagger", "parser", "attribute_ruler", "lemmatizer"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/spacy/__init__.py", line 51, in load
+    return util.load_model(
+           ^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/spacy/util.py", line 472, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_trf'. It doesn't seem to be a Python package or a valid path to a data directory.
 Completed NER
