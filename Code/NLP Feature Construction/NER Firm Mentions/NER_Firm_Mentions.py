@@ -3,7 +3,7 @@
 # Save data of the firms mentioned
 
 # Flag for if you are running this on the sample dataset
-sample_run = True
+sample_run = False
 
 # Packages
 import pandas as pd

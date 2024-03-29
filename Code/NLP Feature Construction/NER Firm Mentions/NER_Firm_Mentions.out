@@ -1,2 +1,3 @@
 Starting NER on Company Names
-slurmstepd-saruman: error: *** JOB 417143 ON saruman CANCELLED AT 2024-03-27T22:01:01 DUE TO PREEMPTION ***
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
