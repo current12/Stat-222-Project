@@ -9,6 +9,6 @@
 echo "Starting Job"
 
 # Execute the notebook
-jupyter nbconvert --execute Fit_Autogluon_Multimodal_SCF.ipynb
+jupyter nbconvert --to notebook --execute Fit_Autogluon_Multimodal_SCF.ipynb
 
 echo "Completed Job"
