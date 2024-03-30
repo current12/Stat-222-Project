@@ -7,14 +7,14 @@
 echo "Making directory"
 
 # Make directory if needed
-mkdir -p ~/Box/"STAT 222 Capstone"
+mkdir -p ~/Box/"STAT 222 Capstone"/Autogluon
 
 echo "Beginning Push"
 
 # Push to remote/online version
-rclone copy ~/Box/"STAT 222 Capstone" "Box:STAT 222 Capstone" --update
+rclone copy ~/Box/"STAT 222 Capstone"/Autogluon "Box:STAT 222 Capstone"/Autogluon --update
 
 echo "Beginning Pull"
 
 # Pull from remote/online version
-rclone copy "Box:STAT 222 Capstone" ~/Box/"STAT 222 Capstone" --update
+rclone copy "Box:STAT 222 Capstone"/Autogluon ~/Box/"STAT 222 Capstone"/Autogluon --update
