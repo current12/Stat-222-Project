@@ -1,0 +1,329 @@
+Starting Job
+No path specified. Models will be saved in: "AutogluonModels/ag-20240331_233723"
+No presets specified! To achieve strong results with AutoGluon, it is recommended to use the available presets.
+	Recommended Presets (For more details refer to https://auto.gluon.ai/stable/tutorials/tabular/tabular-essentials.html#presets):
+	presets='best_quality'   : Maximize accuracy. Default time_limit=3600.
+	presets='high_quality'   : Strong accuracy with fast inference speed. Default time_limit=3600.
+	presets='good_quality'   : Good accuracy with very fast inference speed. Default time_limit=3600.
+	presets='medium_quality' : Fast training time, ideal for initial prototyping.
+Beginning AutoGluon training ...
+AutoGluon will save models to "AutogluonModels/ag-20240331_233723"
+=================== System Info ===================
+AutoGluon Version:  1.0.0
+Python Version:     3.11.8
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023
+CPU Count:          96
+Memory Avail:       734.78 GB / 754.55 GB (97.4%)
+Disk Space Avail:   53354.48 GB / 66955.83 GB (79.7%)
+===================================================
+Train Data Rows:    3826
+Train Data Columns: 153
+Label Column:       Rating
+AutoGluon infers your prediction problem is: 'multiclass' (because dtype of label-column == object).
+	10 unique label values:  ['A', 'BB', 'B', 'BBB', 'AA', 'CCC', 'AAA', 'C', 'D', 'CC']
+	If 'multiclass' is not the correct problem_type, please manually specify the problem_type parameter during predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression'])
+Problem Type:       multiclass
+Preprocessing data ...
+Warning: Some classes in the training set have fewer than 10 examples. AutoGluon will only keep 8 out of 10 classes for training and will not try to predict the rare classes. To keep more classes, increase the number of datapoints from these rare classes in the training data or reduce label_count_threshold.
+Fraction of data from classes with at least 10 examples that will be kept for training models: 0.996340825927862
+Train Data Class Count: 8
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    752439.26 MB
+	Train Data (Original)  Memory Usage: 7.05 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+		Fitting DatetimeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Useless Original Features (Count: 2): ['reportedCurrency', 'train_test_80_20']
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Unused Original Features (Count: 3): ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow', 'readability']
+		These features were not used to generate any of the output features. Add a feature generator compatible with these features to utilize them.
+		Features can also be unused if they carry very little information, such as being categorical but having almost entirely unique values or being duplicates of other features.
+		These features do not need to be present at inference time.
+		('float', []) : 3 | ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow', 'readability']
+	Types of features in original data (raw dtype, special dtypes):
+		('datetime', [])                   :   2 | ['earnings_call_date', 'financial_statement_date']
+		('float', [])                      : 129 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                        :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('object', [])                     :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('object', ['datetime_as_object']) :   8 | ['fixed_quarter_date', 'rating_date', 'Previous Rating Date', 'previous_fixed_quarter_date', 'acceptedDate_balance_sheet', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])             :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('float', [])                : 129 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                  :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('int', ['datetime_as_int']) :  34 | ['fixed_quarter_date', 'fixed_quarter_date.year', 'fixed_quarter_date.month', 'fixed_quarter_date.dayofweek', 'earnings_call_date', ...]
+	1.6s = Fit runtime
+	148 features in original data used to generate 172 features in processed data.
+	Train Data (Processed) Memory Usage: 4.91 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 1.6s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'accuracy'
+	To change this, specify the eval_metric parameter of Predictor()
+Automatically generating train/validation split with holdout_frac=0.13068478829064298, Train Rows: 3313, Val Rows: 499
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': {},
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, 'GBMLarge'],
+	'CAT': {},
+	'XGB': {},
+	'FASTAI': {},
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}}],
+}
+Fitting 13 L1 models ...
+Fitting model: KNeighborsUnif ...
+	0.2585	 = Validation score   (accuracy)
+	0.06s	 = Training   runtime
+	0.11s	 = Validation runtime
+Fitting model: KNeighborsDist ...
+	0.2425	 = Validation score   (accuracy)
+	0.07s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetFastAI ...
+No improvement since epoch 6: early stopping
+	0.9419	 = Validation score   (accuracy)
+	12.02s	 = Training   runtime
+	0.06s	 = Validation runtime
+Fitting model: LightGBMXT ...
+	0.9539	 = Validation score   (accuracy)
+	40.55s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: LightGBM ...
+	0.9519	 = Validation score   (accuracy)
+	26.47s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: RandomForestGini ...
+	0.9539	 = Validation score   (accuracy)
+	1.89s	 = Training   runtime
+	0.05s	 = Validation runtime
+Fitting model: RandomForestEntr ...
+	0.9539	 = Validation score   (accuracy)
+	1.54s	 = Training   runtime
+	0.05s	 = Validation runtime
+Fitting model: CatBoost ...
+TBB Warning: The number of workers is currently limited to 15. The request for 95 workers is ignored. Further requests for more workers will be silently ignored until the limit changes.
+
+	0.9479	 = Validation score   (accuracy)
+	22.78s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: ExtraTreesGini ...
+	0.9519	 = Validation score   (accuracy)
+	1.92s	 = Training   runtime
+	0.08s	 = Validation runtime
+Fitting model: ExtraTreesEntr ...
+	0.9519	 = Validation score   (accuracy)
+	2.05s	 = Training   runtime
+	0.08s	 = Validation runtime
+Fitting model: XGBoost ...
+	0.9519	 = Validation score   (accuracy)
+	11.72s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: NeuralNetTorch ...
+	0.9419	 = Validation score   (accuracy)
+	15.39s	 = Training   runtime
+	0.09s	 = Validation runtime
+Fitting model: LightGBMLarge ...
+	0.9499	 = Validation score   (accuracy)
+	104.7s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ...
+	Ensemble Weights: {'LightGBMXT': 1.0}
+	0.9539	 = Validation score   (accuracy)
+	0.62s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 246.11s ... Best model: "WeightedEnsemble_L2"
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20240331_233723")
+dataframe
+    ticker fixed_quarter_date earnings_call_date  ...        AP        OU     TONE1
+0      FDX         2016-01-01         2015-12-16  ...  3.638989  2.193050  1.215313
+1      FDX         2016-04-01         2016-03-16  ...  3.375587  2.158730  0.201649
+2      FET         2014-10-01         2014-07-25  ...  2.857955  1.767123  1.852850
+3      FET         2015-01-01         2014-10-24  ...  2.986957  1.261538 -0.017701
+4      FET         2015-04-01         2015-02-12  ...  3.120253  1.421320 -0.777920
+..     ...                ...                ...  ...       ...       ...       ...
+468    ZTS         2015-10-01         2015-08-04  ...  2.911215  2.013514  1.744657
+469    ZTS         2016-01-01         2015-11-03  ...  2.791667  1.779279  1.596294
+470    ZTS         2016-04-01         2016-02-16  ...  2.926829  2.161290  2.287146
+471    ZTS         2016-07-01         2016-05-04  ...  3.023715  2.088372  1.739992
+472    ZTS         2016-10-01         2016-08-03  ...  2.840000  2.288557  0.976340
+
+[4724 rows x 162 columns]
+column names
+ticker
+fixed_quarter_date
+earnings_call_date
+Rating
+rating_date
+Rating Rank AAA is 10
+Next Rating
+Next Rating Date
+Previous Rating
+Previous Rating Date
+next_rating_date_or_end_of_data
+credit_rating_year
+previous_fixed_quarter_date
+days_since_call_on_fixed_quarter
+days_since_rating
+for_quarter
+for_year
+transcript
+reportedCurrency
+acceptedDate_balance_sheet
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+acceptedDate_cash_flow_statement
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+acceptedDate_income_statement
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+financial_statement_date
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Ratio_A
+Ratio_B
+Ratio_C
+Ratio_D
+Ratio_E
+Altman_Z
+filingDate
+rating_on_previous_fixed_quarter_date
+Investment_Grade
+rating_on_previous_fixed_quarter_date AAA is 10
+Change Direction Since Last Fixed Quarter Date
+Change Since Last Fixed Quarter Date
+Sector
+train_test_80_20
+num_transparency
+gf_score
+readability
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+PN
+SW
+AP
+OU
+TONE1
+Completed Job
