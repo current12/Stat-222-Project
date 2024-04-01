@@ -80,7 +80,10 @@ print(leaderboard)
 
 # Keep columns model, score_test and output to LaTeX
 # Rename to 'Model' and 'Test Accuracy'
-leaderboard[['model', 'score_test']].rename(columns={'model': 'Model', 'score_test': 'Test Accuracy'}).to_latex('../../../Output/Modelling/Autogluon/' + model_name + '_leaderboard.tex', index=False)
+lt_lb = leaderboard[['model', 'score_test']].rename(columns={'model': 'Model', 'score_test': 'Test Accuracy'})
+# Replace WeightedEnsemble_L2 with WeightedEnsembleL2
+lt_lb['Model'] = lt_lb['Model'].str.replace('WeightedEnsemble_L2', 'WeightedEnsembleL2')
+lt_lb.to_latex('../../../Output/Modelling/Autogluon/' + model_name + '_leaderboard.tex', index=False)
 
 ##################################################################################################
 
