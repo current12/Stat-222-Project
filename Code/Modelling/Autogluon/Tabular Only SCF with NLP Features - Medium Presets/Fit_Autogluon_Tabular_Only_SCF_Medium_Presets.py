@@ -43,14 +43,11 @@ train_df = df[df['train_test_80_20'] == 'train'].reset_index(drop=True)
 train_data = TabularDataset(train_df)
 
 # Create model save directory if it doesn't exist
-os.makedirs(os.path.expanduser('~/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF'), exist_ok=True)
+os.makedirs('../AutogluonModels/Autogluon_Tabular_Only_SCF_Medium_Presets', exist_ok=True)
 
 # Fit models
-# Use the best quality preset
-# Set very high time limit
-time_limit = 3600
 # Set seed to try to encourage stability
 import numpy as np
 np.random.seed(222)
 # Run predictor
-predictor = TabularPredictor(label='Rating', path=os.path.expanduser('~/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF')).fit(train_data=train_data, presets='best_quality', time_limit=time_limit)
+predictor = TabularPredictor(label='Rating', path='../AutogluonModels/Autogluon_Tabular_Only_SCF_Medium_Presets').fit(train_data=train_data, presets='medium_quality')
