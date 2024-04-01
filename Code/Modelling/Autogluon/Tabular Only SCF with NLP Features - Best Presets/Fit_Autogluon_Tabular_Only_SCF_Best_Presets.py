@@ -11,10 +11,10 @@ import os
 ##################################################################################################
 
 # Load data
-# list of files in '../../../Data/All_Data/All_Data_with_NLP_Features' directory
-file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
+# list of files in '../../../../Data/All_Data/All_Data_with_NLP_Features' directory
+file_list = [f for f in os.listdir(r'../../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
 # read in all parquet files
-df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
+df = pd.concat([pd.read_parquet(r'../../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
 print('dataframe')
 print(df)
 
