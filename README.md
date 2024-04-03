@@ -8,8 +8,6 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 `<img src="Output\Mind Maps.jpg" style="max-width: 100%; height: auto; display: block;" />`
 
-### Cleaning Steps
-
 ### Project Updates
 
 Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_3i5U472d_8RIgSb-o/edit#slide=id.p).
