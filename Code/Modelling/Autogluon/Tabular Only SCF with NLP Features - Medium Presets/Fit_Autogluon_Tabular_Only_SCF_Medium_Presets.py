@@ -24,6 +24,11 @@ print('column names')
 for col in df.columns:
     print(col)
 
+# Get train df
+train_df = df[df['train_test_80_20'] == 'train'].reset_index(drop=True)
+
+##################################################################################################
+
 # Load features - the same as the most complex logistic regression model, to ensure comparability
 # Load the JSON file
 with open('../../Logistic Regression/feature_columns.json') as file:
@@ -37,14 +42,11 @@ print('logistic_regression_columns')
 print(logistic_regression_columns)
 
 # Limit to items in logistic regression columns
-df = df[logistic_regression_columns]
+train_df = train_df[logistic_regression_columns]
 # Print out column names
 print('column names')
-for col in df.columns:
+for col in train_df.columns:
     print(col)
-
-# Get train df
-train_df = df[df['train_test_80_20'] == 'train'].reset_index(drop=True)
 
 ##################################################################################################
 

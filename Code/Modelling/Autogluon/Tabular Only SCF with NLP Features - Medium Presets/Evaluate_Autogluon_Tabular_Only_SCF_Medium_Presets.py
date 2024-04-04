@@ -7,6 +7,7 @@
 import pandas as pd
 from autogluon.tabular import TabularDataset, TabularPredictor
 import os
+import json
 
 ##################################################################################################
 
@@ -24,17 +25,29 @@ print('column names')
 for col in df.columns:
     print(col)
 
-# Removing columns: 'transcript', 'Investment_Grade', 'Change Direction Since Last Fixed Quarter Date', 'Change Since Last Fixed Quarter Date', 'Next Rating', 'Next Rating Date', 'next_rating_date_or_end_of_data'
-df = df.drop(columns=['transcript', 
-                      'Investment_Grade', 
-                      'Change Direction Since Last Fixed Quarter Date', 
-                      'Change Since Last Fixed Quarter Date', 
-                      'Next Rating', 
-                      'Next Rating Date', 
-                      'next_rating_date_or_end_of_data'])
-
 # Get test df
 test_df = df[df['train_test_80_20'] == 'test'].reset_index(drop=True)
+
+##################################################################################################
+
+# Load features - the same as the most complex logistic regression model, to ensure comparability
+# Load the JSON file
+with open('../../Logistic Regression/feature_columns.json') as file:
+    column_data = json.load(file)
+cat_feature_columns = column_data['cat_feature_columns']
+nlp_feature_columns = column_data['nlp_feature_columns']
+tabular_feature_columns = column_data['tabular_feature_columns']
+target_column = column_data['target_column']
+logistic_regression_columns = cat_feature_columns + nlp_feature_columns + tabular_feature_columns + [target_column]
+print('logistic_regression_columns')
+print(logistic_regression_columns)
+
+# Limit to items in logistic regression columns
+limited_test_df = test_df[logistic_regression_columns]
+# Print out column names
+print('column names')
+for col in limited_test_df.columns:
+    print(col)
 
 ##################################################################################################
 
@@ -47,7 +60,7 @@ print(predictor)
 # Make Predictions
 
 # Convert from pandas to autogluon
-test_data = TabularDataset(test_df)
+test_data = TabularDataset(limited_test_df)
 
 # Apply test
 predictions = predictor.predict(test_data)
