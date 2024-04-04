@@ -75,6 +75,61 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     # Return the matrices
     return X_train_scaled, X_test_scaled, y_train, y_test
 
+def train_model_with_grid_search(X_train_scaled, y_train, model_name):
+    """
+    Train a logistic regression model with grid search.
+
+    Parameters:
+    - X_train_scaled: scaled feature matrix of the training set.
+    - y_train: target vector of the training set.
+    - model_name: name of the model to be saved - informs folder and file paths
+
+    Returns:
+    The fitted model.
+    """
+
+    # Create necessary directories if they do not exist
+    if not os.path.exists('../../../Output/Modelling/Logistic Regression/' + model_name):
+        os.makedirs('../../../Output/Modelling/Logistic Regression/' + model_name)
+   
+    # Create a preprocessing and modeling pipeline
+    model = LogisticRegression(max_iter=1000) # could be 5000 max iterations but likely limited value from this many
+
+    # Standard hyperparameter settings
+    hyperparameter_settings = [
+        # Non-penalized
+        {'solver': ['lbfgs'], 
+        'penalty': [None], 
+        'C': [1],  # C is irrelevant here but required as a placeholder
+        'class_weight': [None, 'balanced'], 
+        'multi_class': ['ovr']},
+        # ElasticNet penalty
+        {'solver': ['saga'], 
+        'penalty': ['elasticnet'], 
+        'C': [0.001, 0.01, 0.1, 1, 10], 
+        'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
+        'class_weight': [None, 'balanced'], 
+        'multi_class': ['ovr']}
+    ]
+
+    # Instantiate the grid search model
+    grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1, refit=True) # refit is on by default, but marking True here for clarity. the model is refit on the whole training dataset after the best hyperparameters are found
+    # Fit the grid search to the data
+    grid_search.fit(X_train_scaled, y_train)
+
+    # Print the best parameters and the accuracy of the grid search
+    print("Tuned hyperparameters:", grid_search.best_params_)
+    print("Best mean CV accuracy:", grid_search.best_score_)
+    # Coefficients
+    print("Coefficients:", grid_search.best_estimator_.coef_)
+    # Save these results
+    joblib.dump(grid_search.best_estimator_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
+    joblib.dump(grid_search.best_params_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
+    joblib.dump(grid_search.best_score_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_score.pkl')
+
+    # Return fitted model
+    return grid_search.best_estimator_
+
 def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     """
     Evaluate a logistic regression model.
@@ -86,6 +141,11 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     - custom_mapping: dictionary to encode the target variable.
     - model_name: name of the model to be saved - informs folder and file paths
     """
+
+    # Create necessary directories if they do not exist
+    if not os.path.exists('../../../Output/Modelling/Logistic Regression/' + model_name):
+        os.makedirs('../../../Output/Modelling/Logistic Regression/' + model_name)
+
     # Model prediction and evaluation
     y_pred = model.predict(X_test_scaled)
     accuracy = accuracy_score(y_test, y_pred)
@@ -137,54 +197,3 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     # Save
     plt.savefig('../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_confusion_matrix.png')
     plt.show()
-
-def train_model_with_grid_search(X_train_scaled, y_train, model_name):
-    """
-    Train a logistic regression model with grid search.
-
-    Parameters:
-    - X_train_scaled: scaled feature matrix of the training set.
-    - y_train: target vector of the training set.
-    - model_name: name of the model to be saved - informs folder and file paths
-
-    Returns:
-    The fitted model.
-    """
-   
-    # Create a preprocessing and modeling pipeline
-    model = LogisticRegression(max_iter=1000) # could be 5000 max iterations but likely limited value from this many
-
-    # Standard hyperparameter settings
-    hyperparameter_settings = [
-        # Non-penalized
-        {'solver': ['lbfgs'], 
-        'penalty': [None], 
-        'C': [1],  # C is irrelevant here but required as a placeholder
-        'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr']},
-        # ElasticNet penalty
-        {'solver': ['saga'], 
-        'penalty': ['elasticnet'], 
-        'C': [0.001, 0.01, 0.1, 1, 10], 
-        'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
-        'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr']}
-    ]
-
-    # Instantiate the grid search model
-    grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1, refit=True) # refit is on by default, but marking True here for clarity. the model is refit on the whole training dataset after the best hyperparameters are found
-    # Fit the grid search to the data
-    grid_search.fit(X_train_scaled, y_train)
-
-    # Print the best parameters and the accuracy of the grid search
-    print("Tuned hyperparameters:", grid_search.best_params_)
-    print("Best mean CV accuracy:", grid_search.best_score_)
-    # Coefficients
-    print("Coefficients:", grid_search.best_estimator_.coef_)
-    # Save these results
-    joblib.dump(grid_search.best_estimator_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
-    joblib.dump(grid_search.best_params_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
-    joblib.dump(grid_search.best_score_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_score.pkl')
-
-    # Return fitted model
-    return grid_search.best_estimator_
