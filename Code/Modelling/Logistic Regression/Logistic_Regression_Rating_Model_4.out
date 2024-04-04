@@ -4,3 +4,1472 @@ Starting Job
 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
 0.00s - to python to disable frozen modules.
 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[NbConvertApp] Writing 280001 bytes to Logistic_Regression_Rating_Model_4.ipynb
+Completed Job
+Time elapsed: 26 minute(s).
