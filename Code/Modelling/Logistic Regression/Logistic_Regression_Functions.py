@@ -72,6 +72,12 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     X_train_scaled = preprocessor.fit_transform(X_train)
     X_test_scaled = preprocessor.transform(X_test)
 
+    print('one-hot-encoding order')
+    # print('transformer')
+    # print(preprocessor.transformers_)
+    print('preprocessor')
+    print(preprocessor.get_feature_names_out())
+
     # Return the matrices
     return X_train_scaled, X_test_scaled, y_train, y_test
 
