@@ -104,18 +104,18 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     # Standard hyperparameter settings
     hyperparameter_settings = [
         # Non-penalized
-        {'solver': ['lbfgs'], 
+        {'solver': ['saga'], 
         'penalty': [None], 
         'C': [1],  # C is irrelevant here but required as a placeholder
         'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr']},
+        'multi_class': ['ovr', 'multinomial']},
         # ElasticNet penalty
         {'solver': ['saga'], 
         'penalty': ['elasticnet'], 
         'C': [0.001, 0.01, 0.1, 1, 10], 
         'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
         'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr']}
+        'multi_class': ['ovr', 'multinomial']}
     ]
 
     # Instantiate the grid search model
