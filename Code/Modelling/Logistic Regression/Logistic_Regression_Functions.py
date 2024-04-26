@@ -26,10 +26,10 @@ def load_data():
     A DataFrame containing the data.
     """
     # Read the Parquet file into a DataFrame
-    # list of files in '../../../Data/All_Data/All_Data_with_NLP_Features'
-    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
+    # list of files in '../../../../Data/All_Data/All_Data_with_NLP_Features'
+    file_list = [f for f in os.listdir(r'../../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
     # read in all parquet files
-    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
+    df = pd.concat([pd.read_parquet(r'../../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
     return df
 
 def get_column_names_and_mapping(unsanitized_model_name):
@@ -62,10 +62,10 @@ def get_column_names_and_mapping(unsanitized_model_name):
     cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
     # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
     if 'include_previous_rating' in unsanitized_model_name:
-        cat_feature_columns.append(variable_index[variable_index['Model Name'] == 'X (Previous Rating Models)']['column_name'].values[0])
+        cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
     # Target column
-    # Values of "column_name" where column called model_name is Y
-    target_column = variable_index[variable_index[clean_model_name] == 'Y']['Variable Name'].values[0]
+    # Values of column_name where column called model_name is Y
+    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
 
     # Mapping for target column
     if 'rating' in unsanitized_model_name:
@@ -130,8 +130,8 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     """
 
     # Create necessary directories if they do not exist
-    if not os.path.exists('../../../Output/Modelling/Logistic Regression/' + model_name):
-        os.makedirs('../../../Output/Modelling/Logistic Regression/' + model_name)
+    if not os.path.exists('../../../../Output/Modelling/Logistic Regression/' + model_name):
+        os.makedirs('../../../../Output/Modelling/Logistic Regression/' + model_name)
    
     # Create a preprocessing and modeling pipeline
     model = LogisticRegression(max_iter=1000) # could be 5000 max iterations but likely limited value from this many
@@ -164,9 +164,9 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     # Coefficients
     print("Coefficients:", grid_search.best_estimator_.coef_)
     # Save these results
-    joblib.dump(grid_search.best_estimator_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
-    joblib.dump(grid_search.best_params_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
-    joblib.dump(grid_search.best_score_, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_score.pkl')
+    joblib.dump(grid_search.best_estimator_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
+    joblib.dump(grid_search.best_params_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
+    joblib.dump(grid_search.best_score_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_score.pkl')
 
     # Return fitted model
     return grid_search.best_estimator_
@@ -184,8 +184,8 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     """
 
     # Create necessary directories if they do not exist
-    if not os.path.exists('../../../Output/Modelling/Logistic Regression/' + model_name):
-        os.makedirs('../../../Output/Modelling/Logistic Regression/' + model_name)
+    if not os.path.exists('../../../../Output/Modelling/Logistic Regression/' + model_name):
+        os.makedirs('../../../../Output/Modelling/Logistic Regression/' + model_name)
 
     # Model prediction and evaluation
     y_pred = model.predict(X_test_scaled)
@@ -197,7 +197,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     acc_f1_majority = {'accuracy': accuracy, 'f1_score': f1, 'majority_baseline': majority_class_share_baseline}
     print(acc_f1_majority)
     # Save the dictionary
-    joblib.dump(acc_f1_majority, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_acc_f1_majority.pkl')
+    joblib.dump(acc_f1_majority, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_acc_f1_majority.pkl')
     
     ### Calculate the share of predictions that are 1 or fewer ratings away from the actual ratings
     differences = np.abs(y_pred - y_test)
@@ -208,7 +208,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     print(f"Share of predictions 1 or fewer ratings away from actual: {close_predictions_share:.2%}")
     # Create and save a dictionary of the shares
     close_exact_dict = {'exact_predictions_share': exact_predictions_share, 'close_predictions_share': close_predictions_share}
-    joblib.dump(close_exact_dict, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
+    joblib.dump(close_exact_dict, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
 
     # Set up display labels
     display_labels = []
@@ -220,7 +220,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     # detailed evaluation with classification report
     report = classification_report(y_test, y_pred, target_names=display_labels)
     # Save classification report object
-    joblib.dump(report, '../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
+    joblib.dump(report, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
 
     ### confusion matrix
     conf_matrix = confusion_matrix(y_test, y_pred)
@@ -232,9 +232,9 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     plt.ylabel('True Label')
     plt.tight_layout()
     # Save as _no_title
-    plt.savefig('../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_confusion_matrix_no_title.png')
+    plt.savefig('../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_confusion_matrix_no_title.png')
     plt.title('Confusion Matrix')
     plt.tight_layout()
     # Save
-    plt.savefig('../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_confusion_matrix.png')
+    plt.savefig('../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_confusion_matrix.png')
     plt.show()
