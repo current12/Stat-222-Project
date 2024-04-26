@@ -74,7 +74,7 @@ def get_column_names_and_mapping(unsanitized_model_name):
     # Return the column names
     return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
 
-def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_column, custom_mapping, change=False):
+def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_column, custom_mapping):
     """
     Prepare the feature matrices and target vector.
 
@@ -84,7 +84,6 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     - cat_feature_columns: list of categorical columns to be used as features.
     - target_column: column to be used as target.
     - custom_mapping: dictionary to encode the target variable.
-    - change: whether problem is to predict changes
     """
    
     # Selecting features and target, and encoding target
@@ -96,12 +95,8 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     test_cat_X = test_df[cat_feature_columns]
     X_train = pd.concat([train_numeric_X, train_cat_X], axis=1)
     X_test = pd.concat([test_numeric_X, test_cat_X], axis=1)
-    if change:
-        y_train = train_df[target_column].map({-2: 'downgrade', -1: 'downgrade', 0: 'no change', 1: 'upgrade', 2: 'upgrade'}).map(custom_mapping)
-        y_test = test_df[target_column].map({-2: 'downgrade', -1: 'downgrade', 0: 'no change', 1: 'upgrade', 2: 'upgrade'}).map(custom_mapping)
-    else:
-        y_train =  train_df[target_column].map(custom_mapping)
-        y_test = test_df[target_column].map(custom_mapping)
+    y_train =  train_df[target_column].map(custom_mapping)
+    y_test = test_df[target_column].map(custom_mapping)
 
     # Preprocessing
     numeric_transformer = StandardScaler()
@@ -110,13 +105,11 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
         transformers=[
             ('num', numeric_transformer, numeric_feature_columns),
             ('cat', cat_transformer, cat_feature_columns)
-        ])
+        ]
+    )
     X_train_scaled = preprocessor.fit_transform(X_train)
     X_test_scaled = preprocessor.transform(X_test)
 
-    print('one-hot-encoding order')
-    # print('transformer')
-    # print(preprocessor.transformers_)
     print('preprocessor')
     print(preprocessor.get_feature_names_out())
 
