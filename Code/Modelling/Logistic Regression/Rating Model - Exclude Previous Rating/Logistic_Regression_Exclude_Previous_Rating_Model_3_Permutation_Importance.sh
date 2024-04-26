@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=Logistic_Regression_No_Previous_Rating_Model_2
-#SBATCH --output=Logistic_Regression_No_Previous_Rating_Model_2.out
+#SBATCH --job-name=Logistic_Regression_Exclude_Previous_Rating_Model_3_Permutation_Importance
+#SBATCH --output=Logistic_Regression_Exclude_Previous_Rating_Model_3_Permutation_Importance.out
 #SBATCH --partition=epurdom
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
@@ -12,7 +12,7 @@ SECONDS=0
 echo "Starting Job"
 
 # Execute the notebook
-jupyter nbconvert --to notebook --execute --inplace Logistic_Regression_No_Previous_Rating_Model_2.ipynb
+jupyter nbconvert --to notebook --execute --inplace Logistic_Regression_Exclude_Previous_Rating_Model_3_Permutation_Importance.ipynb
 
 echo "Completed Job"
 
