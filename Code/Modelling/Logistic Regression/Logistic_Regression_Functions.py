@@ -218,7 +218,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
                 display_labels.append(key)
 
     # detailed evaluation with classification report
-    report = classification_report(y_test, y_pred, target_names=display_labels)
+    report = classification_report(y_test, y_pred, target_names=display_labels, digits=4)
     # Save classification report object
     joblib.dump(report, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
 
