@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=Logistic_Regression_Include_Previous_Rating_Model_1
 #SBATCH --output=Logistic_Regression_Include_Previous_Rating_Model_1.out
-#SBATCH --partition=epurdom
+#SBATCH --partition=lowmem
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=1
 
 # Timing
 # Reset the SECONDS variable
