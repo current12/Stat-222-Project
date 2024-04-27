@@ -6,7 +6,7 @@ Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
 ### Data Pipeline
 
-`<img src="./Output/Mind Maps.jpg" />`
+<img src="./Output/Mind Maps.jpg" />
 
 ### Project Updates
 
