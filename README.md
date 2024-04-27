@@ -4,10 +4,6 @@ Textual Analysis of Financial Statements
 
 Zhengxing Cheng, Owen Lin, Isaac Liu, Sean Zhou
 
-### Data Pipeline
-
-<img src="./Output/Mind Maps.jpg" />
-
 ### Project Updates
 
 Slides [here](https://docs.google.com/presentation/d/1JJEnThJ8J-kww_SiqMceNVPTG_3i5U472d_8RIgSb-o/edit#slide=id.p).
