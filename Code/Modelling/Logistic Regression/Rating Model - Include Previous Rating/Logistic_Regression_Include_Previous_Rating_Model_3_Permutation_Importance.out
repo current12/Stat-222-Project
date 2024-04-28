@@ -58,7 +58,7 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 # Perform permutation importance
-result = permutation_importance(model, X_test_scaled, y_test, n_repeats=1000, random_state=222, n_jobs=-1)
+result = permutation_importance(model, X_test_scaled.toarray(), y_test, n_repeats=1000, random_state=222, n_jobs=-1)
 
 # Check lengths
 print('shape X: ', X_test_scaled.shape)
@@ -121,82 +121,64 @@ result.to_parquet('../../../../Output/Modelling/Logistic Regression/' + model_na
 result
 ------------------
 
+----- stdout -----
+shape X:  (1127, 14846)
+num + cat:  133
+importances:  14846
+stds:  14846
+with expanded
+146
+importances mean
+[0.00000000e+00 0.00000000e+00 2.66193434e-06 ... 0.00000000e+00
+ 2.17941437e-02 0.00000000e+00]
+imp std
+[0.00000000e+00 0.00000000e+00 4.85270946e-05 ... 0.00000000e+00
+ 7.40336854e-04 0.00000000e+00]
+------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[6], line 2[0m
-[1;32m      1[0m [38;5;66;03m# Perform permutation importance[39;00m
-[0;32m----> 2[0m result [38;5;241m=[39m [43mpermutation_importance[49m[43m([49m[43mmodel[49m[43m,[49m[43m [49m[43mX_test_scaled[49m[43m,[49m[43m [49m[43my_test[49m[43m,[49m[43m [49m[43mn_repeats[49m[38;5;241;43m=[39;49m[38;5;241;43m1000[39;49m[43m,[49m[43m [49m[43mrandom_state[49m[38;5;241;43m=[39;49m[38;5;241;43m222[39;49m[43m,[49m[43m [49m[43mn_jobs[49m[38;5;241;43m=[39;49m[38;5;241;43m-[39;49m[38;5;241;43m1[39;49m[43m)[49m
-[1;32m      4[0m [38;5;66;03m# Check lengths[39;00m
-[1;32m      5[0m [38;5;28mprint[39m([38;5;124m'[39m[38;5;124mshape X: [39m[38;5;124m'[39m, X_test_scaled[38;5;241m.[39mshape)
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[6], line 57[0m
+[1;32m     54[0m [38;5;28mprint[39m(result[38;5;241m.[39mimportances_std)
+[1;32m     56[0m [38;5;66;03m# Put column name, mean and std in a dataframe[39;00m
+[0;32m---> 57[0m result [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mDataFrame[49m[43m([49m[43m{[49m[38;5;124;43m'[39;49m[38;5;124;43mfeature[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43mnumeric_feature_columns[49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[43mexpanded_cat_cols[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mmean[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43mresult[49m[38;5;241;43m.[39;49m[43mimportances_mean[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mstd[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43mresult[49m[38;5;241;43m.[39;49m[43mimportances_std[49m[43m}[49m[43m)[49m
+[1;32m     59[0m [38;5;66;03m# Output to disk[39;00m
+[1;32m     60[0m result[38;5;241m.[39mto_parquet([38;5;124m'[39m[38;5;124m../../../../Output/Modelling/Logistic Regression/[39m[38;5;124m'[39m [38;5;241m+[39m model_name [38;5;241m+[39m [38;5;124m'[39m[38;5;124m/[39m[38;5;124m'[39m [38;5;241m+[39m model_name [38;5;241m+[39m [38;5;124m'[39m[38;5;124m_permutation_importance.parquet[39m[38;5;124m'[39m, index[38;5;241m=[39m[38;5;28;01mFalse[39;00m)
 
-File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/utils/_param_validation.py:213[0m, in [0;36mvalidate_params.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
-[1;32m    207[0m [38;5;28;01mtry[39;00m:
-[1;32m    208[0m     [38;5;28;01mwith[39;00m config_context(
-[1;32m    209[0m         skip_parameter_validation[38;5;241m=[39m(
-[1;32m    210[0m             prefer_skip_nested_validation [38;5;129;01mor[39;00m global_skip_validation
-[1;32m    211[0m         )
-[1;32m    212[0m     ):
-[0;32m--> 213[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-[1;32m    214[0m [38;5;28;01mexcept[39;00m InvalidParameterError [38;5;28;01mas[39;00m e:
-[1;32m    215[0m     [38;5;66;03m# When the function is just a wrapper around an estimator, we allow[39;00m
-[1;32m    216[0m     [38;5;66;03m# the function to delegate validation to the estimator, but we replace[39;00m
-[1;32m    217[0m     [38;5;66;03m# the name of the estimator by the name of the function in the error[39;00m
-[1;32m    218[0m     [38;5;66;03m# message to avoid confusion.[39;00m
-[1;32m    219[0m     msg [38;5;241m=[39m re[38;5;241m.[39msub(
-[1;32m    220[0m         [38;5;124mr[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;124m\[39m[38;5;124mw+ must be[39m[38;5;124m"[39m,
-[1;32m    221[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__qualname__[39m[38;5;132;01m}[39;00m[38;5;124m must be[39m[38;5;124m"[39m,
-[1;32m    222[0m         [38;5;28mstr[39m(e),
-[1;32m    223[0m     )
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/pandas/core/frame.py:767[0m, in [0;36mDataFrame.__init__[0;34m(self, data, index, columns, dtype, copy)[0m
+[1;32m    761[0m     mgr [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_init_mgr(
+[1;32m    762[0m         data, axes[38;5;241m=[39m{[38;5;124m"[39m[38;5;124mindex[39m[38;5;124m"[39m: index, [38;5;124m"[39m[38;5;124mcolumns[39m[38;5;124m"[39m: columns}, dtype[38;5;241m=[39mdtype, copy[38;5;241m=[39mcopy
+[1;32m    763[0m     )
+[1;32m    765[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(data, [38;5;28mdict[39m):
+[1;32m    766[0m     [38;5;66;03m# GH#38939 de facto copy defaults to False only in non-dict cases[39;00m
+[0;32m--> 767[0m     mgr [38;5;241m=[39m [43mdict_to_mgr[49m[43m([49m[43mdata[49m[43m,[49m[43m [49m[43mindex[49m[43m,[49m[43m [49m[43mcolumns[49m[43m,[49m[43m [49m[43mdtype[49m[38;5;241;43m=[39;49m[43mdtype[49m[43m,[49m[43m [49m[43mcopy[49m[38;5;241;43m=[39;49m[43mcopy[49m[43m,[49m[43m [49m[43mtyp[49m[38;5;241;43m=[39;49m[43mmanager[49m[43m)[49m
+[1;32m    768[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(data, ma[38;5;241m.[39mMaskedArray):
+[1;32m    769[0m     [38;5;28;01mfrom[39;00m [38;5;21;01mnumpy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mma[39;00m [38;5;28;01mimport[39;00m mrecords
 
-File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/inspection/_permutation_importance.py:267[0m, in [0;36mpermutation_importance[0;34m(estimator, X, y, scoring, n_repeats, n_jobs, random_state, sample_weight, max_samples)[0m
-[1;32m    148[0m [38;5;250m[39m[38;5;124;03m"""Permutation importance for feature evaluation [BRE]_.[39;00m
-[1;32m    149[0m 
-[1;32m    150[0m [38;5;124;03mThe :term:`estimator` is required to be a fitted estimator. `X` can be the[39;00m
-[0;32m   (...)[0m
-[1;32m    264[0m [38;5;124;03marray([0.2211..., 0.       , 0.       ])[39;00m
-[1;32m    265[0m [38;5;124;03m"""[39;00m
-[1;32m    266[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mhasattr[39m(X, [38;5;124m"[39m[38;5;124miloc[39m[38;5;124m"[39m):
-[0;32m--> 267[0m     X [38;5;241m=[39m [43mcheck_array[49m[43m([49m[43mX[49m[43m,[49m[43m [49m[43mforce_all_finite[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mallow-nan[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mdtype[49m[38;5;241;43m=[39;49m[38;5;28;43;01mNone[39;49;00m[43m)[49m
-[1;32m    269[0m [38;5;66;03m# Precompute random seed from the random state to be used[39;00m
-[1;32m    270[0m [38;5;66;03m# to get a fresh independent RandomState instance for each[39;00m
-[1;32m    271[0m [38;5;66;03m# parallel call to _calculate_permutation_scores, irrespective of[39;00m
-[1;32m    272[0m [38;5;66;03m# the fact that variables are shared or not depending on the active[39;00m
-[1;32m    273[0m [38;5;66;03m# joblib backend (sequential, thread-based or process-based).[39;00m
-[1;32m    274[0m random_state [38;5;241m=[39m check_random_state(random_state)
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/pandas/core/internals/construction.py:503[0m, in [0;36mdict_to_mgr[0;34m(data, index, columns, dtype, typ, copy)[0m
+[1;32m    499[0m     [38;5;28;01melse[39;00m:
+[1;32m    500[0m         [38;5;66;03m# dtype check to exclude e.g. range objects, scalars[39;00m
+[1;32m    501[0m         arrays [38;5;241m=[39m [x[38;5;241m.[39mcopy() [38;5;28;01mif[39;00m [38;5;28mhasattr[39m(x, [38;5;124m"[39m[38;5;124mdtype[39m[38;5;124m"[39m) [38;5;28;01melse[39;00m x [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m arrays]
+[0;32m--> 503[0m [38;5;28;01mreturn[39;00m [43marrays_to_mgr[49m[43m([49m[43marrays[49m[43m,[49m[43m [49m[43mcolumns[49m[43m,[49m[43m [49m[43mindex[49m[43m,[49m[43m [49m[43mdtype[49m[38;5;241;43m=[39;49m[43mdtype[49m[43m,[49m[43m [49m[43mtyp[49m[38;5;241;43m=[39;49m[43mtyp[49m[43m,[49m[43m [49m[43mconsolidate[49m[38;5;241;43m=[39;49m[43mcopy[49m[43m)[49m
 
-File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/utils/validation.py:963[0m, in [0;36mcheck_array[0;34m(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)[0m
-[1;32m    961[0m [38;5;28;01mif[39;00m sp[38;5;241m.[39missparse(array):
-[1;32m    962[0m     _ensure_no_complex_data(array)
-[0;32m--> 963[0m     array [38;5;241m=[39m [43m_ensure_sparse_format[49m[43m([49m
-[1;32m    964[0m [43m        [49m[43marray[49m[43m,[49m
-[1;32m    965[0m [43m        [49m[43maccept_sparse[49m[38;5;241;43m=[39;49m[43maccept_sparse[49m[43m,[49m
-[1;32m    966[0m [43m        [49m[43mdtype[49m[38;5;241;43m=[39;49m[43mdtype[49m[43m,[49m
-[1;32m    967[0m [43m        [49m[43mcopy[49m[38;5;241;43m=[39;49m[43mcopy[49m[43m,[49m
-[1;32m    968[0m [43m        [49m[43mforce_all_finite[49m[38;5;241;43m=[39;49m[43mforce_all_finite[49m[43m,[49m
-[1;32m    969[0m [43m        [49m[43maccept_large_sparse[49m[38;5;241;43m=[39;49m[43maccept_large_sparse[49m[43m,[49m
-[1;32m    970[0m [43m        [49m[43mestimator_name[49m[38;5;241;43m=[39;49m[43mestimator_name[49m[43m,[49m
-[1;32m    971[0m [43m        [49m[43minput_name[49m[38;5;241;43m=[39;49m[43minput_name[49m[43m,[49m
-[1;32m    972[0m [43m    [49m[43m)[49m
-[1;32m    973[0m [38;5;28;01melse[39;00m:
-[1;32m    974[0m     [38;5;66;03m# If np.array(..) gives ComplexWarning, then we convert the warning[39;00m
-[1;32m    975[0m     [38;5;66;03m# to an error. This is needed because specifying a non complex[39;00m
-[1;32m    976[0m     [38;5;66;03m# dtype to the function converts complex to real dtype,[39;00m
-[1;32m    977[0m     [38;5;66;03m# thereby passing the test made in the lines following the scope[39;00m
-[1;32m    978[0m     [38;5;66;03m# of warnings context manager.[39;00m
-[1;32m    979[0m     [38;5;28;01mwith[39;00m warnings[38;5;241m.[39mcatch_warnings():
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/pandas/core/internals/construction.py:114[0m, in [0;36marrays_to_mgr[0;34m(arrays, columns, index, dtype, verify_integrity, typ, consolidate)[0m
+[1;32m    111[0m [38;5;28;01mif[39;00m verify_integrity:
+[1;32m    112[0m     [38;5;66;03m# figure out the index, if necessary[39;00m
+[1;32m    113[0m     [38;5;28;01mif[39;00m index [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m--> 114[0m         index [38;5;241m=[39m [43m_extract_index[49m[43m([49m[43marrays[49m[43m)[49m
+[1;32m    115[0m     [38;5;28;01melse[39;00m:
+[1;32m    116[0m         index [38;5;241m=[39m ensure_index(index)
 
-File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/utils/validation.py:595[0m, in [0;36m_ensure_sparse_format[0;34m(sparse_container, accept_sparse, dtype, copy, force_all_finite, accept_large_sparse, estimator_name, input_name)[0m
-[1;32m    593[0m [38;5;28;01mif[39;00m accept_sparse [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m:
-[1;32m    594[0m     padded_input [38;5;241m=[39m [38;5;124m"[39m[38;5;124m for [39m[38;5;124m"[39m [38;5;241m+[39m input_name [38;5;28;01mif[39;00m input_name [38;5;28;01melse[39;00m [38;5;124m"[39m[38;5;124m"[39m
-[0;32m--> 595[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m(
-[1;32m    596[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mSparse data was passed[39m[38;5;132;01m{[39;00mpadded_input[38;5;132;01m}[39;00m[38;5;124m, but dense data is required. [39m[38;5;124m"[39m
-[1;32m    597[0m         [38;5;124m"[39m[38;5;124mUse [39m[38;5;124m'[39m[38;5;124m.toarray()[39m[38;5;124m'[39m[38;5;124m to convert to a dense numpy array.[39m[38;5;124m"[39m
-[1;32m    598[0m     )
-[1;32m    599[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(accept_sparse, ([38;5;28mlist[39m, [38;5;28mtuple[39m)):
-[1;32m    600[0m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(accept_sparse) [38;5;241m==[39m [38;5;241m0[39m:
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/pandas/core/internals/construction.py:677[0m, in [0;36m_extract_index[0;34m(data)[0m
+[1;32m    675[0m lengths [38;5;241m=[39m [38;5;28mlist[39m([38;5;28mset[39m(raw_lengths))
+[1;32m    676[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(lengths) [38;5;241m>[39m [38;5;241m1[39m:
+[0;32m--> 677[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m"[39m[38;5;124mAll arrays must be of the same length[39m[38;5;124m"[39m)
+[1;32m    679[0m [38;5;28;01mif[39;00m have_dicts:
+[1;32m    680[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    681[0m         [38;5;124m"[39m[38;5;124mMixing dicts with non-Series may lead to ambiguous ordering.[39m[38;5;124m"[39m
+[1;32m    682[0m     )
 
-[0;31mTypeError[0m: Sparse data was passed, but dense data is required. Use '.toarray()' to convert to a dense numpy array.
+[0;31mValueError[0m: All arrays must be of the same length
 
 Completed Job
-Time elapsed: 0 minute(s).
+Time elapsed: 1274 minute(s).
