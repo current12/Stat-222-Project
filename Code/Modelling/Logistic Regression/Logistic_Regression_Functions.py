@@ -89,9 +89,9 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     # Selecting features and target, and encoding target
     train_df = df[df['train_test_80_20'] == 'train']
     test_df = df[df['train_test_80_20'] == 'test']
-    train_numeric_X = train_df[numeric_feature_columns].select_dtypes(include=['int64', 'float64'])
+    train_numeric_X = train_df[numeric_feature_columns]
     train_cat_X = train_df[cat_feature_columns]
-    test_numeric_X = test_df[numeric_feature_columns].select_dtypes(include=['int64', 'float64'])
+    test_numeric_X = test_df[numeric_feature_columns]
     test_cat_X = test_df[cat_feature_columns]
     X_train = pd.concat([train_numeric_X, train_cat_X], axis=1)
     X_test = pd.concat([test_numeric_X, test_cat_X], axis=1)
