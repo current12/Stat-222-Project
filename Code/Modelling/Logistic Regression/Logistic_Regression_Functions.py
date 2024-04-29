@@ -110,11 +110,12 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     X_train_scaled = preprocessor.fit_transform(X_train)
     X_test_scaled = preprocessor.transform(X_test)
 
-    print('preprocessor')
+    print('feature names: ')
     print(preprocessor.get_feature_names_out())
+    feature_names = preprocessor.get_feature_names_out()
 
     # Return the matrices
-    return X_train_scaled, X_test_scaled, y_train, y_test
+    return X_train_scaled, X_test_scaled, y_train, y_test, feature_names
 
 def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     """
