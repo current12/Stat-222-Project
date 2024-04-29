@@ -16,6 +16,8 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, accuracy_score, classification_report
 from dgl.nn.pytorch import conv as dgl_conv
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
 
 # GraphSAGE model
 class GraphSAGEModel(nn.Module):
@@ -60,6 +62,143 @@ class NodeClassification(nn.Module):
     def forward(self, graph, features, labels, train_mask):
         logits = self.gconv_model(graph, features) # logits from the graph convolutional model
         return self.loss_fcn(logits[train_mask], labels[train_mask]) # return loss
+
+def load_feature_and_class_data():
+    """
+    Load the feature and class data from the Parquet file.
+
+    Returns:
+    A DataFrame containing the data.
+    """
+    # Read the Parquet file into a DataFrame
+    # list of files in '../../../../Data/All_Data/All_Data_with_NLP_Features'
+    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
+    # read in all parquet files
+    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
+    return df
+
+def load_src_dst_data():
+    '''
+    Load the source and destination data from the company mentions file.
+
+    Returns:
+    A DataFrame containing unique source and destionation pairs/edges.
+    '''
+
+    # Company mentions file
+    company_mentions_with_ticker = pd.read_excel('../../../Data/Company_Mentions/Company_Mentions_With_Ticker.xlsx')
+
+    # Get tickers and counts
+    pairwise_df = (company_mentions_with_ticker[['ticker', 'matched_ticker', 'fixed_quarter_date']]
+                                               .rename(columns={'ticker': 'ticker1', 'matched_ticker': 'ticker2'})
+                                               .value_counts()
+                                               .reset_index()
+                                               .rename(columns={0: 'count'}))
+
+    # Order doesn't matter!
+    # Iterate over rows, create sorted list of tickers
+    pairwise_df['sorted_tickers'] = pairwise_df[['ticker1', 'ticker2']].apply(lambda x: sorted(x), axis=1)
+    # Sort the rows by the sorted_tickers column
+    pairwise_df = pairwise_df.sort_values('sorted_tickers')
+    # Split sorted tickers into two columns again
+    pairwise_df[['ticker1', 'ticker2']] = pd.DataFrame(pairwise_df['sorted_tickers'].tolist(), index=pairwise_df.index)
+    # Collapse to sums of count by ticker1 and ticker2
+    pairwise_df = pairwise_df.groupby(['ticker1', 'ticker2', 'fixed_quarter_date']).agg({'count': 'sum'}).reset_index()
+
+    # Node identifiers
+    # Create column ticker1_fixed_quarter_date and ticker2_fixed_quarter_date that concatenate ticker1 and fixed_quarter_date and ticker2 and fixed_quarter_date
+    pairwise_df['ticker1_fixed_quarter_date'] = pairwise_df['ticker1'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
+    pairwise_df['ticker2_fixed_quarter_date'] = pairwise_df['ticker2'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
+    # Keep just these columns
+    pairwise_df = pairwise_df[['ticker1_fixed_quarter_date', 'ticker2_fixed_quarter_date']]
+
+    # Return the DataFrame
+    return pairwise_df
+
+def get_column_names_and_mapping(unsanitized_model_name):
+    '''
+    Uses the variable index Excel file to get column names for the model.
+
+    Parameters:
+    - unsanitized_model_name: name of the model, in unsanitized format
+
+    Returns:
+    - numeric_feature_columns: list of numeric columns to be used as features.
+    - cat_feature_columns: list of categorical columns to be used as features.
+    - target_column: column to be used as target.
+    - custom_mapping: dictionary to encode the target variable.
+    '''
+    # Load variable index excel file
+    variable_index = pd.read_excel('../../../Variable Index.xlsx')
+
+    # Model name column
+    # For rating models:
+    if 'rating_model' in unsanitized_model_name:
+        # Clean model name is 'Rating Model' plus the number (last character)
+        clean_model_name = 'Rating Model ' + unsanitized_model_name[-1]
+
+    # Numeric features
+    # Values of column_name where clean_model_name is X, and Data Type is Numeric
+    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
+    # Categorical features
+    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
+    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
+    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
+    if 'include_previous_rating' in unsanitized_model_name:
+        cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
+    # Target column
+    # Values of column_name where column called model_name is Y
+    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
+
+    # Mapping for target column
+    if 'rating' in unsanitized_model_name:
+        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC": 7, "C": 8, "D": 9}
+
+    # Return the column names
+    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
+
+def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_column, custom_mapping):
+    """
+    Prepare the feature matrices and target vector.
+
+    Parameters:
+    - df: DataFrame containing the dataset.
+    - numeric_feature_columns: list of numeric columns to be used as features.
+    - cat_feature_columns: list of categorical columns to be used as features.
+    - target_column: column to be used as target.
+    - custom_mapping: dictionary to encode the target variable.
+    """
+   
+    # Selecting features and target, and encoding target
+    train_df = df[df['train_test_80_20'] == 'train']
+    test_df = df[df['train_test_80_20'] == 'test']
+    train_numeric_X = train_df[numeric_feature_columns]
+    train_cat_X = train_df[cat_feature_columns]
+    test_numeric_X = test_df[numeric_feature_columns]
+    test_cat_X = test_df[cat_feature_columns]
+    X_train = pd.concat([train_numeric_X, train_cat_X], axis=1)
+    X_test = pd.concat([test_numeric_X, test_cat_X], axis=1)
+    y_train =  train_df[target_column].map(custom_mapping)
+    y_test = test_df[target_column].map(custom_mapping)
+
+    # Preprocessing
+    numeric_transformer = StandardScaler()
+    cat_transformer = OneHotEncoder(handle_unknown='ignore')
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', numeric_transformer, numeric_feature_columns),
+            ('cat', cat_transformer, cat_feature_columns)
+        ]
+    )
+    X_train_scaled = preprocessor.fit_transform(X_train)
+    X_test_scaled = preprocessor.transform(X_test)
+
+    print('feature names: ')
+    print(preprocessor.get_feature_names_out())
+    feature_names = preprocessor.get_feature_names_out()
+
+    # Return the matrices
+    return X_train_scaled, X_test_scaled, y_train, y_test, feature_names
 
 # Save model and graph in appropriate directories
 def save_model(g, model, model_dir):
@@ -267,6 +406,13 @@ def run_inductive_model(train_and_val_df,
     - lr: Learning rate
     - aggregator_type: Aggregator type
     '''
+
+    # Create model_dir if it doesn't exist
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+    # Create prediction_file_path directory if it doesn't exist
+    if not os.path.exists(os.path.dirname(prediction_file_path)):
+        os.makedirs(os.path.dirname(prediction_file_path))
 
     # Split train and validation data
     print("Further slice the train dataset into train and validation datasets.")
