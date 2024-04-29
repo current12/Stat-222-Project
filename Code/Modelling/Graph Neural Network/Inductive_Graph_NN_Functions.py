@@ -205,7 +205,7 @@ def save_model(g, model, model_dir):
 
 def get_predictions(logits, mask, labels):
     '''
-    Given logits, prediction mask, and true labels, return true labels, predicted labels, and predicted probabilities for masked items
+    Given logits, prediction mask, and true labels, return true labels after applying the mask, and predicted labels for masked items
 
     Parameters:
     - logits: Logits from the model
@@ -215,7 +215,6 @@ def get_predictions(logits, mask, labels):
     Returns:
     - y_true: True labels
     - y_pred: Predicted labels
-    - y_pred_prob: Predicted probabilities
     '''
     # Get logits for masked items
     y_pred_prob = logits[mask]
@@ -227,12 +226,8 @@ def get_predictions(logits, mask, labels):
     # Convert true and predicted labels to numpy arrays    
     y_true = ground_truth_labels.numpy()
     y_pred = predict_labels.numpy() 
-    # Compute probabiliites with softmax
-    #print(y_pred_prob.shape)
-    y_pred_prob = y_pred_prob.numpy().reshape(-1, y_pred_prob.shape[1])
-    y_pred_prob = scipy.special.softmax(y_pred_prob, axis=1)
-    # Return true labels, predicted labels, and predicted probabilities
-    return y_true, y_pred, y_pred_prob
+    # Return true labels, predicted labels
+    return y_true, y_pred
     
 def evaluate_on_train_and_val(model, graph, features, labels, train_mask, valid_mask):
     '''
@@ -259,40 +254,12 @@ def evaluate_on_train_and_val(model, graph, features, labels, train_mask, valid_
         logits = model.gconv_model(graph, features)
         
         # Training and validation dataset prediction
-        train_y_true, train_y_pred, _ = get_predictions(logits, train_mask, labels)
-        validation_y_true, validation_y_pred, _ = get_predictions(logits, valid_mask, labels)
+        train_y_true, train_y_pred = get_predictions(logits, train_mask, labels)
+        validation_y_true, validation_y_pred = get_predictions(logits, valid_mask, labels)
             
         # Return accuracy on training and validation datasets
         return accuracy_score(train_y_true, train_y_pred), f1_score(train_y_true, train_y_pred, average='weighted'), accuracy_score(validation_y_true, validation_y_pred), f1_score(validation_y_true, validation_y_pred, average='weighted')
     
-def evaluate_on_test(model, graph, features, labels, test_mask):
-    '''
-    Evaluate the model on the test dataset.
-
-    Parameters:
-    - model: Graph neural network model
-    - graph: Graph object mapping source and destination nodes
-    - features: Features for each node
-    - labels: Labels for each node
-    - test_mask: Mask for test data
-
-    Returns:
-    - classification report: Classification report
-    - test_y_true: True labels for test data
-    - test_y_pred: Predicted labels for test data
-    - test_y_prob: Predicted probabilities for test data
-    '''
-    # Set to evaluation
-    model.eval()
-    with torch.no_grad():
-        # Compute logits
-        logits = model.gconv_model(graph, features)
-        
-        # Test dataset prediction
-        test_y_true, test_y_pred, test_y_prob = get_predictions(logits, test_mask, labels)
-        # Return classification report, true labels, predicted labels, and predicted probabilities
-        return classification_report(test_y_true, test_y_pred, zero_division=1, output_dict=True), test_y_true, test_y_pred, test_y_prob
-
 def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs):
     '''
     Train the graph neural network and get predictions for the test dataset.
@@ -310,23 +277,21 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
 
     Returns:
     - model: Trained model
-    - acc_dict: Dictionary containing accuracy metrics
     - y_true: True labels for test data
-    - y_pred_prob: Predicted probabilities for test data
     - y_pred: Predicted labels for test data
     '''
     
-    # Get graph
+    # Get full graph
     full_graph, full_features, full_labels = graph, features, labels
 
     # Inductive model
     # Limit graph to nodes in training or validation dataset
-    graph = graph.subgraph(torch.nonzero(torch.logical_or(train_mask, val_mask)).flatten())
+    inductive_subgraph = graph.subgraph(torch.nonzero(torch.logical_or(train_mask, val_mask)).flatten())
     # Update features, labels, and masks for this subgraph
-    features = features[graph.ndata[dgl.NID]]
-    labels = labels[graph.ndata[dgl.NID]]
-    train_mask = train_mask[graph.ndata[dgl.NID]]
-    val_mask = val_mask[graph.ndata[dgl.NID]]
+    inductive_features = features[inductive_subgraph.ndata[dgl.NID]]
+    inductive_labels = labels[inductive_subgraph.ndata[dgl.NID]]
+    train_mask = train_mask[inductive_subgraph.ndata[dgl.NID]]
+    val_mask = val_mask[inductive_subgraph.ndata[dgl.NID]]
     
     # Keep track of time for each epoch
     duration = []
@@ -340,14 +305,14 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
         model.train()
 
         # Forward pass and loss computation - no gradient computation
-        loss = model(graph, features, labels, train_mask)
+        loss = model(inductive_subgraph, inductive_features, inductive_labels, train_mask)
         optimizer.zero_grad()
         # Backward pass - backpropagation, use optimizer to update values
         loss.backward()
         optimizer.step()
         
         # Evaluate model on training and validation datasets
-        train_acc, train_f1, valid_acc, valid_f1 = evaluate_on_train_and_val(model, graph, features, labels, train_mask, val_mask)
+        train_acc, train_f1, valid_acc, valid_f1 = evaluate_on_train_and_val(model, inductive_subgraph, inductive_features, inductive_labels, train_mask, val_mask)
         
         # Record time taken for epoch
         duration.append(time.time() - tic)
@@ -358,11 +323,23 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
                 epoch, np.mean(duration), train_acc, loss.item(), train_f1, valid_acc, valid_f1)
         )
 
-    # Evaluate model on test dataset
-    acc_dict, y_true, y_pred_prob, y_pred = evaluate_on_test(model, full_graph, full_features, full_labels, test_mask)
+    # Get predictions on test dataset
+    # Set to evaluation mode
+    model.eval()
+    with torch.no_grad():
+        # Compute logits
+        logits = model.gconv_model(full_graph, full_features)
+        print('shape of logits')
+        print(logits.shape)
+        print('shape of test_mask')
+        print(test_mask.shape)
+        print('sum of test_mask')
+        print(torch.sum(test_mask))
+        # Test dataset prediction
+        y_true, y_pred = get_predictions(logits, test_mask, full_labels)
 
-    # Return model, accuracy dictionary, true labels, predicted probabilities, and predicted labels
-    return model, acc_dict, y_true, y_pred_prob, y_pred
+    # Return model, true labels, and predicted labels
+    return model, y_true, y_pred
 
 def run_inductive_model(train_and_val_df,
                           test_df,
@@ -370,6 +347,8 @@ def run_inductive_model(train_and_val_df,
                           model_dir,
                           prediction_file_path,
                           target_column,
+                          custom_mapping,
+                          node_to_int,
                           n_hidden = 64,
                           n_layers = 2,
                           dropout = 0.0,
@@ -387,6 +366,8 @@ def run_inductive_model(train_and_val_df,
     - model_dir: Directory to save model and graph
     - prediction_file_path: File path to save model predictions
     - target_column: Target column
+    - custom_mapping: Dictionary to encode the target variable - will be used to decode
+    - node_to_int: Dictionary to encode the node variable - will be used to decode
     - n_hidden: Number of hidden units
     - n_layers: Number of layers
     - dropout: Dropout rate
@@ -410,6 +391,11 @@ def run_inductive_model(train_and_val_df,
     print(f"The training data has shape: {train_df.shape}.")
     print(f"The validation data has shape: {validation_df.shape}.")
     print(f"The test data has shape: {test_df.shape}.")
+
+    # Add split type column
+    train_df['split_type'] = 'train'
+    validation_df['split_type'] = 'validation'
+    test_df['split_type'] = 'test'
     
     # Put all data together - will mask later
     train_val_test_df = pd.concat([train_df, validation_df, test_df], axis=0)
@@ -417,9 +403,22 @@ def run_inductive_model(train_and_val_df,
     
     # Masks indicating indices of train, validation, and test data
     print("Generate train, validation, and test masks.")
-    train_mask = torch.tensor([True if ix in set(train_df.index) else False for ix in train_val_test_df.index])
-    val_mask = torch.tensor([True if ix in set(validation_df.index) else False for ix in train_val_test_df.index])
-    test_mask = torch.tensor([True if ix in set(test_df.index) else False for ix in train_val_test_df.index])
+    train_mask = torch.tensor([True if value == 'train' else False for value in train_val_test_df['split_type']])
+    val_mask = torch.tensor([True if value == 'validation' else False for value in train_val_test_df['split_type']])
+    test_mask = torch.tensor([True if value == 'test' else False for value in train_val_test_df['split_type']])
+
+    print('sum of train mask')
+    print(torch.sum(train_mask))
+    print('sum of val mask')
+    print(torch.sum(val_mask))
+    print('sum of test mask')
+    print(torch.sum(test_mask))
+
+    # Drop split type column
+    train_val_test_df.drop('split_type', axis=1, inplace=True)
+    train_df.drop('split_type', axis=1, inplace=True)
+    validation_df.drop('split_type', axis=1, inplace=True)
+    test_df.drop('split_type', axis=1, inplace=True)
     
     # Construct graph using source and destination nodes
     graph = dgl.graph((src_dst_df["src"].values.tolist(), src_dst_df["dst"].values.tolist()))
@@ -463,8 +462,13 @@ def run_inductive_model(train_and_val_df,
 
     # Train and get predictions
     print("Starting Model training and prediction")
-    model, _, y_true, y_pred, _ = train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs)
+    model, y_true, y_pred = train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs)
     print("Finished Model training and prediction")
+
+    # Print accuracy, f1, majority class baseline accuracy
+    print("Accuracy: ", accuracy_score(y_true, y_pred))
+    print("F1 Score: ", f1_score(y_true, y_pred, average='weighted'))
+    print('Majority class baseline accuracy: ', max(train_val_test_df[target_column].value_counts(normalize=True)))
 
     # Save model
     print("Saving model")
@@ -472,9 +476,41 @@ def run_inductive_model(train_and_val_df,
     
     # Output model predictions and probabilities
     print("Saving model predictions for test data")
-    pd.DataFrame.from_dict(
-        {
-            'target': y_true.reshape(-1, ),
-            'pred': y_pred.reshape(-1, ),
-        }
-    ).to_csv(prediction_file_path, index=False)
+    # print('checking shape of y_true')
+    # print(y_true.shape)
+    # Output y_true to Excel
+    #y_true_df = pd.DataFrame(y_true)
+    #y_true_df.to_excel(prediction_file_path.replace('.xlsx', '_y_true.xlsx'), index=False)
+    # print('checking shape of y_pred')
+    # print(y_pred.shape)
+    predictions_df = pd.DataFrame.from_dict({'target': y_true.reshape(-1, ), 'pred': y_pred.reshape(-1, )})
+    # Add column for node
+    # print('length of predictions df')
+    # print(len(predictions_df))
+    # print('length of test df')
+    # print(len(test_df))
+    # print('head of test df')
+    # print(test_df.head())
+    predictions_df['node'] = list(test_df['node'])
+    # print('head of predictions df')
+    # print(predictions_df.head())
+    # print('custom mapping')
+    # print(custom_mapping)
+    # print('values of target')
+    # print(predictions_df['target'].unique())
+    # Decode target, pred, and node
+    predictions_df['target'] = predictions_df['target'].replace({v: k for k, v in custom_mapping.items()})
+    predictions_df['pred'] = predictions_df['pred'].replace({v: k for k, v in custom_mapping.items()})
+    # print('head of predictions df after decoding target')
+    # print(predictions_df.head())
+    # print('values of target after decoding')
+    # print(predictions_df['target'].unique())
+    # print('values of node')
+    # print(predictions_df['node'].unique())
+    # print('values of node_to_int')
+    # print(node_to_int)
+    # predictions_df['node'] = predictions_df['node'].replace({v: k for k, v in node_to_int.items()})
+    # print('head of predictions df after decoding node')
+    # print(predictions_df.head())
+    # Output to Excel
+    predictions_df.to_excel(prediction_file_path, index=False)
