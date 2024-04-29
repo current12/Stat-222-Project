@@ -4,4 +4,6 @@ Starting Job
 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
 0.00s - to python to disable frozen modules.
 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
-slurmstepd-ghan: error: *** JOB 482779 ON ghan CANCELLED AT 2024-04-28T21:46:52 ***
+[NbConvertApp] Writing 6907 bytes to Logistic_Regression_Include_Previous_Rating_Model_1.ipynb
+Completed Job
+Time elapsed: 12 minute(s).
