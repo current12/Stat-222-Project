@@ -2014,6 +2014,203 @@ Starting Job
   warnings.warn(
 /scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
   warnings.warn(
-[NbConvertApp] Writing 365974 bytes to Logistic_Regression_Include_Previous_Rating_Model_3.ipynb
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/linear_model/_sag.py:350: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+Traceback (most recent call last):
+  File "/scratch/users/ijyliu/conda/envs/scf_general/bin/jupyter-nbconvert", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/application.py", line 283, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 102, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 123, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Evaluate model
+evaluate_model(best_model, X_test_scaled, y_test, custom_mapping, model_name)
+------------------
+
+----- stdout -----
+{'accuracy': 0.9478021978021978, 'f1_score': 0.9479378876224862, 'majority_baseline': 0.30128205128205127}
+Share of predictions exactly as the actual: 94.78%
+Share of predictions 1 or fewer ratings away from actual: 99.36%
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[6], line 2[0m
+[1;32m      1[0m [38;5;66;03m# Evaluate model[39;00m
+[0;32m----> 2[0m [43mevaluate_model[49m[43m([49m[43mbest_model[49m[43m,[49m[43m [49m[43mX_test_scaled[49m[43m,[49m[43m [49m[43my_test[49m[43m,[49m[43m [49m[43mcustom_mapping[49m[43m,[49m[43m [49m[43mmodel_name[49m[43m)[49m
+
+File [0;32m~/repo/Stat-222-Project/Code/Modelling/Logistic Regression/Logistic_Regression_Functions.py:221[0m, in [0;36mevaluate_model[0;34m(model, X_test_scaled, y_test, custom_mapping, model_name)[0m
+[1;32m    218[0m             display_labels[38;5;241m.[39mappend(key)
+[1;32m    220[0m [38;5;66;03m# detailed evaluation with classification report[39;00m
+[0;32m--> 221[0m report [38;5;241m=[39m [43mclassification_report[49m[43m([49m[43my_test[49m[43m,[49m[43m [49m[43my_pred[49m[43m,[49m[43m [49m[43mtarget_names[49m[38;5;241;43m=[39;49m[43mdisplay_labels[49m[43m,[49m[43m [49m[43mdigits[49m[38;5;241;43m=[39;49m[38;5;241;43m4[39;49m[43m)[49m
+[1;32m    222[0m [38;5;66;03m# Save classification report object[39;00m
+[1;32m    223[0m joblib[38;5;241m.[39mdump(report, [38;5;124m'[39m[38;5;124m../../../../Output/Modelling/Logistic Regression/[39m[38;5;124m'[39m [38;5;241m+[39m model_name [38;5;241m+[39m [38;5;124m'[39m[38;5;124m/[39m[38;5;124m'[39m [38;5;241m+[39m model_name [38;5;241m+[39m [38;5;124m'[39m[38;5;124m_classification_report.pkl[39m[38;5;124m'[39m)
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/utils/_param_validation.py:213[0m, in [0;36mvalidate_params.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    207[0m [38;5;28;01mtry[39;00m:
+[1;32m    208[0m     [38;5;28;01mwith[39;00m config_context(
+[1;32m    209[0m         skip_parameter_validation[38;5;241m=[39m(
+[1;32m    210[0m             prefer_skip_nested_validation [38;5;129;01mor[39;00m global_skip_validation
+[1;32m    211[0m         )
+[1;32m    212[0m     ):
+[0;32m--> 213[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    214[0m [38;5;28;01mexcept[39;00m InvalidParameterError [38;5;28;01mas[39;00m e:
+[1;32m    215[0m     [38;5;66;03m# When the function is just a wrapper around an estimator, we allow[39;00m
+[1;32m    216[0m     [38;5;66;03m# the function to delegate validation to the estimator, but we replace[39;00m
+[1;32m    217[0m     [38;5;66;03m# the name of the estimator by the name of the function in the error[39;00m
+[1;32m    218[0m     [38;5;66;03m# message to avoid confusion.[39;00m
+[1;32m    219[0m     msg [38;5;241m=[39m re[38;5;241m.[39msub(
+[1;32m    220[0m         [38;5;124mr[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;124m\[39m[38;5;124mw+ must be[39m[38;5;124m"[39m,
+[1;32m    221[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mparameter of [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__qualname__[39m[38;5;132;01m}[39;00m[38;5;124m must be[39m[38;5;124m"[39m,
+[1;32m    222[0m         [38;5;28mstr[39m(e),
+[1;32m    223[0m     )
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2626[0m, in [0;36mclassification_report[0;34m(y_true, y_pred, labels, target_names, sample_weight, digits, output_dict, zero_division)[0m
+[1;32m   2620[0m         warnings[38;5;241m.[39mwarn(
+[1;32m   2621[0m             [38;5;124m"[39m[38;5;124mlabels size, [39m[38;5;132;01m{0}[39;00m[38;5;124m, does not match size of target_names, [39m[38;5;132;01m{1}[39;00m[38;5;124m"[39m[38;5;241m.[39mformat(
+[1;32m   2622[0m                 [38;5;28mlen[39m(labels), [38;5;28mlen[39m(target_names)
+[1;32m   2623[0m             )
+[1;32m   2624[0m         )
+[1;32m   2625[0m     [38;5;28;01melse[39;00m:
+[0;32m-> 2626[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m   2627[0m             [38;5;124m"[39m[38;5;124mNumber of classes, [39m[38;5;132;01m{0}[39;00m[38;5;124m, does not match size of [39m[38;5;124m"[39m
+[1;32m   2628[0m             [38;5;124m"[39m[38;5;124mtarget_names, [39m[38;5;132;01m{1}[39;00m[38;5;124m. Try specifying the labels [39m[38;5;124m"[39m
+[1;32m   2629[0m             [38;5;124m"[39m[38;5;124mparameter[39m[38;5;124m"[39m[38;5;241m.[39mformat([38;5;28mlen[39m(labels), [38;5;28mlen[39m(target_names))
+[1;32m   2630[0m         )
+[1;32m   2631[0m [38;5;28;01mif[39;00m target_names [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m   2632[0m     target_names [38;5;241m=[39m [[38;5;124m"[39m[38;5;132;01m%s[39;00m[38;5;124m"[39m [38;5;241m%[39m l [38;5;28;01mfor[39;00m l [38;5;129;01min[39;00m labels]
+
+[0;31mValueError[0m: Number of classes, 10, does not match size of target_names, 9. Try specifying the labels parameter
+
 Completed Job
-Time elapsed: 43 minute(s).
+Time elapsed: 28 minute(s).
