@@ -69,7 +69,7 @@ def get_column_names_and_mapping(unsanitized_model_name):
 
     # Mapping for target column
     if 'rating' in unsanitized_model_name:
-        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC":7, "C":8, "D":9}
+        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC": 7, "C": 8, "D": 9}
 
     # Return the column names
     return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
@@ -224,7 +224,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
 
     ### confusion matrix
     conf_matrix = confusion_matrix(y_test, y_pred)
-    cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix,display_labels=display_labels)
+    cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
     # Plot Confusion Matrix
     plt.figure(figsize=(10, 8))
     cm_display.plot(cmap='Blues', ax=plt.gca(), xticks_rotation='vertical')

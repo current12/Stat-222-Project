@@ -112,37 +112,69 @@ def evaluate(model, graph, features, labels, train_mask, valid_mask, test_mask=N
         return accuracy_score(train_y_true, train_y_pred), f1_score(train_y_true, train_y_pred), accuracy_score(validation_y_true, validation_y_pred), f1_score(validation_y_true, validation_y_pred)
 
 
-def train(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs, inductive):
+def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs, inductive):
+    '''
+    Train the graph neural network and get predictions for the test dataset.
+
+    Parameters:
+    - model: Graph neural network model
+    - optimizer: Optimizer
+    - graph: Graph object mapping source and destination nodes
+    - features: Features for each node
+    - labels: Labels for each node
+    - train_mask: Mask for training data
+    - val_mask: Mask for validation data
+    - test_mask: Mask for test data
+    - n_epochs: Number of epochs to run training
+    - inductive: Boolean indicating whether the model is inductive
+    '''
     
+    # Get graph
     full_graph, full_features, full_labels = graph, features, labels
+    # Inductive learning
     if inductive:
+        # Limit graph to nodes in training or validation dataset
         graph = graph.subgraph(torch.nonzero(torch.logical_or(train_mask, val_mask)).flatten())
+        # Update features, labels, and masks for this subgraph
         features = features[graph.ndata[dgl.NID]]
         labels = labels[graph.ndata[dgl.NID]]
         train_mask = train_mask[graph.ndata[dgl.NID]]
         val_mask = val_mask[graph.ndata[dgl.NID]]
     
+    # Keep track of time for each epoch
     duration = []
+    # Iterate over epochs
     for epoch in range(n_epochs):
+
+        # Start timer
         tic = time.time()
-        # Set the model in the training mode.
+
+        # Set the model to training mode
         model.train()
 
-        # forward
+        # Forward pass and loss computation - no gradient computation
         loss = model(graph, features, labels, train_mask)
         optimizer.zero_grad()
+        # Backward pass - backpropagation, use optimizer to update values
         loss.backward()
         optimizer.step()
         
+        # Evaluate model on training and validation datasets (don't need test_mask argument)
         train_acc, train_f1, valid_acc, valid_f1 = evaluate(model, graph, features, labels, train_mask, val_mask)
         
+        # Record time taken for epoch
         duration.append(time.time() - tic)
+
+        # Print epoch statistics
         print(
-            "Epoch {:05d} | Time(s) {:.4f} | Training Loss {:.4f} | Training F1 {:.4f} | Validation Accuracy {:.4f} | Validation F1 {:.4f}".format(
-                epoch, np.mean(duration), loss.item(), train_f1, valid_acc, valid_f1)
+            "Epoch {:05d} | Time(s) {:.4f} | Training Accuracy {:.4f} | Training Loss {:.4f} | Training F1 {:.4f} | Validation Accuracy {:.4f} | Validation F1 {:.4f}".format(
+                epoch, np.mean(duration), train_acc, loss.item(), train_f1, valid_acc, valid_f1)
         )
 
+    # Evaluate model on test dataset
     acc_dict, y_true, y_pred_prob, y_pred = evaluate(model, full_graph, full_features, full_labels, train_mask, val_mask, test_mask)
+
+    # Return model, accuracy dictionary, true labels, predicted probabilities, and predicted labels
     return model, acc_dict, y_true, y_pred_prob, y_pred
 
 def inductive_entry_train(training_dir,
@@ -213,7 +245,7 @@ def inductive_entry_train(training_dir,
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
     print("Starting Model training")
-    model, metric_table, y_true, y_pred, y_pred_prob = train(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs, inductive)
+    model, metric_table, y_true, y_pred, y_pred_prob = train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs, inductive)
     print("Finished Model training")
 
     print("Saving model")
