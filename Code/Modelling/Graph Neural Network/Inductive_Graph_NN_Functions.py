@@ -98,11 +98,11 @@ def load_src_dst_data():
     # Note: don't need to do anything to handle symmetry (don't need to drop half of the pairs)
 
     # Node identifiers
-    # Create column ticker1_fixed_quarter_date and ticker2_fixed_quarter_date that concatenate ticker1 and fixed_quarter_date and ticker2 and fixed_quarter_date
-    pairwise_df['ticker1_fixed_quarter_date'] = pairwise_df['ticker1'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
-    pairwise_df['ticker2_fixed_quarter_date'] = pairwise_df['ticker2'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
+    # Create columns src and dst that concatenate ticker1 and fixed_quarter_date and ticker2 and fixed_quarter_date
+    pairwise_df['src'] = pairwise_df['ticker1'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
+    pairwise_df['dst'] = pairwise_df['ticker2'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
     # Keep just these columns
-    pairwise_df = pairwise_df[['ticker1_fixed_quarter_date', 'ticker2_fixed_quarter_date']]
+    pairwise_df = pairwise_df[['src', 'dst']]
 
     # Return the DataFrame
     return pairwise_df
