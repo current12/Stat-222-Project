@@ -172,16 +172,18 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     # Return fitted model
     return grid_search.best_estimator_
 
-def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, target_column, full_df):
+def get_model_predictions(model, X_test_scaled, y_test, custom_mapping, model_name, target_column, full_df):
     """
-    Evaluate a logistic regression model.
+    Get predictions from a logistic regression model.
 
     Parameters:
-    - model: the model to be evaluated.
+    - model: the model for predictions.
     - X_test_scaled: scaled feature matrix of the test set.
     - y_test: target vector of the test set.
     - custom_mapping: dictionary to encode the target variable.
     - model_name: name of the model to be saved - informs folder and file paths
+    - target_column: column to be used as target.
+    - full_df: the entire dataset, used to make a predictions DataFrame.
     """
 
     # Create necessary directories if they do not exist
@@ -194,8 +196,6 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, tar
     # Model prediction and evaluation
     y_pred = model.predict(X_test_scaled)
     accuracy = accuracy_score(y_test, y_pred)
-    f1 = f1_score(y_test, y_pred, average='weighted')
-    majority_class_share_baseline = y_test.value_counts(normalize=True).max()
 
     # Save predictions
     # Add predictions to the test_df
@@ -206,14 +206,36 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, tar
     test_df_w_pred[model_name + '_predictions'] = test_df_w_pred[model_name + '_predictions'].map({v: k for k, v in custom_mapping.items()})
     # Keep only the necessary columns
     test_df_w_pred = test_df_w_pred[['ticker', 'fixed_quarter_date', target_column, model_name + '_predictions']]
+    # Assert accuracy == share of correct predictions
+    print('accuracy:', accuracy)
+    print('share of correct predictions:', test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean())
+    print('assertion that they match:')
+    assert round(accuracy, 4) == round(test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean(), 4)
     # Save the DataFrame to Excel
     test_df_w_pred.to_excel('../../../../Data/Predictions/Logistic Regression/' + model_name + '/' + model_name + '_predictions.xlsx', index=False)
-
-    # Assert accuracy == share of correct predictions
-    print('checking accuracy and correct predictions match')
-    print(accuracy, test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean())
-    assert round(accuracy, 4) == round(test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean(), 4)
     
+def create_model_figure_and_table_components(model_name, target_column, custom_mapping):
+    """
+    Create model figure and table components to be used.
+
+    Parameters:
+    - model_name: name of the model - informs folder and file paths of loaded predictions
+    """
+
+    # Load file of predictions
+    predictions_df = pd.read_excel('../../../../Data/Predictions/Logistic Regression/' + model_name + '/' + model_name + '_predictions.xlsx')
+
+    # Create y_test and y_pred
+    y_test = predictions_df[target_column]
+    y_pred = predictions_df[model_name + '_predictions']
+    y_test_num = predictions_df[target_column].map(custom_mapping)
+    y_pred_num = predictions_df[model_name + '_predictions'].map(custom_mapping)
+    
+    # Get accuracy, F1, and majority class baseline
+    accuracy = accuracy_score(predictions_df[target_column], predictions_df[model_name + '_predictions'])
+    f1 = f1_score(predictions_df[target_column], predictions_df[model_name + '_predictions'], average='weighted')
+    majority_class_share_baseline = predictions_df[target_column].value_counts(normalize=True).max()
+
     # Dictionary of accuracy, F1, and majority class baseline
     acc_f1_majority = {'accuracy': accuracy, 'f1_score': f1, 'majority_baseline': majority_class_share_baseline}
     print(acc_f1_majority)
@@ -221,7 +243,7 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, tar
     joblib.dump(acc_f1_majority, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_acc_f1_majority.pkl')
     
     ### Calculate the share of predictions that are 1 or fewer ratings away from the actual ratings
-    differences = np.abs(y_pred - y_test)
+    differences = np.abs(y_pred_num - y_test_num)
     close_predictions_share = np.mean(differences <= 1)
     exact_predictions_share = np.mean(differences == 0 )
 
@@ -231,21 +253,20 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, tar
     close_exact_dict = {'exact_predictions_share': exact_predictions_share, 'close_predictions_share': close_predictions_share}
     joblib.dump(close_exact_dict, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
 
-    # Set up display labels
-    display_labels = []
-    for v in np.sort(np.unique(y_test)):
-        for key, value in custom_mapping.items():
-            if value == v:
-                display_labels.append(key)
-
     # detailed evaluation with classification report
-    report = classification_report(y_test, y_pred, target_names=display_labels, digits=4)
+    report = classification_report(y_test, y_pred, digits=4)
+    print('classification report:')
+    print(report)
     # Save classification report object
     joblib.dump(report, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
 
     ### confusion matrix
+    actual_labels = list(custom_mapping.keys())
+    actual_labels = [label for label in actual_labels if label in y_test.unique() or label in y_pred.unique()]
+    #ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=actual_labels).plot(cmap='Blues')
     conf_matrix = confusion_matrix(y_test, y_pred)
-    cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=display_labels)
+    cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=actual_labels)
+    #plt.show()
     # Plot Confusion Matrix
     plt.figure(figsize=(10, 8))
     cm_display.plot(cmap='Blues', ax=plt.gca(), xticks_rotation='vertical')
