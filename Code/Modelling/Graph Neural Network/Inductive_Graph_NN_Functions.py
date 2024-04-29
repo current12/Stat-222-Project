@@ -95,15 +95,7 @@ def load_src_dst_data():
                                                .reset_index()
                                                .rename(columns={0: 'count'}))
 
-    # Order doesn't matter!
-    # Iterate over rows, create sorted list of tickers
-    pairwise_df['sorted_tickers'] = pairwise_df[['ticker1', 'ticker2']].apply(lambda x: sorted(x), axis=1)
-    # Sort the rows by the sorted_tickers column
-    pairwise_df = pairwise_df.sort_values('sorted_tickers')
-    # Split sorted tickers into two columns again
-    pairwise_df[['ticker1', 'ticker2']] = pd.DataFrame(pairwise_df['sorted_tickers'].tolist(), index=pairwise_df.index)
-    # Collapse to sums of count by ticker1 and ticker2
-    pairwise_df = pairwise_df.groupby(['ticker1', 'ticker2', 'fixed_quarter_date']).agg({'count': 'sum'}).reset_index()
+    # Note: don't need to do anything to handle symmetry (don't need to drop half of the pairs)
 
     # Node identifiers
     # Create column ticker1_fixed_quarter_date and ticker2_fixed_quarter_date that concatenate ticker1 and fixed_quarter_date and ticker2 and fixed_quarter_date
@@ -462,6 +454,12 @@ def run_inductive_model(train_and_val_df,
     # Check model
     print(model)
     print(model.parameters())
+
+    # If GPU is available, move model to GPU
+    print('GPU available: ', torch.cuda.is_available())
+    if torch.cuda.is_available():
+        print("Moving model to GPU")
+        model.cuda()
     
     # Initialize optimizer
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
