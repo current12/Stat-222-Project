@@ -184,6 +184,12 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     - model_name: name of the model to be saved - informs folder and file paths
     """
 
+    # Check input matrices
+    print('X_test_scaled shape')
+    print(X_test_scaled.shape)
+    print('y_test shape')
+    print(y_test.shape)
+
     # Create necessary directories if they do not exist
     if not os.path.exists('../../../../Output/Modelling/Logistic Regression/' + model_name):
         os.makedirs('../../../../Output/Modelling/Logistic Regression/' + model_name)
@@ -219,6 +225,10 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
                 display_labels.append(key)
 
     # detailed evaluation with classification report
+    print('labels')
+    print(display_labels)
+    print('classes')
+    print(np.sort(np.unique(y_test)))
     report = classification_report(y_test, y_pred, target_names=display_labels, digits=4)
     # Save classification report object
     joblib.dump(report, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
