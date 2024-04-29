@@ -75,9 +75,10 @@ def load_feature_and_class_data():
     file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
     # read in all parquet files
     df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
-    # Sort by ticker and fixed_quarter_date, and create column node as index
+    # Sort by ticker and fixed_quarter_date
     df = df.sort_values(['ticker', 'fixed_quarter_date']).reset_index(drop=True)
-    df['node'] = df.index
+    # Create node as ticker + ' : ' + fixed_quarter_date
+    df['node'] = df['ticker'] + ' : ' + df['fixed_quarter_date'].astype(str)
     return df
 
 def load_src_dst_data():
@@ -227,7 +228,8 @@ def get_predictions(logits, mask, labels):
     y_true = ground_truth_labels.numpy()
     y_pred = predict_labels.numpy() 
     # Compute probabiliites with softmax
-    y_pred_prob = y_pred_prob.numpy().reshape(-1, 2)
+    #print(y_pred_prob.shape)
+    y_pred_prob = y_pred_prob.numpy().reshape(-1, y_pred_prob.shape[1])
     y_pred_prob = scipy.special.softmax(y_pred_prob, axis=1)
     # Return true labels, predicted labels, and predicted probabilities
     return y_true, y_pred, y_pred_prob
@@ -261,7 +263,7 @@ def evaluate_on_train_and_val(model, graph, features, labels, train_mask, valid_
         validation_y_true, validation_y_pred, _ = get_predictions(logits, valid_mask, labels)
             
         # Return accuracy on training and validation datasets
-        return accuracy_score(train_y_true, train_y_pred), f1_score(train_y_true, train_y_pred), accuracy_score(validation_y_true, validation_y_pred), f1_score(validation_y_true, validation_y_pred)
+        return accuracy_score(train_y_true, train_y_pred), f1_score(train_y_true, train_y_pred, average='weighted'), accuracy_score(validation_y_true, validation_y_pred), f1_score(validation_y_true, validation_y_pred, average='weighted')
     
 def evaluate_on_test(model, graph, features, labels, test_mask):
     '''
@@ -291,7 +293,7 @@ def evaluate_on_test(model, graph, features, labels, test_mask):
         # Return classification report, true labels, predicted labels, and predicted probabilities
         return classification_report(test_y_true, test_y_pred, zero_division=1, output_dict=True), test_y_true, test_y_pred, test_y_prob
 
-def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs, inductive):
+def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, val_mask, test_mask, n_epochs):
     '''
     Train the graph neural network and get predictions for the test dataset.
 
