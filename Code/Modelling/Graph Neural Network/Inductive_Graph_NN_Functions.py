@@ -75,6 +75,9 @@ def load_feature_and_class_data():
     file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
     # read in all parquet files
     df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
+    # Sort by ticker and fixed_quarter_date, and create column node as index
+    df = df.sort_values(['ticker', 'fixed_quarter_date']).reset_index(drop=True)
+    df['node'] = df.index
     return df
 
 def load_src_dst_data():
@@ -90,19 +93,10 @@ def load_src_dst_data():
 
     # Get tickers and counts
     pairwise_df = (company_mentions_with_ticker[['ticker', 'matched_ticker', 'fixed_quarter_date']]
-                                               .rename(columns={'ticker': 'ticker1', 'matched_ticker': 'ticker2'})
-                                               .value_counts()
-                                               .reset_index()
-                                               .rename(columns={0: 'count'}))
+                                               .drop_duplicates()
+                                               .rename(columns={'ticker': 'src_ticker', 'matched_ticker': 'dst_ticker'}))
 
     # Note: don't need to do anything to handle symmetry (don't need to drop half of the pairs)
-
-    # Node identifiers
-    # Create columns src and dst that concatenate ticker1 and fixed_quarter_date and ticker2 and fixed_quarter_date
-    pairwise_df['src'] = pairwise_df['ticker1'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
-    pairwise_df['dst'] = pairwise_df['ticker2'] + ' : ' + pairwise_df['fixed_quarter_date'].astype(str)
-    # Keep just these columns
-    pairwise_df = pairwise_df[['src', 'dst']]
 
     # Return the DataFrame
     return pairwise_df
@@ -162,8 +156,10 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     """
    
     # Selecting features and target, and encoding target
-    train_df = df[df['train_test_80_20'] == 'train']
-    test_df = df[df['train_test_80_20'] == 'test']
+    train_df = df[df['train_test_80_20'] == 'train'].sort_values(['ticker', 'fixed_quarter_date'])
+    test_df = df[df['train_test_80_20'] == 'test'].sort_values(['ticker', 'fixed_quarter_date'])
+    train_ticker_by_fixed_quarter_date = train_df[['ticker', 'fixed_quarter_date']]
+    test_ticker_by_fixed_quarter_date = test_df[['ticker', 'fixed_quarter_date']]
     train_numeric_X = train_df[numeric_feature_columns]
     train_cat_X = train_df[cat_feature_columns]
     test_numeric_X = test_df[numeric_feature_columns]
@@ -190,9 +186,8 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     feature_names = preprocessor.get_feature_names_out()
 
     # Return the matrices
-    return X_train_scaled, X_test_scaled, y_train, y_test, feature_names
+    return X_train_scaled, X_test_scaled, y_train, y_test, feature_names, train_ticker_by_fixed_quarter_date, test_ticker_by_fixed_quarter_date
 
-# Save model and graph in appropriate directories
 def save_model(g, model, model_dir):
     '''
     Save model and graph in appropriate directory.
