@@ -87,8 +87,8 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     """
    
     # Selecting features and target, and encoding target
-    train_df = df[df['train_test_80_20'] == 'train']
-    test_df = df[df['train_test_80_20'] == 'test']
+    train_df = df[df['train_test_80_20'] == 'train'].sort_values(by=['ticker', 'fixed_quarter_date'])
+    test_df = df[df['train_test_80_20'] == 'test'].sort_values(by=['ticker', 'fixed_quarter_date'])
     train_numeric_X = train_df[numeric_feature_columns]
     train_cat_X = train_df[cat_feature_columns]
     test_numeric_X = test_df[numeric_feature_columns]
@@ -172,7 +172,7 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     # Return fitted model
     return grid_search.best_estimator_
 
-def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
+def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name, target_column, full_df):
     """
     Evaluate a logistic regression model.
 
@@ -193,12 +193,32 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     # Create necessary directories if they do not exist
     if not os.path.exists('../../../../Output/Modelling/Logistic Regression/' + model_name):
         os.makedirs('../../../../Output/Modelling/Logistic Regression/' + model_name)
+    # Place for predictions in '../../../Data/Predictions/Logistic Regression/' + model_name
+    if not os.path.exists('../../../../Data/Predictions/Logistic Regression/' + model_name):
+        os.makedirs('../../../../Data/Predictions/Logistic Regression/' + model_name)
 
     # Model prediction and evaluation
     y_pred = model.predict(X_test_scaled)
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred, average='weighted')
     majority_class_share_baseline = y_test.value_counts(normalize=True).max()
+
+    # Save predictions
+    # Add predictions to the test_df
+    #print(full_df.head())
+    #print(full_df['train_test_80_20'].value_counts())
+    test_df_w_pred = full_df[full_df['train_test_80_20'] == 'test'].copy().sort_values(by=['ticker', 'fixed_quarter_date'])
+    test_df_w_pred[model_name + '_predictions'] = list(y_pred)
+    test_df_w_pred[model_name + '_predictions'] = test_df_w_pred[model_name + '_predictions'].map({v: k for k, v in custom_mapping.items()})
+    # Keep only the necessary columns
+    test_df_w_pred = test_df_w_pred[['ticker', 'fixed_quarter_date', target_column, model_name + '_predictions']]
+    # Save the DataFrame to Excel
+    test_df_w_pred.to_excel('../../../../Data/Predictions/Logistic Regression/' + model_name + '/' + model_name + '_predictions.xlsx', index=False)
+
+    # Assert accuracy == share of correct predictions
+    print('checking accuracy and correct predictions match')
+    print(accuracy, test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean())
+    assert round(accuracy, 4) == round(test_df_w_pred[model_name + '_predictions'].eq(test_df_w_pred[target_column]).mean(), 4)
     
     # Dictionary of accuracy, F1, and majority class baseline
     acc_f1_majority = {'accuracy': accuracy, 'f1_score': f1, 'majority_baseline': majority_class_share_baseline}
