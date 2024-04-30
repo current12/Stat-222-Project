@@ -1,0 +1,492 @@
+Starting Job
+Warning: path already exists! This predictor may overwrite an existing predictor! path="/accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF"
+Presets specified: ['best_quality']
+Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=1
+Dynamic stacking is enabled (dynamic_stacking=True). AutoGluon will try to determine whether the input data is affected by stacked overfitting and enable or disable stacking as a consequence.
+Detecting stacked overfitting by sub-fitting AutoGluon on the input data. That is, copies of AutoGluon will be sub-fit on subset(s) of the data. Then, the holdout validation data is used to detect stacked overfitting.
+Sub-fit(s) time limit is: 3600 seconds.
+Starting holdout-based sub-fit for dynamic stacking. Context path is: /accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF/ds_sub_fit/sub_fit_ho.
+Beginning AutoGluon training ... Time limit = 900s
+AutoGluon will save models to "/accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF/ds_sub_fit/sub_fit_ho"
+=================== System Info ===================
+AutoGluon Version:  1.0.0
+Python Version:     3.11.8
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #93-Ubuntu SMP Tue Sep 5 17:16:10 UTC 2023
+CPU Count:          104
+Memory Avail:       754.46 GB / 1007.52 GB (74.9%)
+Disk Space Avail:   53229.56 GB / 67220.65 GB (79.2%)
+===================================================
+Train Data Rows:    4038
+Train Data Columns: 151
+Label Column:       Rating
+Problem Type:       multiclass
+Preprocessing data ...
+Warning: Some classes in the training set have fewer than 10 examples. AutoGluon will only keep 8 out of 10 classes for training and will not try to predict the rare classes. To keep more classes, increase the number of datapoints from these rare classes in the training data or reduce label_count_threshold.
+Fraction of data from classes with at least 10 examples that will be kept for training models: 0.9972758791480931
+Train Data Class Count: 8
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    772546.94 MB
+	Train Data (Original)  Memory Usage: 7.34 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+		Fitting DatetimeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Useless Original Features (Count: 2): ['reportedCurrency', 'train_test_80_20']
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Unused Original Features (Count: 2): ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+		These features were not used to generate any of the output features. Add a feature generator compatible with these features to utilize them.
+		Features can also be unused if they carry very little information, such as being categorical but having almost entirely unique values or being duplicates of other features.
+		These features do not need to be present at inference time.
+		('float', []) : 2 | ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+	Types of features in original data (raw dtype, special dtypes):
+		('datetime', [])                   :   2 | ['earnings_call_date', 'financial_statement_date']
+		('float', [])                      : 128 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                        :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('object', [])                     :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('object', ['datetime_as_object']) :   8 | ['fixed_quarter_date', 'rating_date', 'Previous Rating Date', 'previous_fixed_quarter_date', 'acceptedDate_balance_sheet', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])             :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('float', [])                : 128 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                  :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('int', ['datetime_as_int']) :  34 | ['fixed_quarter_date', 'fixed_quarter_date.year', 'fixed_quarter_date.month', 'fixed_quarter_date.dayofweek', 'earnings_call_date', ...]
+	1.9s = Fit runtime
+	147 features in original data used to generate 171 features in processed data.
+	Train Data (Processed) Memory Usage: 5.15 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 1.92s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'accuracy'
+	To change this, specify the eval_metric parameter of Predictor()
+Large model count detected (112 configs) ... Only displaying the first 3 models of each family. To see all, set `verbosity=3`.
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': [{}, {'activation': 'elu', 'dropout_prob': 0.10077639529843717, 'hidden_size': 108, 'learning_rate': 0.002735937344002146, 'num_layers': 4, 'use_batchnorm': True, 'weight_decay': 1.356433327634438e-12, 'ag_args': {'name_suffix': '_r79', 'priority': -2}}, {'activation': 'elu', 'dropout_prob': 0.11897478034205347, 'hidden_size': 213, 'learning_rate': 0.0010474382260641949, 'num_layers': 4, 'use_batchnorm': False, 'weight_decay': 5.594471067786272e-10, 'ag_args': {'name_suffix': '_r22', 'priority': -7}}],
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, 'GBMLarge'],
+	'CAT': [{}, {'depth': 6, 'grow_policy': 'SymmetricTree', 'l2_leaf_reg': 2.1542798306067823, 'learning_rate': 0.06864209415792857, 'max_ctr_complexity': 4, 'one_hot_max_size': 10, 'ag_args': {'name_suffix': '_r177', 'priority': -1}}, {'depth': 8, 'grow_policy': 'Depthwise', 'l2_leaf_reg': 2.7997999596449104, 'learning_rate': 0.031375015734637225, 'max_ctr_complexity': 2, 'one_hot_max_size': 3, 'ag_args': {'name_suffix': '_r9', 'priority': -5}}],
+	'XGB': [{}, {'colsample_bytree': 0.6917311125174739, 'enable_categorical': False, 'learning_rate': 0.018063876087523967, 'max_depth': 10, 'min_child_weight': 0.6028633586934382, 'ag_args': {'name_suffix': '_r33', 'priority': -8}}, {'colsample_bytree': 0.6628423832084077, 'enable_categorical': False, 'learning_rate': 0.08775715546881824, 'max_depth': 5, 'min_child_weight': 0.6294123374222513, 'ag_args': {'name_suffix': '_r89', 'priority': -16}}],
+	'FASTAI': [{}, {'bs': 256, 'emb_drop': 0.5411770367537934, 'epochs': 43, 'layers': [800, 400], 'lr': 0.01519848858318159, 'ps': 0.23782946566604385, 'ag_args': {'name_suffix': '_r191', 'priority': -4}}, {'bs': 2048, 'emb_drop': 0.05070411322605811, 'epochs': 29, 'layers': [200, 100], 'lr': 0.08974235041576624, 'ps': 0.10393466140748028, 'ag_args': {'name_suffix': '_r102', 'priority': -11}}],
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}}],
+}
+AutoGluon will fit 2 stack levels (L1 to L2) ...
+Fitting 110 L1 models ...
+Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 598.57s of the 898.07s of remaining time.
+	0.2419	 = Validation score   (accuracy)
+	0.03s	 = Training   runtime
+	0.1s	 = Validation runtime
+Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 598.31s of the 897.81s of remaining time.
+	0.2456	 = Validation score   (accuracy)
+	0.04s	 = Training   runtime
+	0.03s	 = Validation runtime
+Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 598.11s of the 897.62s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.929	 = Validation score   (accuracy)
+	457.05s	 = Training   runtime
+	5.95s	 = Validation runtime
+Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 122.29s of the 421.79s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9466	 = Validation score   (accuracy)
+	98.84s	 = Training   runtime
+	0.52s	 = Validation runtime
+Fitting model: LightGBM_BAG_L1 ... Training model for up to 13.97s of the 313.48s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9444	 = Validation score   (accuracy)
+	12.09s	 = Training   runtime
+	0.4s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 292.37s of remaining time.
+	Ensemble Weights: {'LightGBMXT_BAG_L1': 1.0}
+	0.9466	 = Validation score   (accuracy)
+	0.46s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting 108 L2 models ...
+Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 291.86s of the 291.84s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9434	 = Validation score   (accuracy)
+	226.2s	 = Training   runtime
+	5.68s	 = Validation runtime
+Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 61.36s of the 61.32s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9479	 = Validation score   (accuracy)
+	49.97s	 = Training   runtime
+	0.39s	 = Validation runtime
+Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the -3.18s of remaining time.
+	Ensemble Weights: {'LightGBMXT_BAG_L2': 1.0}
+	0.9479	 = Validation score   (accuracy)
+	0.59s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 904.18s ... Best model: "WeightedEnsemble_L3"
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("/accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF/ds_sub_fit/sub_fit_ho")
+Leaderboard on holdout data from dynamic stacking:
+                    model  holdout_score  score_val eval_metric  pred_time_test  pred_time_val    fit_time  pred_time_test_marginal  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+0         LightGBM_BAG_L1       0.940594   0.944375    accuracy        0.067374       0.395027   12.086033                 0.067374                0.395027          12.086033            1       True          5
+1       LightGBMXT_BAG_L2       0.936634   0.947852    accuracy       15.758985       7.392326  618.013616                 0.121546                0.385910          49.967856            2       True          8
+2     WeightedEnsemble_L3       0.936634   0.947852    accuracy       15.761568       7.393107  618.604973                 0.002584                0.000782           0.591357            3       True          9
+3  NeuralNetFastAI_BAG_L2       0.936634   0.943382    accuracy       15.822440      12.688276  794.250197                 0.185001                5.681860         226.204437            2       True          7
+4       LightGBMXT_BAG_L1       0.934653   0.946610    accuracy        0.244031       0.517888   98.836659                 0.244031                0.517888          98.836659            1       True          4
+5     WeightedEnsemble_L2       0.934653   0.946610    accuracy        0.247265       0.518691   99.293679                 0.003234                0.000803           0.457020            2       True          6
+6  NeuralNetFastAI_BAG_L1       0.922772   0.928979    accuracy       15.269664       5.954411  457.047085                15.269664                5.954411         457.047085            1       True          3
+7   KNeighborsUnif_BAG_L1       0.261386   0.241867    accuracy        0.022034       0.104347    0.032962                 0.022034                0.104347           0.032962            1       True          1
+8   KNeighborsDist_BAG_L1       0.257426   0.245592    accuracy        0.034337       0.034743    0.043021                 0.034337                0.034743           0.043021            1       True          2
+Stacked overfitting occurred: False.
+Spend 924 seconds for the sub-fit(s) during dynamic stacking.
+Time left for full fit of AutoGluon: 2676 seconds.
+Starting full fit now with num_stack_levels 1.
+Beginning AutoGluon training ... Time limit = 2676s
+AutoGluon will save models to "/accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF"
+=================== System Info ===================
+AutoGluon Version:  1.0.0
+Python Version:     3.11.8
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #93-Ubuntu SMP Tue Sep 5 17:16:10 UTC 2023
+CPU Count:          104
+Memory Avail:       754.44 GB / 1007.52 GB (74.9%)
+Disk Space Avail:   53221.73 GB / 67220.65 GB (79.2%)
+===================================================
+Train Data Rows:    4543
+Train Data Columns: 151
+Label Column:       Rating
+Problem Type:       multiclass
+Preprocessing data ...
+Warning: Some classes in the training set have fewer than 10 examples. AutoGluon will only keep 8 out of 10 classes for training and will not try to predict the rare classes. To keep more classes, increase the number of datapoints from these rare classes in the training data or reduce label_count_threshold.
+Fraction of data from classes with at least 10 examples that will be kept for training models: 0.9973585736297601
+Train Data Class Count: 8
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    772552.08 MB
+	Train Data (Original)  Memory Usage: 8.26 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+		Fitting DatetimeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Useless Original Features (Count: 2): ['reportedCurrency', 'train_test_80_20']
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Unused Original Features (Count: 2): ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+		These features were not used to generate any of the output features. Add a feature generator compatible with these features to utilize them.
+		Features can also be unused if they carry very little information, such as being categorical but having almost entirely unique values or being duplicates of other features.
+		These features do not need to be present at inference time.
+		('float', []) : 2 | ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+	Types of features in original data (raw dtype, special dtypes):
+		('datetime', [])                   :   2 | ['earnings_call_date', 'financial_statement_date']
+		('float', [])                      : 128 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                        :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('object', [])                     :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('object', ['datetime_as_object']) :   8 | ['fixed_quarter_date', 'rating_date', 'Previous Rating Date', 'previous_fixed_quarter_date', 'acceptedDate_balance_sheet', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])             :   4 | ['ticker', 'Previous Rating', 'rating_on_previous_fixed_quarter_date', 'Sector']
+		('float', [])                : 128 | ['cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', ...]
+		('int', [])                  :   5 | ['credit_rating_year', 'days_since_call_on_fixed_quarter', 'days_since_rating', 'for_quarter', 'for_year']
+		('int', ['datetime_as_int']) :  34 | ['fixed_quarter_date', 'fixed_quarter_date.year', 'fixed_quarter_date.month', 'fixed_quarter_date.dayofweek', 'earnings_call_date', ...]
+	1.9s = Fit runtime
+	147 features in original data used to generate 171 features in processed data.
+	Train Data (Processed) Memory Usage: 5.80 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 1.95s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'accuracy'
+	To change this, specify the eval_metric parameter of Predictor()
+Large model count detected (112 configs) ... Only displaying the first 3 models of each family. To see all, set `verbosity=3`.
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': [{}, {'activation': 'elu', 'dropout_prob': 0.10077639529843717, 'hidden_size': 108, 'learning_rate': 0.002735937344002146, 'num_layers': 4, 'use_batchnorm': True, 'weight_decay': 1.356433327634438e-12, 'ag_args': {'name_suffix': '_r79', 'priority': -2}}, {'activation': 'elu', 'dropout_prob': 0.11897478034205347, 'hidden_size': 213, 'learning_rate': 0.0010474382260641949, 'num_layers': 4, 'use_batchnorm': False, 'weight_decay': 5.594471067786272e-10, 'ag_args': {'name_suffix': '_r22', 'priority': -7}}],
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, 'GBMLarge'],
+	'CAT': [{}, {'depth': 6, 'grow_policy': 'SymmetricTree', 'l2_leaf_reg': 2.1542798306067823, 'learning_rate': 0.06864209415792857, 'max_ctr_complexity': 4, 'one_hot_max_size': 10, 'ag_args': {'name_suffix': '_r177', 'priority': -1}}, {'depth': 8, 'grow_policy': 'Depthwise', 'l2_leaf_reg': 2.7997999596449104, 'learning_rate': 0.031375015734637225, 'max_ctr_complexity': 2, 'one_hot_max_size': 3, 'ag_args': {'name_suffix': '_r9', 'priority': -5}}],
+	'XGB': [{}, {'colsample_bytree': 0.6917311125174739, 'enable_categorical': False, 'learning_rate': 0.018063876087523967, 'max_depth': 10, 'min_child_weight': 0.6028633586934382, 'ag_args': {'name_suffix': '_r33', 'priority': -8}}, {'colsample_bytree': 0.6628423832084077, 'enable_categorical': False, 'learning_rate': 0.08775715546881824, 'max_depth': 5, 'min_child_weight': 0.6294123374222513, 'ag_args': {'name_suffix': '_r89', 'priority': -16}}],
+	'FASTAI': [{}, {'bs': 256, 'emb_drop': 0.5411770367537934, 'epochs': 43, 'layers': [800, 400], 'lr': 0.01519848858318159, 'ps': 0.23782946566604385, 'ag_args': {'name_suffix': '_r191', 'priority': -4}}, {'bs': 2048, 'emb_drop': 0.05070411322605811, 'epochs': 29, 'layers': [200, 100], 'lr': 0.08974235041576624, 'ps': 0.10393466140748028, 'ag_args': {'name_suffix': '_r102', 'priority': -11}}],
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}}],
+}
+AutoGluon will fit 2 stack levels (L1 to L2) ...
+Fitting 110 L1 models ...
+Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 1782.26s of the 2674.05s of remaining time.
+	0.2461	 = Validation score   (accuracy)
+	0.04s	 = Training   runtime
+	0.06s	 = Validation runtime
+Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 1782.01s of the 2673.8s of remaining time.
+	0.245	 = Validation score   (accuracy)
+	0.05s	 = Training   runtime
+	0.06s	 = Validation runtime
+Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 1781.77s of the 2673.55s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9391	 = Validation score   (accuracy)
+	1387.21s	 = Training   runtime
+	6.08s	 = Validation runtime
+Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 387.45s of the 1279.24s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9479	 = Validation score   (accuracy)
+	137.17s	 = Training   runtime
+	0.38s	 = Validation runtime
+Fitting model: LightGBM_BAG_L1 ... Training model for up to 244.95s of the 1136.74s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9488	 = Validation score   (accuracy)
+	134.96s	 = Training   runtime
+	0.35s	 = Validation runtime
+Fitting model: RandomForestGini_BAG_L1 ... Training model for up to 102.47s of the 994.26s of remaining time.
+	0.9367	 = Validation score   (accuracy)
+	1.31s	 = Training   runtime
+	0.21s	 = Validation runtime
+Fitting model: RandomForestEntr_BAG_L1 ... Training model for up to 99.97s of the 991.76s of remaining time.
+	0.9373	 = Validation score   (accuracy)
+	1.69s	 = Training   runtime
+	0.24s	 = Validation runtime
+Fitting model: CatBoost_BAG_L1 ... Training model for up to 97.61s of the 989.39s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.945	 = Validation score   (accuracy)
+	77.77s	 = Training   runtime
+	0.09s	 = Validation runtime
+Fitting model: ExtraTreesGini_BAG_L1 ... Training model for up to 16.54s of the 908.33s of remaining time.
+	0.9384	 = Validation score   (accuracy)
+	1.53s	 = Training   runtime
+	0.29s	 = Validation runtime
+Fitting model: ExtraTreesEntr_BAG_L1 ... Training model for up to 13.94s of the 905.73s of remaining time.
+	0.9397	 = Validation score   (accuracy)
+	1.5s	 = Training   runtime
+	0.36s	 = Validation runtime
+Fitting model: XGBoost_BAG_L1 ... Training model for up to 11.31s of the 903.1s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9422	 = Validation score   (accuracy)
+	18.84s	 = Training   runtime
+	0.69s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 876.38s of remaining time.
+	Ensemble Weights: {'XGBoost_BAG_L1': 0.671, 'LightGBM_BAG_L1': 0.195, 'NeuralNetFastAI_BAG_L1': 0.049, 'ExtraTreesGini_BAG_L1': 0.037, 'ExtraTreesEntr_BAG_L1': 0.037, 'KNeighborsDist_BAG_L1': 0.012}
+	0.9501	 = Validation score   (accuracy)
+	0.86s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting 108 L2 models ...
+Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 875.5s of the 875.46s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9461	 = Validation score   (accuracy)
+	659.95s	 = Training   runtime
+	7.61s	 = Validation runtime
+Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 211.73s of the 211.69s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.953	 = Validation score   (accuracy)
+	111.9s	 = Training   runtime
+	0.33s	 = Validation runtime
+Fitting model: LightGBM_BAG_L2 ... Training model for up to 94.76s of the 94.72s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.01%)
+	0.9578	 = Validation score   (accuracy)
+	76.61s	 = Training   runtime
+	0.44s	 = Validation runtime
+Fitting model: RandomForestGini_BAG_L2 ... Training model for up to 14.16s of the 14.12s of remaining time.
+	0.9488	 = Validation score   (accuracy)
+	1.25s	 = Training   runtime
+	0.29s	 = Validation runtime
+Fitting model: RandomForestEntr_BAG_L2 ... Training model for up to 12.37s of the 12.33s of remaining time.
+	0.9497	 = Validation score   (accuracy)
+	1.34s	 = Training   runtime
+	0.24s	 = Validation runtime
+Fitting model: CatBoost_BAG_L2 ... Training model for up to 10.56s of the 10.53s of remaining time.
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy (8 workers, per: cpus=13, gpus=0, memory=0.02%)
+	0.9442	 = Validation score   (accuracy)
+	7.85s	 = Training   runtime
+	0.18s	 = Validation runtime
+Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the -4.71s of remaining time.
+	Ensemble Weights: {'LightGBM_BAG_L2': 1.0}
+	0.9578	 = Validation score   (accuracy)
+	1.24s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 2682.25s ... Best model: "WeightedEnsemble_L3"
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("/accounts/grad/ijyliu/Box/STAT 222 Capstone/Autogluon/Autogluon_Tabular_Only_Best_Presets_SCF")
+dataframe
+    ticker fixed_quarter_date  ...     TONE1 train_test_80_20
+0      LKQ         2016-07-01  ... -0.745855            train
+1      LKQ         2016-10-01  ... -0.575157            train
+2      LPX         2011-10-01  ... -1.619543            train
+3      LPX         2012-01-01  ... -1.441481            train
+4      LPX         2012-04-01  ... -1.263053            train
+..     ...                ...  ...       ...              ...
+562    MHO         2013-10-01  ...  2.140598            train
+563    MHO         2014-01-01  ... -0.029287            train
+564    MHO         2014-04-01  ...  0.084888             test
+565    MHO         2014-07-01  ... -0.319794            train
+566    WTI         2016-07-01  ... -1.619389            train
+
+[5670 rows x 159 columns]
+column names
+ticker
+fixed_quarter_date
+earnings_call_date
+Rating
+rating_date
+Next Rating
+Next Rating Date
+Previous Rating
+Previous Rating Date
+next_rating_date_or_end_of_data
+credit_rating_year
+previous_fixed_quarter_date
+days_since_call_on_fixed_quarter
+days_since_rating
+for_quarter
+for_year
+transcript
+reportedCurrency
+acceptedDate_balance_sheet
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+acceptedDate_cash_flow_statement
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+acceptedDate_income_statement
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+financial_statement_date
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Ratio_A
+Ratio_B
+Ratio_C
+Ratio_D
+Ratio_E
+Altman_Z
+filingDate
+rating_on_previous_fixed_quarter_date
+Investment_Grade
+Change Direction Since Last Fixed Quarter Date
+Change Since Last Fixed Quarter Date
+Sector
+num_transparency
+gf_score
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+PN
+SW
+AP
+OU
+TONE1
+train_test_80_20
+Completed Job
+Time elapsed: 60 minute(s).

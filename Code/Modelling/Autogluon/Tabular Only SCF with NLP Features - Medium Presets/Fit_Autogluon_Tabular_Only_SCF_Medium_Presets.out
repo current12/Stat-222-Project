@@ -1,0 +1,445 @@
+Starting Job
+Warning: path already exists! This predictor may overwrite an existing predictor! path="../AutogluonModels/Autogluon_Tabular_Only_SCF_Medium_Presets"
+Presets specified: ['medium_quality']
+Beginning AutoGluon training ...
+AutoGluon will save models to "../AutogluonModels/Autogluon_Tabular_Only_SCF_Medium_Presets"
+=================== System Info ===================
+AutoGluon Version:  1.0.0
+Python Version:     3.11.8
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #93-Ubuntu SMP Tue Sep 5 17:16:10 UTC 2023
+CPU Count:          48
+Memory Avail:       106.56 GB / 125.53 GB (84.9%)
+Disk Space Avail:   52920.98 GB / 67118.07 GB (78.8%)
+===================================================
+Train Data Rows:    4543
+Train Data Columns: 123
+Label Column:       Rating
+AutoGluon infers your prediction problem is: 'multiclass' (because dtype of label-column == object).
+	10 unique label values:  ['B', 'BB', 'BBB', 'A', 'AAA', 'AA', 'CCC', 'C', 'D', 'CC']
+	If 'multiclass' is not the correct problem_type, please manually specify the problem_type parameter during predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression'])
+Problem Type:       multiclass
+Preprocessing data ...
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/autogluon/tabular/learner/default_learner.py:189: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  X[self.label].replace([np.inf, -np.inf], np.nan, inplace=True)
+Warning: Some classes in the training set have fewer than 10 examples. AutoGluon will only keep 8 out of 10 classes for training and will not try to predict the rare classes. To keep more classes, increase the number of datapoints from these rare classes in the training data or reduce label_count_threshold.
+Fraction of data from classes with at least 10 examples that will be kept for training models: 0.9973585736297601
+Train Data Class Count: 8
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    109123.70 MB
+	Train Data (Original)  Memory Usage: 4.75 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Unused Original Features (Count: 2): ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+		These features were not used to generate any of the output features. Add a feature generator compatible with these features to utilize them.
+		Features can also be unused if they carry very little information, such as being categorical but having almost entirely unique values or being duplicates of other features.
+		These features do not need to be present at inference time.
+		('float', []) : 2 | ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+	Types of features in original data (raw dtype, special dtypes):
+		('float', [])  : 119 | ['num_transparency', 'gf_score', 'word_count', 'num_questions', 'pos_score', ...]
+		('object', []) :   2 | ['rating_on_previous_fixed_quarter_date', 'Sector']
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', []) :   2 | ['rating_on_previous_fixed_quarter_date', 'Sector']
+		('float', [])    : 119 | ['num_transparency', 'gf_score', 'word_count', 'num_questions', 'pos_score', ...]
+	0.5s = Fit runtime
+	121 features in original data used to generate 121 features in processed data.
+	Train Data (Processed) Memory Usage: 4.12 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.52s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'accuracy'
+	To change this, specify the eval_metric parameter of Predictor()
+Automatically generating train/validation split with holdout_frac=0.1100594320933304, Train Rows: 4032, Val Rows: 499
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': {},
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, 'GBMLarge'],
+	'CAT': {},
+	'XGB': {},
+	'FASTAI': {},
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}}],
+}
+Fitting 13 L1 models ...
+Fitting model: KNeighborsUnif ...
+	0.8617	 = Validation score   (accuracy)
+	2.49s	 = Training   runtime
+	0.07s	 = Validation runtime
+Fitting model: KNeighborsDist ...
+	0.8898	 = Validation score   (accuracy)
+	0.03s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetFastAI ...
+	0.9499	 = Validation score   (accuracy)
+	9.28s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: LightGBMXT ...
+	0.9559	 = Validation score   (accuracy)
+	30.5s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: LightGBM ...
+	0.9539	 = Validation score   (accuracy)
+	33.13s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: RandomForestGini ...
+	0.9399	 = Validation score   (accuracy)
+	2.56s	 = Training   runtime
+	0.07s	 = Validation runtime
+Fitting model: RandomForestEntr ...
+	0.9399	 = Validation score   (accuracy)
+	3.65s	 = Training   runtime
+	0.07s	 = Validation runtime
+Fitting model: CatBoost ...
+TBB Warning: The number of workers is currently limited to 7. The request for 47 workers is ignored. Further requests for more workers will be silently ignored until the limit changes.
+
+	0.9559	 = Validation score   (accuracy)
+	34.59s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: ExtraTreesGini ...
+	0.9419	 = Validation score   (accuracy)
+	1.08s	 = Training   runtime
+	0.06s	 = Validation runtime
+Fitting model: ExtraTreesEntr ...
+	0.9419	 = Validation score   (accuracy)
+	1.23s	 = Training   runtime
+	0.07s	 = Validation runtime
+Fitting model: XGBoost ...
+	0.9559	 = Validation score   (accuracy)
+	15.31s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetTorch ...
+	0.9559	 = Validation score   (accuracy)
+	14.77s	 = Training   runtime
+	0.08s	 = Validation runtime
+Fitting model: LightGBMLarge ...
+	0.9519	 = Validation score   (accuracy)
+	105.92s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ...
+	Ensemble Weights: {'LightGBMXT': 1.0}
+	0.9559	 = Validation score   (accuracy)
+	0.74s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 259.17s ... Best model: "WeightedEnsemble_L2"
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("../AutogluonModels/Autogluon_Tabular_Only_SCF_Medium_Presets")
+dataframe
+    ticker fixed_quarter_date  ...     TONE1 train_test_80_20
+0      LKQ         2016-07-01  ... -0.745855            train
+1      LKQ         2016-10-01  ... -0.575157            train
+2      LPX         2011-10-01  ... -1.619543            train
+3      LPX         2012-01-01  ... -1.441481            train
+4      LPX         2012-04-01  ... -1.263053            train
+..     ...                ...  ...       ...              ...
+562    MHO         2013-10-01  ...  2.140598            train
+563    MHO         2014-01-01  ... -0.029287            train
+564    MHO         2014-04-01  ...  0.084888             test
+565    MHO         2014-07-01  ... -0.319794            train
+566    WTI         2016-07-01  ... -1.619389            train
+
+[5670 rows x 159 columns]
+column names
+ticker
+fixed_quarter_date
+earnings_call_date
+Rating
+rating_date
+Next Rating
+Next Rating Date
+Previous Rating
+Previous Rating Date
+next_rating_date_or_end_of_data
+credit_rating_year
+previous_fixed_quarter_date
+days_since_call_on_fixed_quarter
+days_since_rating
+for_quarter
+for_year
+transcript
+reportedCurrency
+acceptedDate_balance_sheet
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+acceptedDate_cash_flow_statement
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+acceptedDate_income_statement
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+financial_statement_date
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Ratio_A
+Ratio_B
+Ratio_C
+Ratio_D
+Ratio_E
+Altman_Z
+filingDate
+rating_on_previous_fixed_quarter_date
+Investment_Grade
+Change Direction Since Last Fixed Quarter Date
+Change Since Last Fixed Quarter Date
+Sector
+num_transparency
+gf_score
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+PN
+SW
+AP
+OU
+TONE1
+train_test_80_20
+logistic_regression_columns
+['rating_on_previous_fixed_quarter_date', 'Sector', 'num_transparency', 'gf_score', 'word_count', 'num_questions', 'pos_score', 'Positiv', 'Negativ', 'Strong', 'Weak', 'Active', 'Passive', 'Ovrst', 'Undrst', 'TONE1', 'cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', 'otherCurrentAssets', 'totalCurrentAssets', 'propertyPlantEquipmentNet', 'goodwill', 'intangibleAssets', 'goodwillAndIntangibleAssets', 'longTermInvestments', 'taxAssets', 'otherNonCurrentAssets', 'totalNonCurrentAssets', 'otherAssets', 'totalAssets', 'accountPayables', 'shortTermDebt', 'taxPayables', 'deferredRevenue', 'otherCurrentLiabilities', 'totalCurrentLiabilities', 'longTermDebt', 'deferredRevenueNonCurrent', 'deferredTaxLiabilitiesNonCurrent', 'otherNonCurrentLiabilities', 'totalNonCurrentLiabilities', 'otherLiabilities', 'capitalLeaseObligations', 'totalLiabilities', 'preferredStock', 'commonStock', 'retainedEarnings', 'accumulatedOtherComprehensiveIncomeLoss', 'othertotalStockholdersEquity', 'totalStockholdersEquity', 'totalEquity', 'totalLiabilitiesAndStockholdersEquity', 'minorityInterest', 'totalLiabilitiesAndTotalEquity', 'totalInvestments', 'totalDebt', 'netDebt', 'netIncome_cash_flow_statement', 'depreciationAndAmortization_cash_flow_statement', 'deferredIncomeTax', 'stockBasedCompensation', 'changeInWorkingCapital', 'accountsReceivables', 'inventory_cash_flow_statement', 'accountsPayables', 'otherWorkingCapital', 'otherNonCashItems', 'netCashProvidedByOperatingActivities', 'investmentsInPropertyPlantAndEquipment', 'acquisitionsNet', 'purchasesOfInvestments', 'salesMaturitiesOfInvestments', 'otherInvestingActivites', 'netCashUsedForInvestingActivites', 'debtRepayment', 'commonStockIssued', 'commonStockRepurchased', 'dividendsPaid', 'otherFinancingActivites', 'netCashUsedProvidedByFinancingActivities', 'effectOfForexChangesOnCash', 'netChangeInCash', 'cashAtEndOfPeriod', 'cashAtBeginningOfPeriod', 'operatingCashFlow', 'capitalExpenditure', 'freeCashFlow', 'revenue', 'costOfRevenue', 'grossProfit', 'grossProfitRatio', 'researchAndDevelopmentExpenses', 'generalAndAdministrativeExpenses', 'sellingAndMarketingExpenses', 'sellingGeneralAndAdministrativeExpenses', 'otherExpenses', 'operatingExpenses', 'costAndExpenses', 'interestIncome', 'interestExpense', 'depreciationAndAmortization_income_statement', 'ebitda', 'ebitdaratio', 'operatingIncome', 'operatingIncomeRatio', 'totalOtherIncomeExpensesNet', 'incomeBeforeTax', 'incomeBeforeTaxRatio', 'incomeTaxExpense', 'netIncome_income_statement', 'netIncomeRatio', 'eps', 'epsdiluted', 'weightedAverageShsOut', 'weightedAverageShsOutDil', 'marketCap', 'EBIT', 'common_plus_preferred_stock', 'workingCapital', 'Altman_Z', 'Rating']
+column names
+rating_on_previous_fixed_quarter_date
+Sector
+num_transparency
+gf_score
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+TONE1
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Altman_Z
+Rating
+Completed Job
+Time elapsed: 4 minute(s).

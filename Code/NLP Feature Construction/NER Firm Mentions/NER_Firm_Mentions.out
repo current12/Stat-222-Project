@@ -1,0 +1,73 @@
+Starting NER on Company Names
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+using gpu?  True
+beginning data load
+dataframe
+  ticker fixed_quarter_date                                         transcript
+0    NEE         2012-01-01  Operator: Good day, everyone, and welcome to t...
+1    NEE         2012-04-01  Operator: Good day, everyone, and welcome to t...
+2    NEE         2012-07-01  Operator: Good day, everyone, and welcome to t...
+3    NEE         2012-10-01  Operator: Good day, everyone, and welcome to t...
+4    NEE         2013-01-01  Operator: Good day, everyone, and welcome to t...
+                                  company_mentioned  ...  fixed_quarter_date
+0                                               FPL  ...          2012-01-01
+1                                  ENERGY RESOURCES  ...          2012-01-01
+2                                              CITC  ...          2012-01-01
+3                                   DESERT SUNLIGHT  ...          2012-01-01
+4                                 ENERGY RESOURCES'  ...          2012-01-01
+5                                 RESEARCH DIVISION  ...          2012-01-01
+6                                             MCCOY  ...          2012-01-01
+7                                           GENESIS  ...          2012-01-01
+8                                  DEUTSCHE BANK AG  ...          2012-01-01
+9                                          MERCHANT  ...          2012-01-01
+10                         GOLDMAN SACHS GROUP INC.  ...          2012-01-01
+11       THE CALIFORNIA PUBLIC UTILITIES COMMISSION  ...          2012-01-01
+12                                             GEXA  ...          2012-01-01
+13                                 NEXTERA ENERGY'S  ...          2012-01-01
+14                                        LONE STAR  ...          2012-01-01
+15                                   NEXTERA ENERGY  ...          2012-01-01
+16                            FLORIDA POWER & LIGHT  ...          2012-01-01
+17                                 CRÉDIT SUISSE AG  ...          2012-01-01
+18                    FLORIDA POWER & LIGHT COMPANY  ...          2012-01-01
+19                           LONE STAR TRANSMISSION  ...          2012-01-01
+20                                             GAAP  ...          2012-01-01
+21                     NEXTERA ENERGY RESOURCES LLC  ...          2012-01-01
+22                                 NON-GAAP MEASURE  ...          2012-01-01
+23                               NON-GAAP FINANCIAL  ...          2012-01-01
+24           THE SECURITIES AND EXCHANGE COMMISSION  ...          2012-01-01
+25                                              PSC  ...          2012-01-01
+26                   THE SOUTHERN CALIFORNIA EDISON  ...          2012-01-01
+27                                         SEABROOK  ...          2012-01-01
+28  THE OFFICE OF ECONOMIC AND DEMOGRAPHIC RESEARCH  ...          2012-01-01
+29                                             RIEC  ...          2012-01-01
+30                       SOUTHERN CALIFORNIA EDISON  ...          2012-01-01
+31            THE FLORIDA PUBLIC SERVICE COMMISSION  ...          2012-01-01
+32                                    CRÉDIT SUISSE  ...          2012-01-01
+33                                              PTC  ...          2012-01-01
+34                                         CONGRESS  ...          2012-01-01
+35                            U.S. RENEWABLE ENERGY  ...          2012-01-01
+36                                    GOLDMAN SACHS  ...          2012-01-01
+37                                      SPAIN SOLAR  ...          2012-01-01
+38                              GLENROCK ASSOCIATES  ...          2012-01-01
+39                          GLENROCK ASSOCIATES LLC  ...          2012-01-01
+40                                    DEUTSCHE BANK  ...          2012-01-01
+
+[41 rows x 4 columns]
+Estimated Time to process:  596.7574693361918
+Time to process:  62.62513994375865
+combined dataframes
+   company_mentioned  count ticker fixed_quarter_date
+0                FPL     26    NEE         2012-01-01
+1   ENERGY RESOURCES     25    NEE         2012-01-01
+2               CITC     14    NEE         2012-01-01
+3    DESERT SUNLIGHT     10    NEE         2012-01-01
+4  ENERGY RESOURCES'      9    NEE         2012-01-01
+(267115, 4)
+      company_mentioned  count ticker fixed_quarter_date
+22               SIDOTI      1     KW         2014-04-01
+23      BANCO POPULAR’S      1     KW         2014-04-01
+24  WALL STREET JOURNAL      1     KW         2014-04-01
+25  THE BANK OF IRELAND      1     KW         2014-04-01
+26        MERRILL LYNCH      1     KW         2014-04-01
+Completed NER

@@ -1,0 +1,4 @@
+set up device
+device:  cuda
+loaded model
+Calculating pos_score for index 0 to 3.

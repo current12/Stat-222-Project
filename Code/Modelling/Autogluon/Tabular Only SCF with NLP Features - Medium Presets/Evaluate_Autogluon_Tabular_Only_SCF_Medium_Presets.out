@@ -1,0 +1,722 @@
+Starting Job
+TBB Warning: The number of workers is currently limited to 7. The request for 47 workers is ignored. Further requests for more workers will be silently ignored until the limit changes.
+
+These features in provided data are not utilized by the predictor and will be ignored: ['totalLiabilitiesAndTotalEquity', 'operatingCashFlow']
+dataframe
+    ticker fixed_quarter_date  ...     TONE1 train_test_80_20
+0      LKQ         2016-07-01  ... -0.745855            train
+1      LKQ         2016-10-01  ... -0.575157            train
+2      LPX         2011-10-01  ... -1.619543            train
+3      LPX         2012-01-01  ... -1.441481            train
+4      LPX         2012-04-01  ... -1.263053            train
+..     ...                ...  ...       ...              ...
+562    MHO         2013-10-01  ...  2.140598            train
+563    MHO         2014-01-01  ... -0.029287            train
+564    MHO         2014-04-01  ...  0.084888             test
+565    MHO         2014-07-01  ... -0.319794            train
+566    WTI         2016-07-01  ... -1.619389            train
+
+[5670 rows x 159 columns]
+column names
+ticker
+fixed_quarter_date
+earnings_call_date
+Rating
+rating_date
+Next Rating
+Next Rating Date
+Previous Rating
+Previous Rating Date
+next_rating_date_or_end_of_data
+credit_rating_year
+previous_fixed_quarter_date
+days_since_call_on_fixed_quarter
+days_since_rating
+for_quarter
+for_year
+transcript
+reportedCurrency
+acceptedDate_balance_sheet
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+acceptedDate_cash_flow_statement
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+acceptedDate_income_statement
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+financial_statement_date
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Ratio_A
+Ratio_B
+Ratio_C
+Ratio_D
+Ratio_E
+Altman_Z
+filingDate
+rating_on_previous_fixed_quarter_date
+Investment_Grade
+Change Direction Since Last Fixed Quarter Date
+Change Since Last Fixed Quarter Date
+Sector
+num_transparency
+gf_score
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+PN
+SW
+AP
+OU
+TONE1
+train_test_80_20
+logistic_regression_columns
+['rating_on_previous_fixed_quarter_date', 'Sector', 'num_transparency', 'gf_score', 'word_count', 'num_questions', 'pos_score', 'Positiv', 'Negativ', 'Strong', 'Weak', 'Active', 'Passive', 'Ovrst', 'Undrst', 'TONE1', 'cashAndCashEquivalents', 'shortTermInvestments', 'cashAndShortTermInvestments', 'netReceivables', 'inventory_balance_sheet', 'otherCurrentAssets', 'totalCurrentAssets', 'propertyPlantEquipmentNet', 'goodwill', 'intangibleAssets', 'goodwillAndIntangibleAssets', 'longTermInvestments', 'taxAssets', 'otherNonCurrentAssets', 'totalNonCurrentAssets', 'otherAssets', 'totalAssets', 'accountPayables', 'shortTermDebt', 'taxPayables', 'deferredRevenue', 'otherCurrentLiabilities', 'totalCurrentLiabilities', 'longTermDebt', 'deferredRevenueNonCurrent', 'deferredTaxLiabilitiesNonCurrent', 'otherNonCurrentLiabilities', 'totalNonCurrentLiabilities', 'otherLiabilities', 'capitalLeaseObligations', 'totalLiabilities', 'preferredStock', 'commonStock', 'retainedEarnings', 'accumulatedOtherComprehensiveIncomeLoss', 'othertotalStockholdersEquity', 'totalStockholdersEquity', 'totalEquity', 'totalLiabilitiesAndStockholdersEquity', 'minorityInterest', 'totalLiabilitiesAndTotalEquity', 'totalInvestments', 'totalDebt', 'netDebt', 'netIncome_cash_flow_statement', 'depreciationAndAmortization_cash_flow_statement', 'deferredIncomeTax', 'stockBasedCompensation', 'changeInWorkingCapital', 'accountsReceivables', 'inventory_cash_flow_statement', 'accountsPayables', 'otherWorkingCapital', 'otherNonCashItems', 'netCashProvidedByOperatingActivities', 'investmentsInPropertyPlantAndEquipment', 'acquisitionsNet', 'purchasesOfInvestments', 'salesMaturitiesOfInvestments', 'otherInvestingActivites', 'netCashUsedForInvestingActivites', 'debtRepayment', 'commonStockIssued', 'commonStockRepurchased', 'dividendsPaid', 'otherFinancingActivites', 'netCashUsedProvidedByFinancingActivities', 'effectOfForexChangesOnCash', 'netChangeInCash', 'cashAtEndOfPeriod', 'cashAtBeginningOfPeriod', 'operatingCashFlow', 'capitalExpenditure', 'freeCashFlow', 'revenue', 'costOfRevenue', 'grossProfit', 'grossProfitRatio', 'researchAndDevelopmentExpenses', 'generalAndAdministrativeExpenses', 'sellingAndMarketingExpenses', 'sellingGeneralAndAdministrativeExpenses', 'otherExpenses', 'operatingExpenses', 'costAndExpenses', 'interestIncome', 'interestExpense', 'depreciationAndAmortization_income_statement', 'ebitda', 'ebitdaratio', 'operatingIncome', 'operatingIncomeRatio', 'totalOtherIncomeExpensesNet', 'incomeBeforeTax', 'incomeBeforeTaxRatio', 'incomeTaxExpense', 'netIncome_income_statement', 'netIncomeRatio', 'eps', 'epsdiluted', 'weightedAverageShsOut', 'weightedAverageShsOutDil', 'marketCap', 'EBIT', 'common_plus_preferred_stock', 'workingCapital', 'Altman_Z', 'Rating']
+column names
+rating_on_previous_fixed_quarter_date
+Sector
+num_transparency
+gf_score
+word_count
+num_questions
+pos_score
+Positiv
+Negativ
+Strong
+Weak
+Active
+Passive
+Ovrst
+Undrst
+TONE1
+cashAndCashEquivalents
+shortTermInvestments
+cashAndShortTermInvestments
+netReceivables
+inventory_balance_sheet
+otherCurrentAssets
+totalCurrentAssets
+propertyPlantEquipmentNet
+goodwill
+intangibleAssets
+goodwillAndIntangibleAssets
+longTermInvestments
+taxAssets
+otherNonCurrentAssets
+totalNonCurrentAssets
+otherAssets
+totalAssets
+accountPayables
+shortTermDebt
+taxPayables
+deferredRevenue
+otherCurrentLiabilities
+totalCurrentLiabilities
+longTermDebt
+deferredRevenueNonCurrent
+deferredTaxLiabilitiesNonCurrent
+otherNonCurrentLiabilities
+totalNonCurrentLiabilities
+otherLiabilities
+capitalLeaseObligations
+totalLiabilities
+preferredStock
+commonStock
+retainedEarnings
+accumulatedOtherComprehensiveIncomeLoss
+othertotalStockholdersEquity
+totalStockholdersEquity
+totalEquity
+totalLiabilitiesAndStockholdersEquity
+minorityInterest
+totalLiabilitiesAndTotalEquity
+totalInvestments
+totalDebt
+netDebt
+netIncome_cash_flow_statement
+depreciationAndAmortization_cash_flow_statement
+deferredIncomeTax
+stockBasedCompensation
+changeInWorkingCapital
+accountsReceivables
+inventory_cash_flow_statement
+accountsPayables
+otherWorkingCapital
+otherNonCashItems
+netCashProvidedByOperatingActivities
+investmentsInPropertyPlantAndEquipment
+acquisitionsNet
+purchasesOfInvestments
+salesMaturitiesOfInvestments
+otherInvestingActivites
+netCashUsedForInvestingActivites
+debtRepayment
+commonStockIssued
+commonStockRepurchased
+dividendsPaid
+otherFinancingActivites
+netCashUsedProvidedByFinancingActivities
+effectOfForexChangesOnCash
+netChangeInCash
+cashAtEndOfPeriod
+cashAtBeginningOfPeriod
+operatingCashFlow
+capitalExpenditure
+freeCashFlow
+revenue
+costOfRevenue
+grossProfit
+grossProfitRatio
+researchAndDevelopmentExpenses
+generalAndAdministrativeExpenses
+sellingAndMarketingExpenses
+sellingGeneralAndAdministrativeExpenses
+otherExpenses
+operatingExpenses
+costAndExpenses
+interestIncome
+interestExpense
+depreciationAndAmortization_income_statement
+ebitda
+ebitdaratio
+operatingIncome
+operatingIncomeRatio
+totalOtherIncomeExpensesNet
+incomeBeforeTax
+incomeBeforeTaxRatio
+incomeTaxExpense
+netIncome_income_statement
+netIncomeRatio
+eps
+epsdiluted
+weightedAverageShsOut
+weightedAverageShsOutDil
+marketCap
+EBIT
+common_plus_preferred_stock
+workingCapital
+Altman_Z
+Rating
+<autogluon.tabular.predictor.predictor.TabularPredictor object at 0x7fcc0c0f3a50>
+     ticker fixed_quarter_date Rating
+0       LPX         2015-07-01      B
+1       LXU         2014-01-01      B
+2       LXU         2016-04-01      B
+3       LXU         2016-07-01      B
+4       LYV         2014-10-01      B
+...     ...                ...    ...
+1122    HOV         2015-01-01      C
+1123    HOV         2016-01-01      C
+1124   KODK         2016-04-01    BBB
+1125   KODK         2016-07-01      B
+1126    MHO         2014-04-01    CCC
+
+[1127 rows x 3 columns]
+                  model  score_test  ...  can_infer fit_order
+0               XGBoost    0.953860  ...       True        11
+1              LightGBM    0.952972  ...       True         5
+2            LightGBMXT    0.952972  ...       True         4
+3   WeightedEnsemble_L2    0.952972  ...       True        14
+4              CatBoost    0.952085  ...       True         8
+5        NeuralNetTorch    0.950311  ...       True        12
+6         LightGBMLarge    0.943212  ...       True        13
+7        ExtraTreesGini    0.939663  ...       True         9
+8        ExtraTreesEntr    0.938776  ...       True        10
+9      RandomForestGini    0.937888  ...       True         6
+10      NeuralNetFastAI    0.935226  ...       True         3
+11     RandomForestEntr    0.934339  ...       True         7
+12       KNeighborsDist    0.874002  ...       True         2
+13       KNeighborsUnif    0.848270  ...       True         1
+
+[14 rows x 13 columns]
+                  model            hyperparameter     value
+0        KNeighborsUnif                   weights   uniform
+1        KNeighborsDist                   weights  distance
+2       NeuralNetFastAI                    layers      None
+3       NeuralNetFastAI                  emb_drop       0.1
+4       NeuralNetFastAI                        ps       0.1
+..                  ...                       ...       ...
+75        LightGBMLarge          min_data_in_leaf       3.0
+76  WeightedEnsemble_L2         use_orig_features     False
+77  WeightedEnsemble_L2           max_base_models        25
+78  WeightedEnsemble_L2  max_base_models_per_type         5
+79  WeightedEnsemble_L2            save_bag_folds      True
+
+[80 rows x 3 columns]
+                                                 importance    stddev  \
+rating_on_previous_fixed_quarter_date              0.714769  0.013384   
+weightedAverageShsOutDil                           0.003381  0.000975   
+totalNonCurrentAssets                              0.002669  0.000000   
+propertyPlantEquipmentNet                          0.001957  0.000744   
+marketCap                                          0.000890  0.000890   
+totalLiabilities                                   0.000178  0.000398   
+changeInWorkingCapital                             0.000000  0.000000   
+revenue                                            0.000000  0.000000   
+freeCashFlow                                       0.000000  0.000000   
+capitalExpenditure                                 0.000000  0.000000   
+cashAtBeginningOfPeriod                            0.000000  0.000000   
+cashAtEndOfPeriod                                  0.000000  0.000000   
+netChangeInCash                                    0.000000  0.000000   
+effectOfForexChangesOnCash                         0.000000  0.000000   
+accountsReceivables                                0.000000  0.000000   
+netCashUsedProvidedByFinancingActivities           0.000000  0.000000   
+otherFinancingActivites                            0.000000  0.000000   
+dividendsPaid                                      0.000000  0.000000   
+commonStockRepurchased                             0.000000  0.000000   
+costOfRevenue                                      0.000000  0.000000   
+debtRepayment                                      0.000000  0.000000   
+netCashUsedForInvestingActivites                   0.000000  0.000000   
+otherInvestingActivites                            0.000000  0.000000   
+salesMaturitiesOfInvestments                       0.000000  0.000000   
+purchasesOfInvestments                             0.000000  0.000000   
+acquisitionsNet                                    0.000000  0.000000   
+investmentsInPropertyPlantAndEquipment             0.000000  0.000000   
+netCashProvidedByOperatingActivities               0.000000  0.000000   
+otherNonCashItems                                  0.000000  0.000000   
+otherWorkingCapital                                0.000000  0.000000   
+accountsPayables                                   0.000000  0.000000   
+inventory_cash_flow_statement                      0.000000  0.000000   
+commonStockIssued                                  0.000000  0.000000   
+common_plus_preferred_stock                        0.000000  0.000000   
+EBIT                                               0.000000  0.000000   
+Altman_Z                                           0.000000  0.000000   
+weightedAverageShsOut                              0.000000  0.000000   
+epsdiluted                                         0.000000  0.000000   
+eps                                                0.000000  0.000000   
+netIncomeRatio                                     0.000000  0.000000   
+netIncome_income_statement                         0.000000  0.000000   
+incomeTaxExpense                                   0.000000  0.000000   
+incomeBeforeTaxRatio                               0.000000  0.000000   
+incomeBeforeTax                                    0.000000  0.000000   
+totalOtherIncomeExpensesNet                        0.000000  0.000000   
+operatingIncomeRatio                               0.000000  0.000000   
+grossProfitRatio                                   0.000000  0.000000   
+ebitdaratio                                        0.000000  0.000000   
+ebitda                                             0.000000  0.000000   
+depreciationAndAmortization_income_statement       0.000000  0.000000   
+interestExpense                                    0.000000  0.000000   
+interestIncome                                     0.000000  0.000000   
+costAndExpenses                                    0.000000  0.000000   
+operatingExpenses                                  0.000000  0.000000   
+otherExpenses                                      0.000000  0.000000   
+sellingGeneralAndAdministrativeExpenses            0.000000  0.000000   
+sellingAndMarketingExpenses                        0.000000  0.000000   
+generalAndAdministrativeExpenses                   0.000000  0.000000   
+researchAndDevelopmentExpenses                     0.000000  0.000000   
+stockBasedCompensation                             0.000000  0.000000   
+grossProfit                                        0.000000  0.000000   
+operatingIncome                                    0.000000  0.000000   
+otherNonCurrentAssets                              0.000000  0.000000   
+taxAssets                                          0.000000  0.000000   
+longTermInvestments                                0.000000  0.000000   
+goodwillAndIntangibleAssets                        0.000000  0.000000   
+intangibleAssets                                   0.000000  0.000000   
+goodwill                                           0.000000  0.000000   
+totalCurrentAssets                                 0.000000  0.000000   
+otherCurrentAssets                                 0.000000  0.000000   
+inventory_balance_sheet                            0.000000  0.000000   
+netReceivables                                     0.000000  0.000000   
+cashAndShortTermInvestments                        0.000000  0.000000   
+shortTermInvestments                               0.000000  0.000000   
+cashAndCashEquivalents                             0.000000  0.000000   
+workingCapital                                     0.000000  0.000000   
+Undrst                                             0.000000  0.000000   
+Ovrst                                              0.000000  0.000000   
+Passive                                            0.000000  0.000000   
+Active                                             0.000000  0.000000   
+Weak                                               0.000000  0.000000   
+Strong                                             0.000000  0.000000   
+Negativ                                            0.000000  0.000000   
+Positiv                                            0.000000  0.000000   
+pos_score                                          0.000000  0.000000   
+num_questions                                      0.000000  0.000000   
+word_count                                         0.000000  0.000000   
+gf_score                                           0.000000  0.000000   
+num_transparency                                   0.000000  0.000000   
+Sector                                             0.000000  0.000000   
+TONE1                                              0.000000  0.000000   
+deferredIncomeTax                                  0.000000  0.000000   
+depreciationAndAmortization_cash_flow_statement    0.000000  0.000000   
+netIncome_cash_flow_statement                      0.000000  0.000000   
+netDebt                                            0.000000  0.000000   
+totalDebt                                          0.000000  0.000000   
+totalInvestments                                   0.000000  0.000000   
+minorityInterest                                   0.000000  0.000000   
+totalLiabilitiesAndStockholdersEquity              0.000000  0.000000   
+totalEquity                                        0.000000  0.000000   
+totalStockholdersEquity                            0.000000  0.000000   
+othertotalStockholdersEquity                       0.000000  0.000000   
+accumulatedOtherComprehensiveIncomeLoss            0.000000  0.000000   
+retainedEarnings                                   0.000000  0.000000   
+commonStock                                        0.000000  0.000000   
+otherAssets                                        0.000000  0.000000   
+capitalLeaseObligations                            0.000000  0.000000   
+otherLiabilities                                   0.000000  0.000000   
+totalNonCurrentLiabilities                         0.000000  0.000000   
+otherNonCurrentLiabilities                         0.000000  0.000000   
+deferredTaxLiabilitiesNonCurrent                   0.000000  0.000000   
+deferredRevenueNonCurrent                          0.000000  0.000000   
+longTermDebt                                       0.000000  0.000000   
+totalCurrentLiabilities                            0.000000  0.000000   
+otherCurrentLiabilities                            0.000000  0.000000   
+deferredRevenue                                    0.000000  0.000000   
+taxPayables                                        0.000000  0.000000   
+shortTermDebt                                      0.000000  0.000000   
+accountPayables                                    0.000000  0.000000   
+totalAssets                                        0.000000  0.000000   
+preferredStock                                     0.000000  0.000000   
+
+                                                      p_value  n  p99_high  \
+rating_on_previous_fixed_quarter_date            1.474416e-08  5  0.742326   
+weightedAverageShsOutDil                         7.443162e-04  5  0.005387   
+totalNonCurrentAssets                            5.000000e-01  5  0.002669   
+propertyPlantEquipmentNet                        2.090536e-03  5  0.003490   
+marketCap                                        4.450467e-02  5  0.002722   
+totalLiabilities                                 1.869505e-01  5  0.000997   
+changeInWorkingCapital                           5.000000e-01  5  0.000000   
+revenue                                          5.000000e-01  5  0.000000   
+freeCashFlow                                     5.000000e-01  5  0.000000   
+capitalExpenditure                               5.000000e-01  5  0.000000   
+cashAtBeginningOfPeriod                          5.000000e-01  5  0.000000   
+cashAtEndOfPeriod                                5.000000e-01  5  0.000000   
+netChangeInCash                                  5.000000e-01  5  0.000000   
+effectOfForexChangesOnCash                       5.000000e-01  5  0.000000   
+accountsReceivables                              5.000000e-01  5  0.000000   
+netCashUsedProvidedByFinancingActivities         5.000000e-01  5  0.000000   
+otherFinancingActivites                          5.000000e-01  5  0.000000   
+dividendsPaid                                    5.000000e-01  5  0.000000   
+commonStockRepurchased                           5.000000e-01  5  0.000000   
+costOfRevenue                                    5.000000e-01  5  0.000000   
+debtRepayment                                    5.000000e-01  5  0.000000   
+netCashUsedForInvestingActivites                 5.000000e-01  5  0.000000   
+otherInvestingActivites                          5.000000e-01  5  0.000000   
+salesMaturitiesOfInvestments                     5.000000e-01  5  0.000000   
+purchasesOfInvestments                           5.000000e-01  5  0.000000   
+acquisitionsNet                                  5.000000e-01  5  0.000000   
+investmentsInPropertyPlantAndEquipment           5.000000e-01  5  0.000000   
+netCashProvidedByOperatingActivities             5.000000e-01  5  0.000000   
+otherNonCashItems                                5.000000e-01  5  0.000000   
+otherWorkingCapital                              5.000000e-01  5  0.000000   
+accountsPayables                                 5.000000e-01  5  0.000000   
+inventory_cash_flow_statement                    5.000000e-01  5  0.000000   
+commonStockIssued                                5.000000e-01  5  0.000000   
+common_plus_preferred_stock                      5.000000e-01  5  0.000000   
+EBIT                                             5.000000e-01  5  0.000000   
+Altman_Z                                         5.000000e-01  5  0.000000   
+weightedAverageShsOut                            5.000000e-01  5  0.000000   
+epsdiluted                                       5.000000e-01  5  0.000000   
+eps                                              5.000000e-01  5  0.000000   
+netIncomeRatio                                   5.000000e-01  5  0.000000   
+netIncome_income_statement                       5.000000e-01  5  0.000000   
+incomeTaxExpense                                 5.000000e-01  5  0.000000   
+incomeBeforeTaxRatio                             5.000000e-01  5  0.000000   
+incomeBeforeTax                                  5.000000e-01  5  0.000000   
+totalOtherIncomeExpensesNet                      5.000000e-01  5  0.000000   
+operatingIncomeRatio                             5.000000e-01  5  0.000000   
+grossProfitRatio                                 5.000000e-01  5  0.000000   
+ebitdaratio                                      5.000000e-01  5  0.000000   
+ebitda                                           5.000000e-01  5  0.000000   
+depreciationAndAmortization_income_statement     5.000000e-01  5  0.000000   
+interestExpense                                  5.000000e-01  5  0.000000   
+interestIncome                                   5.000000e-01  5  0.000000   
+costAndExpenses                                  5.000000e-01  5  0.000000   
+operatingExpenses                                5.000000e-01  5  0.000000   
+otherExpenses                                    5.000000e-01  5  0.000000   
+sellingGeneralAndAdministrativeExpenses          5.000000e-01  5  0.000000   
+sellingAndMarketingExpenses                      5.000000e-01  5  0.000000   
+generalAndAdministrativeExpenses                 5.000000e-01  5  0.000000   
+researchAndDevelopmentExpenses                   5.000000e-01  5  0.000000   
+stockBasedCompensation                           5.000000e-01  5  0.000000   
+grossProfit                                      5.000000e-01  5  0.000000   
+operatingIncome                                  5.000000e-01  5  0.000000   
+otherNonCurrentAssets                            5.000000e-01  5  0.000000   
+taxAssets                                        5.000000e-01  5  0.000000   
+longTermInvestments                              5.000000e-01  5  0.000000   
+goodwillAndIntangibleAssets                      5.000000e-01  5  0.000000   
+intangibleAssets                                 5.000000e-01  5  0.000000   
+goodwill                                         5.000000e-01  5  0.000000   
+totalCurrentAssets                               5.000000e-01  5  0.000000   
+otherCurrentAssets                               5.000000e-01  5  0.000000   
+inventory_balance_sheet                          5.000000e-01  5  0.000000   
+netReceivables                                   5.000000e-01  5  0.000000   
+cashAndShortTermInvestments                      5.000000e-01  5  0.000000   
+shortTermInvestments                             5.000000e-01  5  0.000000   
+cashAndCashEquivalents                           5.000000e-01  5  0.000000   
+workingCapital                                   5.000000e-01  5  0.000000   
+Undrst                                           5.000000e-01  5  0.000000   
+Ovrst                                            5.000000e-01  5  0.000000   
+Passive                                          5.000000e-01  5  0.000000   
+Active                                           5.000000e-01  5  0.000000   
+Weak                                             5.000000e-01  5  0.000000   
+Strong                                           5.000000e-01  5  0.000000   
+Negativ                                          5.000000e-01  5  0.000000   
+Positiv                                          5.000000e-01  5  0.000000   
+pos_score                                        5.000000e-01  5  0.000000   
+num_questions                                    5.000000e-01  5  0.000000   
+word_count                                       5.000000e-01  5  0.000000   
+gf_score                                         5.000000e-01  5  0.000000   
+num_transparency                                 5.000000e-01  5  0.000000   
+Sector                                           5.000000e-01  5  0.000000   
+TONE1                                            5.000000e-01  5  0.000000   
+deferredIncomeTax                                5.000000e-01  5  0.000000   
+depreciationAndAmortization_cash_flow_statement  5.000000e-01  5  0.000000   
+netIncome_cash_flow_statement                    5.000000e-01  5  0.000000   
+netDebt                                          5.000000e-01  5  0.000000   
+totalDebt                                        5.000000e-01  5  0.000000   
+totalInvestments                                 5.000000e-01  5  0.000000   
+minorityInterest                                 5.000000e-01  5  0.000000   
+totalLiabilitiesAndStockholdersEquity            5.000000e-01  5  0.000000   
+totalEquity                                      5.000000e-01  5  0.000000   
+totalStockholdersEquity                          5.000000e-01  5  0.000000   
+othertotalStockholdersEquity                     5.000000e-01  5  0.000000   
+accumulatedOtherComprehensiveIncomeLoss          5.000000e-01  5  0.000000   
+retainedEarnings                                 5.000000e-01  5  0.000000   
+commonStock                                      5.000000e-01  5  0.000000   
+otherAssets                                      5.000000e-01  5  0.000000   
+capitalLeaseObligations                          5.000000e-01  5  0.000000   
+otherLiabilities                                 5.000000e-01  5  0.000000   
+totalNonCurrentLiabilities                       5.000000e-01  5  0.000000   
+otherNonCurrentLiabilities                       5.000000e-01  5  0.000000   
+deferredTaxLiabilitiesNonCurrent                 5.000000e-01  5  0.000000   
+deferredRevenueNonCurrent                        5.000000e-01  5  0.000000   
+longTermDebt                                     5.000000e-01  5  0.000000   
+totalCurrentLiabilities                          5.000000e-01  5  0.000000   
+otherCurrentLiabilities                          5.000000e-01  5  0.000000   
+deferredRevenue                                  5.000000e-01  5  0.000000   
+taxPayables                                      5.000000e-01  5  0.000000   
+shortTermDebt                                    5.000000e-01  5  0.000000   
+accountPayables                                  5.000000e-01  5  0.000000   
+totalAssets                                      5.000000e-01  5  0.000000   
+preferredStock                                   5.000000e-01  5  0.000000   
+
+                                                  p99_low  
+rating_on_previous_fixed_quarter_date            0.687211  
+weightedAverageShsOutDil                         0.001374  
+totalNonCurrentAssets                            0.002669  
+propertyPlantEquipmentNet                        0.000425  
+marketCap                                       -0.000942  
+totalLiabilities                                -0.000641  
+changeInWorkingCapital                           0.000000  
+revenue                                          0.000000  
+freeCashFlow                                     0.000000  
+capitalExpenditure                               0.000000  
+cashAtBeginningOfPeriod                          0.000000  
+cashAtEndOfPeriod                                0.000000  
+netChangeInCash                                  0.000000  
+effectOfForexChangesOnCash                       0.000000  
+accountsReceivables                              0.000000  
+netCashUsedProvidedByFinancingActivities         0.000000  
+otherFinancingActivites                          0.000000  
+dividendsPaid                                    0.000000  
+commonStockRepurchased                           0.000000  
+costOfRevenue                                    0.000000  
+debtRepayment                                    0.000000  
+netCashUsedForInvestingActivites                 0.000000  
+otherInvestingActivites                          0.000000  
+salesMaturitiesOfInvestments                     0.000000  
+purchasesOfInvestments                           0.000000  
+acquisitionsNet                                  0.000000  
+investmentsInPropertyPlantAndEquipment           0.000000  
+netCashProvidedByOperatingActivities             0.000000  
+otherNonCashItems                                0.000000  
+otherWorkingCapital                              0.000000  
+accountsPayables                                 0.000000  
+inventory_cash_flow_statement                    0.000000  
+commonStockIssued                                0.000000  
+common_plus_preferred_stock                      0.000000  
+EBIT                                             0.000000  
+Altman_Z                                         0.000000  
+weightedAverageShsOut                            0.000000  
+epsdiluted                                       0.000000  
+eps                                              0.000000  
+netIncomeRatio                                   0.000000  
+netIncome_income_statement                       0.000000  
+incomeTaxExpense                                 0.000000  
+incomeBeforeTaxRatio                             0.000000  
+incomeBeforeTax                                  0.000000  
+totalOtherIncomeExpensesNet                      0.000000  
+operatingIncomeRatio                             0.000000  
+grossProfitRatio                                 0.000000  
+ebitdaratio                                      0.000000  
+ebitda                                           0.000000  
+depreciationAndAmortization_income_statement     0.000000  
+interestExpense                                  0.000000  
+interestIncome                                   0.000000  
+costAndExpenses                                  0.000000  
+operatingExpenses                                0.000000  
+otherExpenses                                    0.000000  
+sellingGeneralAndAdministrativeExpenses          0.000000  
+sellingAndMarketingExpenses                      0.000000  
+generalAndAdministrativeExpenses                 0.000000  
+researchAndDevelopmentExpenses                   0.000000  
+stockBasedCompensation                           0.000000  
+grossProfit                                      0.000000  
+operatingIncome                                  0.000000  
+otherNonCurrentAssets                            0.000000  
+taxAssets                                        0.000000  
+longTermInvestments                              0.000000  
+goodwillAndIntangibleAssets                      0.000000  
+intangibleAssets                                 0.000000  
+goodwill                                         0.000000  
+totalCurrentAssets                               0.000000  
+otherCurrentAssets                               0.000000  
+inventory_balance_sheet                          0.000000  
+netReceivables                                   0.000000  
+cashAndShortTermInvestments                      0.000000  
+shortTermInvestments                             0.000000  
+cashAndCashEquivalents                           0.000000  
+workingCapital                                   0.000000  
+Undrst                                           0.000000  
+Ovrst                                            0.000000  
+Passive                                          0.000000  
+Active                                           0.000000  
+Weak                                             0.000000  
+Strong                                           0.000000  
+Negativ                                          0.000000  
+Positiv                                          0.000000  
+pos_score                                        0.000000  
+num_questions                                    0.000000  
+word_count                                       0.000000  
+gf_score                                         0.000000  
+num_transparency                                 0.000000  
+Sector                                           0.000000  
+TONE1                                            0.000000  
+deferredIncomeTax                                0.000000  
+depreciationAndAmortization_cash_flow_statement  0.000000  
+netIncome_cash_flow_statement                    0.000000  
+netDebt                                          0.000000  
+totalDebt                                        0.000000  
+totalInvestments                                 0.000000  
+minorityInterest                                 0.000000  
+totalLiabilitiesAndStockholdersEquity            0.000000  
+totalEquity                                      0.000000  
+totalStockholdersEquity                          0.000000  
+othertotalStockholdersEquity                     0.000000  
+accumulatedOtherComprehensiveIncomeLoss          0.000000  
+retainedEarnings                                 0.000000  
+commonStock                                      0.000000  
+otherAssets                                      0.000000  
+capitalLeaseObligations                          0.000000  
+otherLiabilities                                 0.000000  
+totalNonCurrentLiabilities                       0.000000  
+otherNonCurrentLiabilities                       0.000000  
+deferredTaxLiabilitiesNonCurrent                 0.000000  
+deferredRevenueNonCurrent                        0.000000  
+longTermDebt                                     0.000000  
+totalCurrentLiabilities                          0.000000  
+otherCurrentLiabilities                          0.000000  
+deferredRevenue                                  0.000000  
+taxPayables                                      0.000000  
+shortTermDebt                                    0.000000  
+accountPayables                                  0.000000  
+totalAssets                                      0.000000  
+preferredStock                                   0.000000  
+Completed Job
+Time elapsed: 0 minute(s).
