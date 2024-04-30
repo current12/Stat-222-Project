@@ -10,7 +10,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 import pandas as pd
-import scipy
 import time
 import pickle
 from sklearn.model_selection import train_test_split
@@ -30,7 +29,9 @@ class GraphSAGEModel(nn.Module):
                  dropout, # dropout rate
                  aggregator_type): # type of aggregator to use
         super(GraphSAGEModel, self).__init__()
-        self.layers = nn.ModuleList() # starter layers
+
+        # initialize stack of layers
+        self.layers = nn.ModuleList()
 
         # input layer
         self.layers.append(dgl_conv.SAGEConv(in_feats, n_hidden, aggregator_type,
@@ -329,12 +330,6 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
     with torch.no_grad():
         # Compute logits
         logits = model.gconv_model(full_graph, full_features)
-        print('shape of logits')
-        print(logits.shape)
-        print('shape of test_mask')
-        print(test_mask.shape)
-        print('sum of test_mask')
-        print(torch.sum(test_mask))
         # Test dataset prediction
         y_true, y_pred = get_predictions(logits, test_mask, full_labels)
 
@@ -474,43 +469,14 @@ def run_inductive_model(train_and_val_df,
     print("Saving model")
     save_model(graph, model, model_dir)
     
-    # Output model predictions and probabilities
+    # Output model predictions
     print("Saving model predictions for test data")
-    # print('checking shape of y_true')
-    # print(y_true.shape)
-    # Output y_true to Excel
-    #y_true_df = pd.DataFrame(y_true)
-    #y_true_df.to_excel(prediction_file_path.replace('.xlsx', '_y_true.xlsx'), index=False)
-    # print('checking shape of y_pred')
-    # print(y_pred.shape)
     predictions_df = pd.DataFrame.from_dict({'target': y_true.reshape(-1, ), 'pred': y_pred.reshape(-1, )})
     # Add column for node
-    # print('length of predictions df')
-    # print(len(predictions_df))
-    # print('length of test df')
-    # print(len(test_df))
-    # print('head of test df')
-    # print(test_df.head())
     predictions_df['node'] = list(test_df['node'])
-    # print('head of predictions df')
-    # print(predictions_df.head())
-    # print('custom mapping')
-    # print(custom_mapping)
-    # print('values of target')
-    # print(predictions_df['target'].unique())
     # Decode target, pred, and node
     predictions_df['target'] = predictions_df['target'].replace({v: k for k, v in custom_mapping.items()})
     predictions_df['pred'] = predictions_df['pred'].replace({v: k for k, v in custom_mapping.items()})
-    # print('head of predictions df after decoding target')
-    # print(predictions_df.head())
-    # print('values of target after decoding')
-    # print(predictions_df['target'].unique())
-    # print('values of node')
-    # print(predictions_df['node'].unique())
-    # print('values of node_to_int')
-    # print(node_to_int)
-    # predictions_df['node'] = predictions_df['node'].replace({v: k for k, v in node_to_int.items()})
-    # print('head of predictions df after decoding node')
-    # print(predictions_df.head())
+    predictions_df['node'] = predictions_df['node'].replace({v: k for k, v in node_to_int.items()})
     # Output to Excel
     predictions_df.to_excel(prediction_file_path, index=False)
