@@ -156,17 +156,20 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
 
     # Instantiate the grid search model
     grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1, refit=True) # refit is on by default, but marking True here for clarity. the model is refit on the whole training dataset after the best hyperparameters are found
-    # Fit the grid search to the data
+    # Fit the grid search to the data (includes the refit step since set to true above)
     grid_search.fit(X_train_scaled, y_train)
 
     # Print the best parameters and the accuracy of the grid search
     print("Tuned hyperparameters:", grid_search.best_params_)
+    train_accuracy_best_model = grid_search.best_estimator_.score(X_train_scaled, y_train)
+    print("Train accuracy of best model: ", train_accuracy_best_model)
     print("Best mean CV accuracy:", grid_search.best_score_)
     # Coefficients
     print("Coefficients:", grid_search.best_estimator_.coef_)
     # Save these results
     joblib.dump(grid_search.best_estimator_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
     joblib.dump(grid_search.best_params_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
+    joblib.dump(train_accuracy_best_model, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_train_accuracy_best_model.pkl')
     joblib.dump(grid_search.best_score_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_score.pkl')
 
     # Return fitted model
