@@ -32,6 +32,49 @@ def load_data():
     df = pd.concat([pd.read_parquet(r'../../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
     return df
 
+def get_column_names_and_mapping_change(unsanitized_model_name):
+    '''
+    Uses the variable index Excel file to get column names for the model.
+
+    Parameters:
+    - unsanitized_model_name: name of the model, in unsanitized format
+
+    Returns:
+    - numeric_feature_columns: list of numeric columns to be used as features.
+    - cat_feature_columns: list of categorical columns to be used as features.
+    - target_column: column to be used as target.
+    - custom_mapping: dictionary to encode the target variable.
+    '''
+    # Load variable index excel file
+    variable_index = pd.read_excel('../../../../Variable Index.xlsx')
+
+    # Model name column
+    # For rating change models:
+    if 'change_model' in unsanitized_model_name:
+        # Clean model name is 'Change Model' plus the number (last character)
+        clean_model_name = 'Change Model ' + unsanitized_model_name[-1]
+
+    # Numeric features
+    # Values of column_name where clean_model_name is X, and Data Type is Numeric
+    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
+    # Categorical features
+    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
+    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
+    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
+    # if 'include_previous_rating' in unsanitized_model_name:
+    #     cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
+    # Target column
+    # Values of column_name where column called model_name is Y
+    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
+
+    # Mapping for target column
+    # Don't need mapping since change is already in number
+    if 'rating' in unsanitized_model_name:
+        custom_mapping = {'Same As Last Fixed Quarter Date': 0, 'Upgrade Since Last Fixed Quarter Date': 1, "Downgrade Since Last Fixed Quarter Date": -1}
+
+    # Return the column names
+    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
+
 def get_column_names_and_mapping(unsanitized_model_name):
     '''
     Uses the variable index Excel file to get column names for the model.
@@ -166,6 +209,7 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     print("Best mean CV accuracy:", grid_search.best_score_)
     # Coefficients
     print("Coefficients:", grid_search.best_estimator_.coef_)
+    print("Corresponding class:", grid_search.best_estimator_.classes_)
     # Save these results
     joblib.dump(grid_search.best_estimator_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_estimator.pkl')
     joblib.dump(grid_search.best_params_, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_best_params.pkl')
