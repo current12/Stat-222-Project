@@ -19,12 +19,19 @@ print('beginning data load')
 
 # Load in sample or full parquet file
 if sample_run:
-    df = pd.read_parquet(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates_Sample/all_data_fixed_quarter_dates_sample.parquet', columns = ['ticker', 'fixed_quarter_date', 'transcript'])
-else:
-    # list of files in '../../../Data/All_Data/All_Data_Fixed_Quarter_Dates'
-    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates') if f.endswith('.parquet')]
+    # list of files in '../../../Data/All_Data/All_Data_with_NLP_Features'
+    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
+    # Truncate file list
+    file_list = file_list[:1]
     # read in all parquet files
-    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_Fixed_Quarter_Dates/' + f, columns=['ticker', 'fixed_quarter_date', 'transcript']) for f in file_list])
+    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f, columns=['ticker', 'fixed_quarter_date', 'transcript']) for f in file_list])
+    # Limit to 100 rows
+    df = df.head(100)
+else:
+    # list of files in '../../../Data/All_Data/All_Data_with_NLP_Features'
+    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
+    # read in all parquet files
+    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f, columns=['ticker', 'fixed_quarter_date', 'transcript']) for f in file_list])
 print('dataframe')
 print(df.head())
 
