@@ -108,6 +108,7 @@ def train_model_with_grid_search(X_train_scaled, y_train,num_class, model_name):
         'max_depth': [3, 5, 10],
         'min_child_weight': [1, 3, 5],
         'n_estimators': [100,10000],
+        'class_weights':[None,"balanced"],
         'min_child_weight': [1, 3, 5],
         'booster': ['gbtree'],
         'objective':['multi:softprob']
