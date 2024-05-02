@@ -363,8 +363,6 @@ dependencies:
       - dill==0.3.8
       - distlib==0.3.8
       - editor==1.6.6
-      - en-core-web-sm==3.7.1
-      - en-core-web-trf==3.7.3
       - evaluate==0.4.1
       - fastai==2.7.14
       - fastapi==0.110.0
