@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=Logistic_Change_Model_3
 #SBATCH --output=Logistic_Change_Model_3.out
-#SBATCH --partition=lowmem
+#SBATCH --partition=epurdom
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 
