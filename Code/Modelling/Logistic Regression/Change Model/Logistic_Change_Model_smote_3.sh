@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=Logistic_Change_Model_smote_3
 #SBATCH --output=Logistic_Change_Model_smote_3.out
-#SBATCH --partition=epurdom
+#SBATCH --partition=jsteinhardt
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=16
 
 # Timing
 # Reset the SECONDS variable
