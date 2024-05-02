@@ -333,6 +333,16 @@ def create_model_figure_and_table_components(model_name, target_column, custom_m
     ### confusion matrix
     actual_labels = list(custom_mapping.keys())
     actual_labels = [label for label in actual_labels if label in y_test.unique() or label in y_pred.unique()]
+    # Recode labels - if contains 'Upgrade', set to 'Upgrade', if contains 'Downgrade', set to 'Downgrade', if contains 'Same', set to 'Same'
+    actual_labels_recoded = []
+    for label in actual_labels:
+        if 'Upgrade' in label:
+            actual_labels_recoded.append('Upgrade')
+        elif 'Downgrade' in label:
+            actual_labels_recoded.append('Downgrade')
+        else:
+            actual_labels_recoded.append('Same')
+    actual_labels = actual_labels_recoded
     #ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=actual_labels).plot(cmap='Blues')
     conf_matrix = confusion_matrix(y_test, y_pred)
     cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=actual_labels)
