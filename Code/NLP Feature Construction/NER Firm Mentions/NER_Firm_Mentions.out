@@ -1,3 +1,65 @@
 Starting NER on Company Names
 /scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
   warnings.warn(
+using gpu?  True
+beginning data load
+dataframe
+  ticker fixed_quarter_date                                         transcript
+0    LPX         2013-07-01  Operator: Good day, ladies and gentlemen, and ...
+1    LPX         2015-04-01  Operator: Good day ladies and gentlemen and we...
+2    LPX         2015-07-01  Operator: Good day, ladies and gentlemen, and ...
+3    LPX         2015-10-01  Operator: Good day, ladies and gentlemen, and ...
+4    LPX         2016-01-01  Operator: Good day, ladies and gentlemen, and ...
+                             company_mentioned  count ticker fixed_quarter_date
+0                                          OSB     11    LPX         2013-07-01
+1                                           LP     10    LPX         2013-07-01
+2                          D.A. DAVIDSON & CO.      7    LPX         2013-07-01
+3   THE BUCKINGHAM RESEARCH GROUP INCORPORATED      5    LPX         2013-07-01
+4                              ENGINEERED WOOD      5    LPX         2013-07-01
+5                                      CANEXEL      4    LPX         2013-07-01
+6              VERTICAL RESEARCH PARTNERS, LLC      4    LPX         2013-07-01
+7                          UBS INVESTMENT BANK      3    LPX         2013-07-01
+8                     RBC CAPITAL MARKETS, LLC      3    LPX         2013-07-01
+9        CREDIT AGRICOLE SECURITIES (USA) INC.      2    LPX         2013-07-01
+10                           RESEARCH DIVISION      2    LPX         2013-07-01
+11                                      SALLIE      2    LPX         2013-07-01
+12                                         EWP      2    LPX         2013-07-01
+13                                   ST MICHEL      2    LPX         2013-07-01
+14                     LOUISIANA-PACIFIC CORP.      1    LPX         2013-07-01
+15                          INVESTOR RELATIONS      1    LPX         2013-07-01
+16                                PEACE VALLEY      1    LPX         2013-07-01
+17                                        GAAP      1    LPX         2013-07-01
+18                          NON-GAAP FINANCIAL      1    LPX         2013-07-01
+19                  NEW WAVERLY TRANSPORTATION      1    LPX         2013-07-01
+20                                      CANFOR      1    LPX         2013-07-01
+21                                         EPA      1    LPX         2013-07-01
+22                            U.S. GREEN FIBER      1    LPX         2013-07-01
+23                                     MOLDING      1    LPX         2013-07-01
+24                    ENGINEERED WOOD PRODUCTS      1    LPX         2013-07-01
+25                                     ABITIBI      1    LPX         2013-07-01
+26                              MURPHY PLYWOOD      1    LPX         2013-07-01
+27                         BUCKINGHAM RESEARCH      1    LPX         2013-07-01
+28                                         UBS      1    LPX         2013-07-01
+29                                        CLSA      1    LPX         2013-07-01
+30                           VERTICAL PARTNERS      1    LPX         2013-07-01
+31                                   D.A. D.\n      1    LPX         2013-07-01
+32               TD SECURITIES EQUITY RESEARCH      1    LPX         2013-07-01
+33                               TD SECURITIES      1    LPX         2013-07-01
+34                         RBC CAPITAL MARKETS      1    LPX         2013-07-01
+Estimated Time to process:  503.87298115491865
+Time to process:  63.74247377316157
+combined dataframes
+                            company_mentioned  count ticker fixed_quarter_date
+0                                         OSB     11    LPX         2013-07-01
+1                                          LP     10    LPX         2013-07-01
+2                         D.A. DAVIDSON & CO.      7    LPX         2013-07-01
+3  THE BUCKINGHAM RESEARCH GROUP INCORPORATED      5    LPX         2013-07-01
+4                             ENGINEERED WOOD      5    LPX         2013-07-01
+(222284, 4)
+                     company_mentioned  count ticker fixed_quarter_date
+9   THE INTERIOR BOARD OF LAND APPEALS      1    WTI         2016-07-01
+10                                BSAE      1    WTI         2016-07-01
+11                               JWEST      1    WTI         2016-07-01
+12                  LADENBURG THALMANN      1    WTI         2016-07-01
+13                            MAHOGANY      1    WTI         2016-07-01
+Completed NER
