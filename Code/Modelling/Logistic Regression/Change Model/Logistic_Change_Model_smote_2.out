@@ -1,0 +1,220 @@
+Starting Job
+[NbConvertApp] Converting notebook Logistic_Change_Model_smote_2.ipynb to notebook
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/_multiprocessing_helpers.py:46: UserWarning: [Errno 28] No space left on device.  joblib will operate in serial mode
+  warnings.warn('%s.  joblib will operate in serial mode' % (e,))
+Traceback (most recent call last):
+  File "/scratch/users/ijyliu/conda/envs/scf_general/bin/jupyter-nbconvert", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/application.py", line 283, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 102, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 123, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Train model
+best_model = train_model_with_grid_search(X_train_sm, y_train_sm, model_name)
+------------------
+
+----- stderr -----
+/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/_multiprocessing_helpers.py:46: UserWarning: [Errno 28] No space left on device.  joblib will operate in serial mode
+  warnings.warn('%s.  joblib will operate in serial mode' % (e,))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mOSError[0m                                   Traceback (most recent call last)
+Cell [0;32mIn[6], line 2[0m
+[1;32m      1[0m [38;5;66;03m# Train model[39;00m
+[0;32m----> 2[0m best_model [38;5;241m=[39m [43mtrain_model_with_grid_search[49m[43m([49m[43mX_train_sm[49m[43m,[49m[43m [49m[43my_train_sm[49m[43m,[49m[43m [49m[43mmodel_name[49m[43m)[49m
+
+File [0;32m~/repo/Stat-222-Project/Code/Modelling/Logistic Regression/Logistic_Regression_Functions.py:220[0m, in [0;36mtrain_model_with_grid_search[0;34m(X_train_scaled, y_train, model_name)[0m
+[1;32m    218[0m grid_search [38;5;241m=[39m GridSearchCV(model, hyperparameter_settings, scoring[38;5;241m=[39m[38;5;124m'[39m[38;5;124maccuracy[39m[38;5;124m'[39m, cv[38;5;241m=[39m[38;5;241m5[39m, n_jobs[38;5;241m=[39m[38;5;241m-[39m[38;5;241m1[39m, refit[38;5;241m=[39m[38;5;28;01mTrue[39;00m) [38;5;66;03m# refit is on by default, but marking True here for clarity. the model is refit on the whole training dataset after the best hyperparameters are found[39;00m
+[1;32m    219[0m [38;5;66;03m# Fit the grid search to the data (includes the refit step since set to true above)[39;00m
+[0;32m--> 220[0m [43mgrid_search[49m[38;5;241;43m.[39;49m[43mfit[49m[43m([49m[43mX_train_scaled[49m[43m,[49m[43m [49m[43my_train[49m[43m)[49m
+[1;32m    222[0m [38;5;66;03m# Print the best parameters and the accuracy of the grid search[39;00m
+[1;32m    223[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mTuned hyperparameters:[39m[38;5;124m"[39m, grid_search[38;5;241m.[39mbest_params_)
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/base.py:1474[0m, in [0;36m_fit_context.<locals>.decorator.<locals>.wrapper[0;34m(estimator, *args, **kwargs)[0m
+[1;32m   1467[0m     estimator[38;5;241m.[39m_validate_params()
+[1;32m   1469[0m [38;5;28;01mwith[39;00m config_context(
+[1;32m   1470[0m     skip_parameter_validation[38;5;241m=[39m(
+[1;32m   1471[0m         prefer_skip_nested_validation [38;5;129;01mor[39;00m global_skip_validation
+[1;32m   1472[0m     )
+[1;32m   1473[0m ):
+[0;32m-> 1474[0m     [38;5;28;01mreturn[39;00m [43mfit_method[49m[43m([49m[43mestimator[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/sklearn/model_selection/_search.py:898[0m, in [0;36mBaseSearchCV.fit[0;34m(self, X, y, **params)[0m
+[1;32m    886[0m fit_and_score_kwargs [38;5;241m=[39m [38;5;28mdict[39m(
+[1;32m    887[0m     scorer[38;5;241m=[39mscorers,
+[1;32m    888[0m     fit_params[38;5;241m=[39mrouted_params[38;5;241m.[39mestimator[38;5;241m.[39mfit,
+[0;32m   (...)[0m
+[1;32m    895[0m     verbose[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mverbose,
+[1;32m    896[0m )
+[1;32m    897[0m results [38;5;241m=[39m {}
+[0;32m--> 898[0m [43m[49m[38;5;28;43;01mwith[39;49;00m[43m [49m[43mparallel[49m[43m:[49m
+[1;32m    899[0m [43m    [49m[43mall_candidate_params[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m[[49m[43m][49m
+[1;32m    900[0m [43m    [49m[43mall_out[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43m[[49m[43m][49m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/parallel.py:1320[0m, in [0;36mParallel.__enter__[0;34m(self)[0m
+[1;32m   1318[0m [38;5;28mself[39m[38;5;241m.[39m_managed_backend [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+[1;32m   1319[0m [38;5;28mself[39m[38;5;241m.[39m_calling [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+[0;32m-> 1320[0m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_initialize_backend[49m[43m([49m[43m)[49m
+[1;32m   1321[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/parallel.py:1332[0m, in [0;36mParallel._initialize_backend[0;34m(self)[0m
+[1;32m   1330[0m [38;5;250m[39m[38;5;124;03m"""Build a process or thread pool and return the number of workers"""[39;00m
+[1;32m   1331[0m [38;5;28;01mtry[39;00m:
+[0;32m-> 1332[0m     n_jobs [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_backend[49m[38;5;241;43m.[39;49m[43mconfigure[49m[43m([49m[43mn_jobs[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mn_jobs[49m[43m,[49m[43m [49m[43mparallel[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[43m,[49m
+[1;32m   1333[0m [43m                                     [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_backend_args[49m[43m)[49m
+[1;32m   1334[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mtimeout [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_backend[38;5;241m.[39msupports_timeout:
+[1;32m   1335[0m         warnings[38;5;241m.[39mwarn(
+[1;32m   1336[0m             [38;5;124m'[39m[38;5;124mThe backend class [39m[38;5;132;01m{!r}[39;00m[38;5;124m does not support timeout. [39m[38;5;124m'[39m
+[1;32m   1337[0m             [38;5;124m"[39m[38;5;124mYou have set [39m[38;5;124m'[39m[38;5;124mtimeout=[39m[38;5;132;01m{}[39;00m[38;5;124m'[39m[38;5;124m in Parallel but [39m[38;5;124m"[39m
+[1;32m   1338[0m             [38;5;124m"[39m[38;5;124mthe [39m[38;5;124m'[39m[38;5;124mtimeout[39m[38;5;124m'[39m[38;5;124m parameter will not be used.[39m[38;5;124m"[39m[38;5;241m.[39mformat(
+[1;32m   1339[0m                 [38;5;28mself[39m[38;5;241m.[39m_backend[38;5;241m.[39m[38;5;18m__class__[39m[38;5;241m.[39m[38;5;18m__name__[39m,
+[1;32m   1340[0m                 [38;5;28mself[39m[38;5;241m.[39mtimeout))
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/_parallel_backends.py:550[0m, in [0;36mLokyBackend.configure[0;34m(self, n_jobs, parallel, prefer, require, idle_worker_timeout, **memmappingexecutor_args)[0m
+[1;32m    546[0m [38;5;28;01mif[39;00m n_jobs [38;5;241m==[39m [38;5;241m1[39m:
+[1;32m    547[0m     [38;5;28;01mraise[39;00m FallbackToBackend(
+[1;32m    548[0m         SequentialBackend(nesting_level[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mnesting_level))
+[0;32m--> 550[0m [38;5;28mself[39m[38;5;241m.[39m_workers [38;5;241m=[39m [43mget_memmapping_executor[49m[43m([49m
+[1;32m    551[0m [43m    [49m[43mn_jobs[49m[43m,[49m[43m [49m[43mtimeout[49m[38;5;241;43m=[39;49m[43midle_worker_timeout[49m[43m,[49m
+[1;32m    552[0m [43m    [49m[43menv[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_prepare_worker_env[49m[43m([49m[43mn_jobs[49m[38;5;241;43m=[39;49m[43mn_jobs[49m[43m)[49m[43m,[49m
+[1;32m    553[0m [43m    [49m[43mcontext_id[49m[38;5;241;43m=[39;49m[43mparallel[49m[38;5;241;43m.[39;49m[43m_id[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mmemmappingexecutor_args[49m[43m)[49m
+[1;32m    554[0m [38;5;28mself[39m[38;5;241m.[39mparallel [38;5;241m=[39m parallel
+[1;32m    555[0m [38;5;28;01mreturn[39;00m n_jobs
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/executor.py:20[0m, in [0;36mget_memmapping_executor[0;34m(n_jobs, **kwargs)[0m
+[1;32m     19[0m [38;5;28;01mdef[39;00m [38;5;21mget_memmapping_executor[39m(n_jobs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[0;32m---> 20[0m     [38;5;28;01mreturn[39;00m [43mMemmappingExecutor[49m[38;5;241;43m.[39;49m[43mget_memmapping_executor[49m[43m([49m[43mn_jobs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/executor.py:52[0m, in [0;36mMemmappingExecutor.get_memmapping_executor[0;34m(cls, n_jobs, timeout, initializer, initargs, env, temp_folder, context_id, **backend_args)[0m
+[1;32m     44[0m [38;5;66;03m# reducers access the temporary folder in which to store temporary[39;00m
+[1;32m     45[0m [38;5;66;03m# pickles through a call to manager.resolve_temp_folder_name. resolving[39;00m
+[1;32m     46[0m [38;5;66;03m# the folder name dynamically is useful to use different folders across[39;00m
+[1;32m     47[0m [38;5;66;03m# calls of a same reusable executor[39;00m
+[1;32m     48[0m job_reducers, result_reducers [38;5;241m=[39m get_memmapping_reducers(
+[1;32m     49[0m     unlink_on_gc_collect[38;5;241m=[39m[38;5;28;01mTrue[39;00m,
+[1;32m     50[0m     temp_folder_resolver[38;5;241m=[39mmanager[38;5;241m.[39mresolve_temp_folder_name,
+[1;32m     51[0m     [38;5;241m*[39m[38;5;241m*[39mbackend_args)
+[0;32m---> 52[0m _executor, executor_is_reused [38;5;241m=[39m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[43mget_reusable_executor[49m[43m([49m
+[1;32m     53[0m [43m    [49m[43mn_jobs[49m[43m,[49m[43m [49m[43mjob_reducers[49m[38;5;241;43m=[39;49m[43mjob_reducers[49m[43m,[49m[43m [49m[43mresult_reducers[49m[38;5;241;43m=[39;49m[43mresult_reducers[49m[43m,[49m
+[1;32m     54[0m [43m    [49m[43mreuse[49m[38;5;241;43m=[39;49m[43mreuse[49m[43m,[49m[43m [49m[43mtimeout[49m[38;5;241;43m=[39;49m[43mtimeout[49m[43m,[49m[43m [49m[43minitializer[49m[38;5;241;43m=[39;49m[43minitializer[49m[43m,[49m
+[1;32m     55[0m [43m    [49m[43minitargs[49m[38;5;241;43m=[39;49m[43minitargs[49m[43m,[49m[43m [49m[43menv[49m[38;5;241;43m=[39;49m[43menv[49m
+[1;32m     56[0m [43m[49m[43m)[49m
+[1;32m     58[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m executor_is_reused:
+[1;32m     59[0m     [38;5;66;03m# Only set a _temp_folder_manager for new executors. Reused[39;00m
+[1;32m     60[0m     [38;5;66;03m# executors already have a _temporary_folder_manager that must not[39;00m
+[1;32m     61[0m     [38;5;66;03m# be re-assigned like that because it is referenced in various[39;00m
+[1;32m     62[0m     [38;5;66;03m# places in the reducing machinery of the executor.[39;00m
+[1;32m     63[0m     _executor[38;5;241m.[39m_temp_folder_manager [38;5;241m=[39m manager
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/reusable_executor.py:182[0m, in [0;36m_ReusablePoolExecutor.get_reusable_executor[0;34m(cls, max_workers, context, timeout, kill_workers, reuse, job_reducers, result_reducers, initializer, initargs, env)[0m
+[1;32m    180[0m     executor_id [38;5;241m=[39m _get_next_executor_id()
+[1;32m    181[0m     _executor_kwargs [38;5;241m=[39m kwargs
+[0;32m--> 182[0m     _executor [38;5;241m=[39m executor [38;5;241m=[39m [38;5;28;43mcls[39;49m[43m([49m
+[1;32m    183[0m [43m        [49m[43m_executor_lock[49m[43m,[49m
+[1;32m    184[0m [43m        [49m[43mmax_workers[49m[38;5;241;43m=[39;49m[43mmax_workers[49m[43m,[49m
+[1;32m    185[0m [43m        [49m[43mexecutor_id[49m[38;5;241;43m=[39;49m[43mexecutor_id[49m[43m,[49m
+[1;32m    186[0m [43m        [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m    187[0m [43m    [49m[43m)[49m
+[1;32m    188[0m [38;5;28;01melse[39;00m:
+[1;32m    189[0m     [38;5;28;01mif[39;00m reuse [38;5;241m==[39m [38;5;124m"[39m[38;5;124mauto[39m[38;5;124m"[39m:
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/reusable_executor.py:118[0m, in [0;36m_ReusablePoolExecutor.__init__[0;34m(self, submit_resize_lock, max_workers, context, timeout, executor_id, job_reducers, result_reducers, initializer, initargs, env)[0m
+[1;32m    105[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m(
+[1;32m    106[0m     [38;5;28mself[39m,
+[1;32m    107[0m     submit_resize_lock,
+[0;32m   (...)[0m
+[1;32m    116[0m     env[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m    117[0m ):
+[0;32m--> 118[0m     [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m
+[1;32m    119[0m [43m        [49m[43mmax_workers[49m[38;5;241;43m=[39;49m[43mmax_workers[49m[43m,[49m
+[1;32m    120[0m [43m        [49m[43mcontext[49m[38;5;241;43m=[39;49m[43mcontext[49m[43m,[49m
+[1;32m    121[0m [43m        [49m[43mtimeout[49m[38;5;241;43m=[39;49m[43mtimeout[49m[43m,[49m
+[1;32m    122[0m [43m        [49m[43mjob_reducers[49m[38;5;241;43m=[39;49m[43mjob_reducers[49m[43m,[49m
+[1;32m    123[0m [43m        [49m[43mresult_reducers[49m[38;5;241;43m=[39;49m[43mresult_reducers[49m[43m,[49m
+[1;32m    124[0m [43m        [49m[43minitializer[49m[38;5;241;43m=[39;49m[43minitializer[49m[43m,[49m
+[1;32m    125[0m [43m        [49m[43minitargs[49m[38;5;241;43m=[39;49m[43minitargs[49m[43m,[49m
+[1;32m    126[0m [43m        [49m[43menv[49m[38;5;241;43m=[39;49m[43menv[49m[43m,[49m
+[1;32m    127[0m [43m    [49m[43m)[49m
+[1;32m    128[0m     [38;5;28mself[39m[38;5;241m.[39mexecutor_id [38;5;241m=[39m executor_id
+[1;32m    129[0m     [38;5;28mself[39m[38;5;241m.[39m_submit_resize_lock [38;5;241m=[39m submit_resize_lock
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/process_executor.py:1110[0m, in [0;36mProcessPoolExecutor.__init__[0;34m(self, max_workers, job_reducers, result_reducers, timeout, context, initializer, initargs, env)[0m
+[1;32m   1108[0m [38;5;28mself[39m[38;5;241m.[39m_running_work_items [38;5;241m=[39m []
+[1;32m   1109[0m [38;5;28mself[39m[38;5;241m.[39m_work_ids [38;5;241m=[39m queue[38;5;241m.[39mQueue()
+[0;32m-> 1110[0m [38;5;28mself[39m[38;5;241m.[39m_processes_management_lock [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_context[49m[38;5;241;43m.[39;49m[43mLock[49m[43m([49m[43m)[49m
+[1;32m   1111[0m [38;5;28mself[39m[38;5;241m.[39m_executor_manager_thread [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[1;32m   1112[0m [38;5;28mself[39m[38;5;241m.[39m_shutdown_lock [38;5;241m=[39m threading[38;5;241m.[39mLock()
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/backend/context.py:335[0m, in [0;36mLokyContext.Lock[0;34m(self)[0m
+[1;32m    332[0m [38;5;250m[39m[38;5;124;03m"""Returns a lock object"""[39;00m
+[1;32m    333[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01msynchronize[39;00m [38;5;28;01mimport[39;00m Lock
+[0;32m--> 335[0m [38;5;28;01mreturn[39;00m [43mLock[49m[43m([49m[43m)[49m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/backend/synchronize.py:192[0m, in [0;36mLock.__init__[0;34m(self)[0m
+[1;32m    191[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m([38;5;28mself[39m):
+[0;32m--> 192[0m     [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mSEMAPHORE[49m[43m,[49m[43m [49m[38;5;241;43m1[39;49m[43m,[49m[43m [49m[38;5;241;43m1[39;49m[43m)[49m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/joblib/externals/loky/backend/synchronize.py:72[0m, in [0;36mSemLock.__init__[0;34m(self, kind, value, maxvalue, name)[0m
+[1;32m     70[0m [38;5;28;01mfor[39;00m _ [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;241m100[39m):
+[1;32m     71[0m     [38;5;28;01mtry[39;00m:
+[0;32m---> 72[0m         [38;5;28mself[39m[38;5;241m.[39m_semlock [38;5;241m=[39m [43m_SemLock[49m[43m([49m
+[1;32m     73[0m [43m            [49m[43mkind[49m[43m,[49m[43m [49m[43mvalue[49m[43m,[49m[43m [49m[43mmaxvalue[49m[43m,[49m[43m [49m[43mSemLock[49m[38;5;241;43m.[39;49m[43m_make_name[49m[43m([49m[43m)[49m[43m,[49m[43m [49m[43munlink_now[49m
+[1;32m     74[0m [43m        [49m[43m)[49m
+[1;32m     75[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mFileExistsError[39;00m:  [38;5;66;03m# pragma: no cover[39;00m
+[1;32m     76[0m         [38;5;28;01mpass[39;00m
+
+[0;31mOSError[0m: [Errno 28] No space left on device
+
+Completed Job
+Time elapsed: 0 minute(s).
