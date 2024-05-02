@@ -181,21 +181,38 @@ def train_model_with_grid_search(X_train_scaled, y_train, model_name):
     model = LogisticRegression(max_iter=1000) # could be 5000 max iterations but likely limited value from this many
 
     # Standard hyperparameter settings
-    hyperparameter_settings = [
-        # Non-penalized
-        {'solver': ['saga'], 
-        'penalty': [None], 
-        'C': [1],  # C is irrelevant here but required as a placeholder
-        'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr', 'multinomial']},
-        # ElasticNet penalty
-        {'solver': ['saga'], 
-        'penalty': ['elasticnet'], 
-        'C': [0.001, 0.01, 0.1, 1, 10], 
-        'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
-        'class_weight': [None, 'balanced'], 
-        'multi_class': ['ovr', 'multinomial']}
-    ]
+    if "smote" in model_name:
+        hyperparameter_settings = [
+            # Non-penalized
+            {'solver': ['saga'], 
+            'penalty': [None], 
+            'C': [1],  # C is irrelevant here but required as a placeholder
+            'class_weight': [None], 
+            'multi_class': ['ovr', 'multinomial']},
+            # ElasticNet penalty
+            {'solver': ['saga'], 
+            'penalty': ['elasticnet'], 
+            'C': [0.001, 0.01, 0.1, 1, 10], 
+            'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
+            'class_weight': [None], 
+            'multi_class': ['ovr', 'multinomial']}
+        ]
+    else:
+        hyperparameter_settings = [
+            # Non-penalized
+            {'solver': ['saga'], 
+            'penalty': [None], 
+            'C': [1],  # C is irrelevant here but required as a placeholder
+            'class_weight': ["balanced"], 
+            'multi_class': ['ovr', 'multinomial']},
+            # ElasticNet penalty
+            {'solver': ['saga'], 
+            'penalty': ['elasticnet'], 
+            'C': [0.001, 0.01, 0.1, 1, 10], 
+            'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0], 
+            'class_weight': ['balanced'], 
+            'multi_class': ['ovr', 'multinomial']}
+        ]        
 
     # Instantiate the grid search model
     grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1, refit=True) # refit is on by default, but marking True here for clarity. the model is refit on the whole training dataset after the best hyperparameters are found
