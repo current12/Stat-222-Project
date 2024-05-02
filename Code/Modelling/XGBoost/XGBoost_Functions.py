@@ -16,6 +16,7 @@ from sklearn.metrics import ConfusionMatrixDisplay, classification_report, confu
 from sklearn.model_selection import GridSearchCV
 from sklearn.utils import class_weight
 import joblib
+from imblearn.over_sampling import SMOTE
 # Kill warnings
 import warnings
 warnings.filterwarnings("ignore")
@@ -78,7 +79,25 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     # Return the matrices
     return X_train_scaled, X_test_scaled, y_train, y_test, feature_names
 
+def smote_sampling(X_train_scaled, y_train, n_sample):
+    """
+    Smote oversampling
 
+    Parameters:
+    - X_train_scaled: scaled feature matrix of the training set.
+    - y_train: target vector of the training set.
+    - n_sample: number of total sample for each minority class
+
+    Returns:
+    - X_train_sm: X_train with add on data
+    - y_train_sm: X_train with add on data
+    """
+    sm = SMOTE(sampling_strategy={0:n_sample, 2: n_sample})
+    X_train_sm, y_train_sm = sm.fit_resample(X_train_scaled, y_train)
+    unique, count = np.unique(y_train_sm, return_counts=True)
+    dict_value_count = {k:v for (k, v) in zip(unique, count)}
+    print(dict_value_count)
+    return X_train_sm, y_train_sm
 
 def train_model_with_grid_search(X_train_scaled, y_train,num_class, model_name):
     """
