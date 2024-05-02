@@ -331,18 +331,35 @@ def create_model_figure_and_table_components(model_name, target_column, custom_m
     joblib.dump(report, '../../../../Output/Modelling/Logistic Regression/' + model_name + '/' + model_name + '_classification_report.pkl')
 
     ### confusion matrix
-    actual_labels = list(custom_mapping.keys())
-    actual_labels = [label for label in actual_labels if label in y_test.unique() or label in y_pred.unique()]
+    # print('custom mapping')
+    # print(custom_mapping)
+    print('counts of y_test values')
+    print(y_test.value_counts())
+    print('start of y_pred')
+    print(y_pred.value_counts())
+    # print('custom mapping')
+    # print(custom_mapping)
+    # Sort custom mapping by values
+    custom_mapping = {k: v for k, v in sorted(custom_mapping.items(), key=lambda item: item[1])}
+    print('sorted custom mapping')
+    print(custom_mapping)
+    limited_custom_mapping = {k: v for k, v in custom_mapping.items() if k in y_test.unique() or k in y_pred.unique()}
+    actual_labels = list(limited_custom_mapping.keys())
     # Recode labels - if contains 'Upgrade', set to 'Upgrade', if contains 'Downgrade', set to 'Downgrade', if contains 'Same', set to 'Same'
     actual_labels_recoded = []
     for label in actual_labels:
+        print('label; ', label)
         if 'Upgrade' in label:
             actual_labels_recoded.append('Upgrade')
         elif 'Downgrade' in label:
             actual_labels_recoded.append('Downgrade')
-        else:
+        elif 'Same' in label:
             actual_labels_recoded.append('Same')
+        else:
+            actual_labels_recoded.append(label)
     actual_labels = actual_labels_recoded
+    print('actual labels')
+    print(actual_labels)
     #ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=actual_labels).plot(cmap='Blues')
     conf_matrix = confusion_matrix(y_test, y_pred)
     cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=actual_labels)
