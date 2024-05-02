@@ -400,3 +400,97 @@ def plot_importance(best_model,_,model_name,top_k=15):
     plt.figure(figsize=(15, 20))
     plt.tight_layout()
     plt.show()
+
+def create_model_figure_and_table_components(model_name, target_column, custom_mapping):
+    """
+    Create model figure and table components to be used.
+
+    Parameters:
+    - model_name: name of the model - informs folder and file paths of loaded predictions
+    """
+
+    # Load file of predictions
+    predictions_df = pd.read_excel('../../../../Data/Predictions/XGBoost/' + model_name + '/' + model_name + '_predictions.xlsx')
+
+    # Create y_test and y_pred
+    y_test = predictions_df[target_column]
+    y_pred = predictions_df[model_name + '_predictions']
+    y_test_num = predictions_df[target_column].map(custom_mapping)
+    y_pred_num = predictions_df[model_name + '_predictions'].map(custom_mapping)
+    
+    # Get accuracy, F1, and majority class baseline
+    accuracy = accuracy_score(predictions_df[target_column], predictions_df[model_name + '_predictions'])
+    f1 = f1_score(predictions_df[target_column], predictions_df[model_name + '_predictions'], average='weighted')
+    majority_class_share_baseline = predictions_df[target_column].value_counts(normalize=True).max()
+
+    # Dictionary of accuracy, F1, and majority class baseline
+    acc_f1_majority = {'accuracy': accuracy, 'f1_score': f1, 'majority_baseline': majority_class_share_baseline}
+    print(acc_f1_majority)
+    # Save the dictionary
+    joblib.dump(acc_f1_majority, '../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_acc_f1_majority.pkl')
+    
+    ### Calculate the share of predictions that are 1 or fewer ratings away from the actual ratings
+    differences = np.abs(y_pred_num - y_test_num)
+    close_predictions_share = np.mean(differences <= 1)
+    exact_predictions_share = np.mean(differences == 0 )
+
+    print(f"Share of predictions exactly as the actual: {exact_predictions_share:.2%}")
+    print(f"Share of predictions 1 or fewer ratings away from actual: {close_predictions_share:.2%}")
+    # Create and save a dictionary of the shares
+    close_exact_dict = {'exact_predictions_share': exact_predictions_share, 'close_predictions_share': close_predictions_share}
+    joblib.dump(close_exact_dict, '../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
+
+    # detailed evaluation with classification report
+    report = classification_report(y_test, y_pred, digits=4)
+    print('classification report:')
+    print(report)
+    # Save classification report object
+    joblib.dump(report, '../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_classification_report.pkl')
+
+    ### confusion matrix
+    # print('custom mapping')
+    # print(custom_mapping)
+    print('counts of y_test values')
+    print(y_test.value_counts())
+    print('start of y_pred')
+    print(y_pred.value_counts())
+    # print('custom mapping')
+    # print(custom_mapping)
+    # Sort custom mapping by values
+    custom_mapping = {k: v for k, v in sorted(custom_mapping.items(), key=lambda item: item[1])}
+    print('sorted custom mapping')
+    print(custom_mapping)
+    limited_custom_mapping = {k: v for k, v in custom_mapping.items() if k in y_test.unique() or k in y_pred.unique()}
+    actual_labels = list(limited_custom_mapping.keys())
+    # Recode labels - if contains 'Upgrade', set to 'Upgrade', if contains 'Downgrade', set to 'Downgrade', if contains 'Same', set to 'Same'
+    actual_labels_recoded = []
+    for label in actual_labels:
+        print('label; ', label)
+        if 'Upgrade' in label:
+            actual_labels_recoded.append('Upgrade')
+        elif 'Downgrade' in label:
+            actual_labels_recoded.append('Downgrade')
+        elif 'Same' in label:
+            actual_labels_recoded.append('Same')
+        else:
+            actual_labels_recoded.append(label)
+    actual_labels = actual_labels_recoded
+    print('actual labels')
+    print(actual_labels)
+    #ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=actual_labels).plot(cmap='Blues')
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=actual_labels)
+    #plt.show()
+    # Plot Confusion Matrix
+    plt.figure(figsize=(10, 8))
+    cm_display.plot(cmap='Blues', ax=plt.gca(), xticks_rotation='vertical')
+    plt.xlabel('Predicted Label')
+    plt.ylabel('True Label')
+    plt.tight_layout()
+    # Save as _no_title
+    plt.savefig('../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_confusion_matrix_no_title.png')
+    plt.title('Confusion Matrix')
+    plt.tight_layout()
+    # Save
+    plt.savefig('../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_confusion_matrix.png')
+    plt.show()
