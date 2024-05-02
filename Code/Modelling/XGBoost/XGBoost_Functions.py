@@ -102,18 +102,37 @@ def train_model_with_grid_search(X_train_scaled, y_train,num_class, model_name):
     model = xgb.XGBClassifier(num_class=num_class,n_jobs=-1)
 
     # Define hyperparameter settings to search    
-
-    hyperparameter_settings = {
-      'learning_rate': [0.01, 0.1],
-        'max_depth': [3, 5, 10],
-        'min_child_weight': [1, 3, 5],
-        'n_estimators': [100,10000],
-        'class_weights':[None,"balanced"],
-        'min_child_weight': [1, 3, 5],
-        'booster': ['gbtree'],
-        'objective':['multi:softprob']
-    }
-
+    if "change" in model_name:
+        if "smote" in model_name:
+            hyperparameter_settings = {
+                'learning_rate': [0.01, 0.1],
+                'max_depth': [3, 6, 8, 10],
+                'min_child_weight': [1, 3, 5],
+                'n_estimators': [100,100,10000],
+                'booster': ['gbtree'],
+                'objective':['multi:softprob']
+                }
+        else:
+            hyperparameter_settings = {
+                'learning_rate': [0.01, 0.1],
+                'max_depth': [3, 6, 8, 10],
+                'min_child_weight': [1, 3, 5],
+                'n_estimators': [100,1000,10000],
+                'class_weights':["balanced"],
+                'booster': ['gbtree'],
+                'objective':['multi:softprob']
+                }
+            
+    else:
+        hyperparameter_settings = {
+            'learning_rate': [0.01, 0.1],
+            'max_depth': [3, 6, 8, 10],
+            'min_child_weight': [1, 3, 5, 10],
+            'n_estimators': [100,1000,10000],
+            'booster': ['gbtree'],
+            'objective':['multi:softprob']
+            }      
+        
     # Instantiate the grid search model
     grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1)
 
