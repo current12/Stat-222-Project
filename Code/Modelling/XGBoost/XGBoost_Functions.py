@@ -35,6 +35,91 @@ def load_data():
     df = pd.concat([pd.read_parquet(r'../../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
     return df
 
+def get_column_names_and_mapping(unsanitized_model_name):
+    '''
+    Uses the variable index Excel file to get column names for the model.
+
+    Parameters:
+    - unsanitized_model_name: name of the model, in unsanitized format
+
+    Returns:
+    - numeric_feature_columns: list of numeric columns to be used as features.
+    - cat_feature_columns: list of categorical columns to be used as features.
+    - target_column: column to be used as target.
+    - custom_mapping: dictionary to encode the target variable.
+    '''
+    # Load variable index excel file
+    variable_index = pd.read_excel('../../../../Variable Index.xlsx')
+
+    # Model name column
+    # For rating models:
+    if 'rating_model' in unsanitized_model_name:
+        # Clean model name is 'Rating Model' plus the number (last character)
+        clean_model_name = 'Rating Model ' + unsanitized_model_name[-1]
+
+    # Numeric features
+    # Values of column_name where clean_model_name is X, and Data Type is Numeric
+    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
+    # Categorical features
+    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
+    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
+    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
+    if 'include_previous_rating' in unsanitized_model_name:
+        cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
+    # Target column
+    # Values of column_name where column called model_name is Y
+    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
+
+    # Mapping for target column
+    if 'rating' in unsanitized_model_name:
+        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC": 7, "C": 8, "D": 9}
+
+    # Return the column names
+    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
+
+def get_column_names_and_mapping_change(unsanitized_model_name):
+    '''
+    Uses the variable index Excel file to get column names for the model.
+
+    Parameters:
+    - unsanitized_model_name: name of the model, in unsanitized format
+
+    Returns:
+    - numeric_feature_columns: list of numeric columns to be used as features.
+    - cat_feature_columns: list of categorical columns to be used as features.
+    - target_column: column to be used as target.
+    - custom_mapping: dictionary to encode the target variable.
+    '''
+    # Load variable index excel file
+    variable_index = pd.read_excel('../../../../Variable Index.xlsx')
+
+    # Model name column
+    # For rating change models:
+    if 'change_model' in unsanitized_model_name:
+        # Clean model name is 'Change Model' plus the number (last character)
+        clean_model_name = 'Change Model ' + unsanitized_model_name[-1]
+
+    # Numeric features
+    # Values of column_name where clean_model_name is X, and Data Type is Numeric
+    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
+    # Categorical features
+    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
+    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
+    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
+    # if 'include_previous_rating' in unsanitized_model_name:
+    #     cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
+    # Target column
+    # Values of column_name where column called model_name is Y
+    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
+
+    # Mapping for target column
+    # Don't need mapping since change is already in number
+    if 'rating' in unsanitized_model_name:
+        custom_mapping = { "Downgrade Since Last Fixed Quarter Date": 0, 'Same As Last Fixed Quarter Date': 1, 'Upgrade Since Last Fixed Quarter Date': 2}
+
+    # Return the column names
+    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
+
 def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_column, custom_mapping, change=False):
     """
     Prepare the feature matrices and target vector.
@@ -219,11 +304,11 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     joblib.dump(close_exact_dict, '../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
 
     # Set up display labels
-    display_labels = []
-    for v in np.sort(np.unique(y_test)):
-        for key, value in custom_mapping.items():
-            if value == v:
-                display_labels.append(key)
+    display_labels = ["Downgrade", "Same", "Upgrade"]
+    # for v in np.sort(np.unique(y_test)):
+    #     for key, value in custom_mapping.items():
+    #         if value == v:
+    #             display_labels.append(key)
 
     # detailed evaluation with classification report
     report = classification_report(y_test, y_pred, target_names=display_labels)
@@ -246,91 +331,6 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     # Save
     plt.savefig('../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_confusion_matrix.png')
     plt.show()
-
-def get_column_names_and_mapping(unsanitized_model_name):
-    '''
-    Uses the variable index Excel file to get column names for the model.
-
-    Parameters:
-    - unsanitized_model_name: name of the model, in unsanitized format
-
-    Returns:
-    - numeric_feature_columns: list of numeric columns to be used as features.
-    - cat_feature_columns: list of categorical columns to be used as features.
-    - target_column: column to be used as target.
-    - custom_mapping: dictionary to encode the target variable.
-    '''
-    # Load variable index excel file
-    variable_index = pd.read_excel('../../../../Variable Index.xlsx')
-
-    # Model name column
-    # For rating models:
-    if 'rating_model' in unsanitized_model_name:
-        # Clean model name is 'Rating Model' plus the number (last character)
-        clean_model_name = 'Rating Model ' + unsanitized_model_name[-1]
-
-    # Numeric features
-    # Values of column_name where clean_model_name is X, and Data Type is Numeric
-    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
-    # Categorical features
-    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
-    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
-    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
-    if 'include_previous_rating' in unsanitized_model_name:
-        cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
-    # Target column
-    # Values of column_name where column called model_name is Y
-    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
-
-    # Mapping for target column
-    if 'rating' in unsanitized_model_name:
-        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC": 7, "C": 8, "D": 9}
-
-    # Return the column names
-    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
-
-def get_column_names_and_mapping_change(unsanitized_model_name):
-    '''
-    Uses the variable index Excel file to get column names for the model.
-
-    Parameters:
-    - unsanitized_model_name: name of the model, in unsanitized format
-
-    Returns:
-    - numeric_feature_columns: list of numeric columns to be used as features.
-    - cat_feature_columns: list of categorical columns to be used as features.
-    - target_column: column to be used as target.
-    - custom_mapping: dictionary to encode the target variable.
-    '''
-    # Load variable index excel file
-    variable_index = pd.read_excel('../../../../Variable Index.xlsx')
-
-    # Model name column
-    # For rating change models:
-    if 'change_model' in unsanitized_model_name:
-        # Clean model name is 'Change Model' plus the number (last character)
-        clean_model_name = 'Change Model ' + unsanitized_model_name[-1]
-
-    # Numeric features
-    # Values of column_name where clean_model_name is X, and Data Type is Numeric
-    numeric_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] == 'Numeric')]['column_name'].tolist()
-    # Categorical features
-    # Values of column_name where clean_model_name is X, and Data Type is not Numeric
-    cat_feature_columns = variable_index[(variable_index[clean_model_name] == 'X') & (variable_index['Data Type'] != 'Numeric')]['column_name'].tolist()
-    # If include_previous_rating is unsanitized_model_name, then add values where clean_model_name is 'X (Previous Rating Models)'
-    # if 'include_previous_rating' in unsanitized_model_name:
-    #     cat_feature_columns.append(variable_index[variable_index[clean_model_name] == 'X (Previous Rating Models)']['column_name'].values[0])
-    # Target column
-    # Values of column_name where column called model_name is Y
-    target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
-
-    # Mapping for target column
-    # Don't need mapping since change is already in number
-    if 'rating' in unsanitized_model_name:
-        custom_mapping = { "Downgrade Since Last Fixed Quarter Date": 0, 'Same As Last Fixed Quarter Date': 1, 'Upgrade Since Last Fixed Quarter Date': 2}
-
-    # Return the column names
-    return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
 
 def get_model_predictions(model, X_test_scaled, y_test, custom_mapping, model_name, target_column, full_df):
     """
