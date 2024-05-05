@@ -228,14 +228,35 @@ def train_model_with_grid_search(X_train_scaled, y_train,num_class, model_name):
                 }
             
     else:
-        hyperparameter_settings = {
+        if "2" in model_name:
+            hyperparameter_settings = {
+            'learning_rate': [0.1],
+            'gamma': [0,0.1],
+            'max_depth': [3, 10, 20, 30],
+            'min_child_weight': [1, 5, 10, 20],
+            'n_estimators': [50,100,300,500,700,1000],
+            'booster': ['gbtree'],
+            'objective':['multi:softprob']
+            }
+        elif "3" in model_name:
+            hyperparameter_settings = {
+            'learning_rate': [0.1],
+            'gamma': [0,0.1],
+            'max_depth': [3, 10, 20],
+            'min_child_weight': [1, 5, 10],
+            'n_estimators': [50,100,300,500,700,1000],
+            'booster': ['gbtree'],
+            'objective':['multi:softprob']
+            }
+        else:
+            hyperparameter_settings = {
             'learning_rate': [0.01, 0.1],
             'max_depth': [3, 6, 8, 10],
             'min_child_weight': [1, 3, 5, 10],
             'n_estimators': [100,1000,10000],
             'booster': ['gbtree'],
             'objective':['multi:softprob']
-            }      
+            }         
         
     # Instantiate the grid search model
     grid_search = GridSearchCV(model, hyperparameter_settings, scoring='accuracy', cv=5, n_jobs=-1)
@@ -304,11 +325,14 @@ def evaluate_model(model, X_test_scaled, y_test, custom_mapping, model_name):
     joblib.dump(close_exact_dict, '../../../../Output/Modelling/XGBoost/' + model_name + '/' + model_name + '_close_exact_dict.pkl')
 
     # Set up display labels
-    display_labels = ["Downgrade", "Same", "Upgrade"]
-    # for v in np.sort(np.unique(y_test)):
-    #     for key, value in custom_mapping.items():
-    #         if value == v:
-    #             display_labels.append(key)
+    if "change" in model_name:
+        display_labels = ["Downgrade", "Same", "Upgrade"]
+    else:
+        display_labels = []
+        for v in np.sort(np.unique(y_test)):
+            for key, value in custom_mapping.items():
+                if value == v:
+                    display_labels.append(key)
 
     # detailed evaluation with classification report
     report = classification_report(y_test, y_pred, target_names=display_labels)
