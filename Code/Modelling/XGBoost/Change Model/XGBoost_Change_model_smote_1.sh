@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=Logistic_Change_Model_2
-#SBATCH --output=Logistic_Change_Model_2.out
-#SBATCH --partition=jsteinhardt
+#SBATCH --job-name=XGBoost_Change_model_smote_1
+#SBATCH --output=XGBoost_Change_model_smote_1.out
+#SBATCH --partition=epurdom
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
 
@@ -12,7 +12,7 @@ SECONDS=0
 echo "Starting Job"
 
 # Execute the notebook
-jupyter nbconvert --to notebook --execute --inplace Logistic_Change_Model_2.ipynb
+jupyter nbconvert --to notebook --execute --inplace XGBoost_Change_model_smote_1.ipynb
 
 echo "Completed Job"
 
