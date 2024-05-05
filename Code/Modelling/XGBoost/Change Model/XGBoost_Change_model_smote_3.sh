@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=XGBoost_Change_model_smote_3
 #SBATCH --output=XGBoost_Change_model_smote_3.out
-#SBATCH --partition=jsteinhardt
+#SBATCH --partition=epurdom
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
 
