@@ -70,7 +70,7 @@ def get_column_names_and_mapping_change(unsanitized_model_name):
     # Mapping for target column
     # Don't need mapping since change is already in number
     if 'rating' in unsanitized_model_name:
-        custom_mapping = {'Same As Last Fixed Quarter Date': 0, 'Upgrade Since Last Fixed Quarter Date': 1, "Downgrade Since Last Fixed Quarter Date": -1}
+        custom_mapping = {"Downgrade Since Last Fixed Quarter Date": -1, 'Same As Last Fixed Quarter Date': 0, 'Upgrade Since Last Fixed Quarter Date': 1}
 
     # Return the column names
     return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
