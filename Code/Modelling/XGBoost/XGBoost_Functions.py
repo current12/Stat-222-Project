@@ -211,9 +211,9 @@ def train_model_with_grid_search(X_train_scaled, y_train,num_class, model_name):
         if "smote" in model_name:
             hyperparameter_settings = {
                 'learning_rate': [0.01, 0.1],
-                'max_depth': [3, 6, 8, 10],
-                'min_child_weight': [1, 3, 5],
-                'n_estimators': [100,100,10000],
+                'max_depth': [8, 10, 15],
+                'min_child_weight': [1, 5],
+                'n_estimators': [100,1000,10000],
                 'booster': ['gbtree'],
                 'objective':['multi:softprob']
                 }
