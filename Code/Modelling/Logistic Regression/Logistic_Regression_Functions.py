@@ -127,6 +127,13 @@ def prepare_matrices(df, numeric_feature_columns, cat_feature_columns, target_co
     - cat_feature_columns: list of categorical columns to be used as features.
     - target_column: column to be used as target.
     - custom_mapping: dictionary to encode the target variable.
+
+    Returns:
+    - X_train_scaled: scaled feature matrix of the training set.
+    - X_test_scaled: scaled feature matrix of the test set.
+    - y_train: target vector of the training set.
+    - y_test: target vector of the test set.
+    - feature_names: names of the features.
     """
    
     # Selecting features and target, and encoding target
