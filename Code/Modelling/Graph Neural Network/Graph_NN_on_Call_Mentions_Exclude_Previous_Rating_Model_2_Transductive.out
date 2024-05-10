@@ -1,0 +1,145 @@
+Starting Job
+[NbConvertApp] Converting notebook Graph_NN_on_Call_Mentions_Exclude_Previous_Rating_Model_2_Transductive.ipynb to notebook
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+Traceback (most recent call last):
+  File "/scratch/users/ijyliu/conda/envs/scf_general/bin/jupyter-nbconvert", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/application.py", line 283, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 102, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 123, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Packages
+from Graph_NN_Functions import *
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[2], line 2[0m
+[1;32m      1[0m [38;5;66;03m# Packages[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mGraph_NN_Functions[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+
+File [0;32m~/repo/Stat-222-Project/Code/Modelling/Graph Neural Network/Graph_NN_Functions.py:7[0m
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[1;32m      6[0m os[38;5;241m.[39menviron[[38;5;124m'[39m[38;5;124mDGLBACKEND[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;124m'[39m[38;5;124mpytorch[39m[38;5;124m'[39m
+[0;32m----> 7[0m [38;5;28;01mimport[39;00m [38;5;21;01mdgl[39;00m
+[1;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mtorch[39;00m
+[1;32m      9[0m [38;5;28;01mimport[39;00m [38;5;21;01mtorch[39;00m[38;5;21;01m.[39;00m[38;5;21;01mnn[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnn[39;00m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/__init__.py:16[0m
+[1;32m     13[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mlogging[39;00m [38;5;28;01mimport[39;00m enable_verbose_logging  [38;5;66;03m# usort: skip[39;00m
+[1;32m     14[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbackend[39;00m [38;5;28;01mimport[39;00m backend_name, load_backend  [38;5;66;03m# usort: skip[39;00m
+[0;32m---> 16[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m (
+[1;32m     17[0m     container,
+[1;32m     18[0m     cuda,
+[1;32m     19[0m     dataloading,
+[1;32m     20[0m     function,
+[1;32m     21[0m     ops,
+[1;32m     22[0m     random,
+[1;32m     23[0m     sampling,
+[1;32m     24[0m     storages,
+[1;32m     25[0m )
+[1;32m     26[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_ffi[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m __version__, DGLError
+[1;32m     27[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_ffi[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfunction[39;00m [38;5;28;01mimport[39;00m (
+[1;32m     28[0m     extract_ext_funcs,
+[1;32m     29[0m     get_global_func,
+[1;32m     30[0m     list_global_func_names,
+[1;32m     31[0m     register_func,
+[1;32m     32[0m )
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/dataloading/__init__.py:13[0m
+[1;32m     11[0m [38;5;28;01mif[39;00m F[38;5;241m.[39mget_preferred_backend() [38;5;241m==[39m [38;5;124m"[39m[38;5;124mpytorch[39m[38;5;124m"[39m:
+[1;32m     12[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mspot_target[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[0;32m---> 13[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdataloader[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[1;32m     14[0m     [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdist_dataloader[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/dataloading/dataloader.py:27[0m
+[1;32m     25[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbatch[39;00m [38;5;28;01mimport[39;00m batch [38;5;28;01mas[39;00m batch_graphs
+[1;32m     26[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcuda[39;00m [38;5;28;01mimport[39;00m GPUCache
+[0;32m---> 27[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdistributed[39;00m [38;5;28;01mimport[39;00m DistGraph
+[1;32m     28[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mframe[39;00m [38;5;28;01mimport[39;00m LazyFeature
+[1;32m     29[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mheterograph[39;00m [38;5;28;01mimport[39;00m DGLGraph
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/distributed/__init__.py:5[0m
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdist_context[39;00m [38;5;28;01mimport[39;00m exit_client, initialize
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdist_dataloader[39;00m [38;5;28;01mimport[39;00m DistDataLoader
+[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdist_graph[39;00m [38;5;28;01mimport[39;00m DistGraph, DistGraphServer, edge_split, node_split
+[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mdist_tensor[39;00m [38;5;28;01mimport[39;00m DistTensor
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mgraph_partition_book[39;00m [38;5;28;01mimport[39;00m GraphPartitionBook, PartitionPolicy
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/distributed/dist_graph.py:11[0m
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mcollections[39;00m[38;5;21;01m.[39;00m[38;5;21;01mabc[39;00m [38;5;28;01mimport[39;00m MutableMapping
+[1;32m      9[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m---> 11[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m backend [38;5;28;01mas[39;00m F, graphbolt [38;5;28;01mas[39;00m gb, heterograph_index
+[1;32m     12[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_ffi[39;00m[38;5;21;01m.[39;00m[38;5;21;01mndarray[39;00m [38;5;28;01mimport[39;00m empty_shared_mem
+[1;32m     13[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m ALL, DGLError, EID, ETYPE, is_all, NID
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/graphbolt/__init__.py:36[0m
+[1;32m     32[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m:  [38;5;66;03m# pylint: disable=W0703[39;00m
+[1;32m     33[0m         [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m([38;5;124m"[39m[38;5;124mCannot load Graphbolt C++ library[39m[38;5;124m"[39m)
+[0;32m---> 36[0m [43mload_graphbolt[49m[43m([49m[43m)[49m
+[1;32m     38[0m [38;5;66;03m# pylint: disable=wrong-import-position[39;00m
+[1;32m     39[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mbase[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+
+File [0;32m/scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/graphbolt/__init__.py:26[0m, in [0;36mload_graphbolt[0;34m()[0m
+[1;32m     24[0m path [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mjoin(dirname, [38;5;124m"[39m[38;5;124mgraphbolt[39m[38;5;124m"[39m, basename)
+[1;32m     25[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m os[38;5;241m.[39mpath[38;5;241m.[39mexists(path):
+[0;32m---> 26[0m     [38;5;28;01mraise[39;00m [38;5;167;01mFileNotFoundError[39;00m(
+[1;32m     27[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mCannot find DGL C++ graphbolt library at [39m[38;5;132;01m{[39;00mpath[38;5;132;01m}[39;00m[38;5;124m"[39m
+[1;32m     28[0m     )
+[1;32m     30[0m [38;5;28;01mtry[39;00m:
+[1;32m     31[0m     torch[38;5;241m.[39mclasses[38;5;241m.[39mload_library(path)
+
+[0;31mFileNotFoundError[0m: Cannot find DGL C++ graphbolt library at /scratch/users/ijyliu/conda/envs/scf_general/lib/python3.11/site-packages/dgl/graphbolt/libgraphbolt_pytorch_2.1.2.post104.so
+
+Completed Job
+Time elapsed: 0 minute(s).
