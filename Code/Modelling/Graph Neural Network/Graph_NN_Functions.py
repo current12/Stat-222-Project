@@ -64,45 +64,6 @@ class NodeClassification(nn.Module):
         logits = self.gconv_model(graph, features) # logits from the graph convolutional model
         return self.loss_fcn(logits[train_mask], labels[train_mask]) # return loss
 
-def load_feature_and_class_data():
-    """
-    Load the feature and class data from the Parquet file.
-
-    Returns:
-    A DataFrame containing the data.
-    """
-    # Read the Parquet file into a DataFrame
-    # list of files in '../../../../Data/All_Data/All_Data_with_NLP_Features'
-    file_list = [f for f in os.listdir(r'../../../Data/All_Data/All_Data_with_NLP_Features') if f.endswith('.parquet')]
-    # read in all parquet files
-    df = pd.concat([pd.read_parquet(r'../../../Data/All_Data/All_Data_with_NLP_Features/' + f) for f in file_list])
-    # Sort by ticker and fixed_quarter_date
-    df = df.sort_values(['ticker', 'fixed_quarter_date']).reset_index(drop=True)
-    # Create node as ticker + ' : ' + fixed_quarter_date
-    df['node'] = df['ticker'] + ' : ' + df['fixed_quarter_date'].astype(str)
-    return df
-
-def load_src_dst_data():
-    '''
-    Load the source and destination data from the company mentions file.
-
-    Returns:
-    A DataFrame containing unique source and destionation pairs/edges.
-    '''
-
-    # Company mentions file
-    company_mentions_with_ticker = pd.read_excel('../../../Data/Company_Mentions/Company_Mentions_With_Ticker.xlsx')
-
-    # Get tickers and counts
-    pairwise_df = (company_mentions_with_ticker[['ticker', 'matched_ticker', 'fixed_quarter_date']]
-                                               .drop_duplicates()
-                                               .rename(columns={'ticker': 'src_ticker', 'matched_ticker': 'dst_ticker'}))
-
-    # Note: don't need to do anything to handle symmetry (don't need to drop half of the pairs)
-
-    # Return the DataFrame
-    return pairwise_df
-
 def get_column_names_and_mapping(unsanitized_model_name):
     '''
     Uses the variable index Excel file to get column names for the model.
@@ -481,6 +442,8 @@ def run_model(train_and_val_df,
     # Decode target, pred, and node
     predictions_df['target'] = predictions_df['target'].replace({v: k for k, v in custom_mapping.items()})
     predictions_df['pred'] = predictions_df['pred'].replace({v: k for k, v in custom_mapping.items()})
+    print(predictions_df['node'])
+    print(node_to_int)
     predictions_df['node'] = predictions_df['node'].replace({v: k for k, v in node_to_int.items()})
     # Output to Excel
     predictions_df.to_excel(prediction_file_path, index=False)
