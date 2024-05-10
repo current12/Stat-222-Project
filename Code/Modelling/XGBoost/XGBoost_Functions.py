@@ -502,7 +502,7 @@ def create_model_figure_and_table_components(model_name, target_column, custom_m
     print('actual labels')
     print(actual_labels)
     #ConfusionMatrixDisplay.from_predictions(y_test, y_pred, display_labels=actual_labels).plot(cmap='Blues')
-    conf_matrix = confusion_matrix(y_test, y_pred)
+    conf_matrix = confusion_matrix(y_test_num, y_pred_num)
     cm_display = ConfusionMatrixDisplay(confusion_matrix=conf_matrix, display_labels=actual_labels)
     #plt.show()
     # Plot Confusion Matrix
