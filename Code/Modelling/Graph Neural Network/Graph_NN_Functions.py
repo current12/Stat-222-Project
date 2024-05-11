@@ -259,6 +259,10 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
     
     # Keep track of time for each epoch
     duration = []
+    # List of model states
+    model_states = []
+    # List of validation accuracies
+    val_accuracies = []
     # Iterate over epochs
     for epoch in range(n_epochs):
 
@@ -274,9 +278,15 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
         # Backward pass - backpropagation, use optimizer to update values
         loss.backward()
         optimizer.step()
+
+        # Save model state
+        model_states.append(model.state_dict())
         
         # Evaluate model on training and validation datasets
         train_acc, train_f1, valid_acc, valid_f1 = evaluate_on_train_and_val(model, graph, features, labels, train_mask, val_mask)
+
+        # Save validation accuracy
+        val_accuracies.append(valid_acc)
         
         # Record time taken for epoch
         duration.append(time.time() - tic)
@@ -286,6 +296,14 @@ def train_and_get_pred(model, optimizer, graph, features, labels, train_mask, va
             "Epoch {:05d} | Time(s) {:.4f} | Training Accuracy {:.4f} | Training Loss {:.4f} | Training F1 {:.4f} | Validation Accuracy {:.4f} | Validation F1 {:.4f}".format(
                 epoch, np.mean(duration), train_acc, loss.item(), train_f1, valid_acc, valid_f1)
         )
+    
+    # Get best model state
+    best_model_state = model_states[np.argmax(val_accuracies)]
+    print('Epoch of best validation accuracy: ', np.argmax(val_accuracies))
+    print('Best validation accuracy: ', np.max(val_accuracies))
+    # Load best model state
+    model.load_state_dict(best_model_state)
+    print('Set model to best state.')
 
     # Get predictions on test dataset
     # Set to evaluation mode
