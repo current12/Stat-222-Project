@@ -100,8 +100,9 @@ def get_column_names_and_mapping(unsanitized_model_name):
     target_column = variable_index[variable_index[clean_model_name] == 'Y']['column_name'].values[0]
 
     # Mapping for target column
-    if 'rating' in unsanitized_model_name:
-        custom_mapping = {'AAA': 0, 'AA': 1, 'A': 2, 'BBB': 3, 'BB': 4, 'B': 5, 'CCC': 6, "CC": 7, "C": 8, "D": 9}
+    rating_to_int = pd.read_excel('../../../Data/Learnable Network/rating_to_int.xlsx')
+    # Create dictionary to encode the target variable
+    custom_mapping = {rating_to_int['Rating'][i]: rating_to_int['Rating_int'][i] for i in range(len(rating_to_int))}
 
     # Return the column names
     return numeric_feature_columns, cat_feature_columns, target_column, custom_mapping
