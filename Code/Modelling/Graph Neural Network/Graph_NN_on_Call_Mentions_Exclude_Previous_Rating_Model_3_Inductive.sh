@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=Graph_NN_on_Call_Mentions_Exclude_Previous_Rating_Model_3_Inductive
 #SBATCH --output=Graph_NN_on_Call_Mentions_Exclude_Previous_Rating_Model_3_Inductive.out
-#SBATCH --partition=jsteinhardt
-#SBATCH --gres=gpu:A100:1
+#SBATCH --partition=epurdom
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
 
 # Timing
 # Reset the SECONDS variable
