@@ -402,7 +402,7 @@ def run_model(train_and_val_df,
     # Initialize model
     print("Initializing Model")
     # Create model
-    gconv_model = GraphSAGEModel(num_feats, n_hidden, n_classes, n_layers, F.relu, dropout, aggregator_type)
+    gconv_model = GraphSAGEModel(in_feats=num_feats, n_hidden=n_hidden, out_dim=n_classes, n_layers=n_layers, activation=F.relu, dropout=dropout, aggregator_type=aggregator_type)
     # Node classification task
     model = NodeClassification(gconv_model, n_hidden, n_classes)
     print("Initialized Model")
