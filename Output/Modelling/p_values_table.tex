@@ -1,0 +1,27 @@
+\footnotesize
+\begin{tabular}{ccccc}
+\toprule
+Model A & Model B & p, Non-Exact & p, Non-Exact, Continuity Corrected & p, Exact \\
+\midrule
+Logistic - Include Previous Rating Model 2 & Logistic - Include Previous Rating Model 3 & - & - & - \\
+Logistic - Exclude Previous Rating Model 2 & Logistic - Exclude Previous Rating Model 3 & 0.31 & 0.35 & 0.35 \\
+Logistic - SMOTE Rating Change Model 2 & Logistic - SMOTE Rating Change Model 3 & 0.17 & 0.19 & 0.19 \\
+XGBoost - Include Previous Rating Model 2 & XGBoost - Include Previous Rating Model 3 & - & - & - \\
+XGBoost - Exclude Previous Rating Model 2 & XGBoost - Exclude Previous Rating Model 3 & 0.0 & 0.0 & 0.0 \\
+XGBoost - SMOTE Rating Change Model 2 & XGBoost - SMOTE Rating Change Model 3 & 0.06 & 0.11 & 0.11 \\
+GNN - Transductive - Model 2 & GNN - Transductive - Model 3 & 0.17 & 0.21 & 0.21 \\
+GNN - Inductive - Model 2 & GNN - Inductive - Model 3 & 0.1 & 0.12 & 0.12 \\
+GNN - Transductive - Model 2 & GNN - Inductive - Model 2 & 0.83 & 0.92 & 0.92 \\
+GNN - Transductive - Model 3 & GNN - Inductive - Model 3 & 0.48 & 0.55 & 0.55 \\
+GNN - Inductive - Model 3 & Logistic Regression - Retrain on GNN Data & 0.01 & 0.01 & 0.01 \\
+GNN - Inductive - Model 3 & XGBoost - Retrain on GNN Data & 0.0 & 0.0 & 0.0 \\
+GNN - Transductive - Model 3 & Logistic Regression - Retrain on GNN Data & 0.03 & 0.03 & 0.03 \\
+GNN - Transductive - Model 3 & XGBoost - Retrain on GNN Data & 0.0 & 0.0 & 0.0 \\
+GNN - Inductive - Model 3 & Logistic Regression - Pretrained on GNN Data & 0.03 & 0.04 & 0.04 \\
+GNN - Inductive - Model 3 & XGBoost - Pretrained on GNN Data & 0.0 & 0.0 & 0.0 \\
+GNN - Transductive - Model 3 & Logistic Regression - Pretrained on GNN Data & 0.08 & 0.09 & 0.09 \\
+GNN - Transductive - Model 3 & XGBoost - Pretrained on GNN Data & 0.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+
+\normalsize
